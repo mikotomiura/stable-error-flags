@@ -1,0 +1,13 @@
+base,factor,projected,actual,ratio
+deberta,base error rate,0.257,0.21,0.819
+deberta,paraphrase 1 formed,0.865,0.881,1.018
+deberta,passed human check,0.575,0.531,0.923
+deberta,errors vs. check exclusion (correlation term),1.0,0.922,0.922
+deberta,stable share of errors,0.74,0.607,0.82
+deberta,"stable errors (product x 1,654)",156.5,91,0.582
+flan,base error rate,0.457,0.458,1.003
+flan,paraphrase 1 formed,0.865,0.881,1.018
+flan,passed human check,0.575,0.531,0.923
+flan,errors vs. check exclusion (correlation term),1.0,1.016,1.016
+flan,stable share of errors,0.64,0.792,1.237
+flan,"stable errors (product x 1,654)",240.6,285,1.184

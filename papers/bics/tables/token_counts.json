@@ -1,0 +1,62 @@
+{
+ "study1:wic_test/qwen": {
+  "prompts": {
+   "A": 2608,
+   "ii": 2608,
+   "iii": 2608
+  },
+  "prompt_ratio_A_ii": 1.0,
+  "in_token_ratio_A_ii": 2.04,
+  "in_token_ratio_A_iii": 1.55
+ },
+ "study1:wic_test/olmo": {
+  "prompts": {
+   "A": 2608,
+   "ii": 2608,
+   "iii": 2608
+  },
+  "prompt_ratio_A_ii": 1.0,
+  "in_token_ratio_A_ii": 2.24,
+  "in_token_ratio_A_iii": 1.57
+ },
+ "study1:chaos/qwen": {
+  "prompts": {
+   "A": 14440,
+   "ii": 12452,
+   "iii": 12452
+  },
+  "prompt_ratio_A_ii": 1.16,
+  "in_token_ratio_A_ii": 1.58,
+  "in_token_ratio_A_iii": 1.29
+ },
+ "study1:chaos/olmo": {
+  "prompts": {
+   "A": 26205,
+   "ii": 12452,
+   "iii": 12452
+  },
+  "prompt_ratio_A_ii": 2.1,
+  "in_token_ratio_A_ii": 3.13,
+  "in_token_ratio_A_iii": 2.37
+ },
+ "study2:mcl/qwen": {
+  "prompts": {
+   "A": 3308,
+   "ii": 3308,
+   "iii": 3308
+  },
+  "prompt_ratio_A_ii": 1.0,
+  "in_token_ratio_A_ii": 1.52,
+  "in_token_ratio_A_iii": 1.23
+ },
+ "study2:mcl/olmo": {
+  "prompts": {
+   "A": 3308,
+   "ii": 3308,
+   "iii": 3308
+  },
+  "prompt_ratio_A_ii": 1.0,
+  "in_token_ratio_A_ii": 1.59,
+  "in_token_ratio_A_iii": 1.22
+ }
+}

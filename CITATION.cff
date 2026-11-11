@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper."
+title: "stable-error-flags: code and aggregate outputs"
+authors:
+  - family-names: Miura
+    given-names: Mikoto
+    affiliation: Independent Researcher
+    orcid: "https://orcid.org/0009-0000-4196-0508"
+  - family-names: Harada
+    given-names: Yuusuke
+    affiliation: Hiroshima University
+    orcid: "https://orcid.org/0009-0006-7252-5115"
+doi: 10.5281/zenodo.24132227
+license: MIT
+repository-code: "https://github.com/mikotomiura/stable-error-flags"
+preferred-citation:
+  type: article
+  title: "Flagging stable classifier errors with an inventory-mediated LLM judgement: an exploratory study and a preregistered replication"
+  authors:
+    - family-names: Miura
+      given-names: Mikoto
+      orcid: "https://orcid.org/0009-0000-4196-0508"
+    - family-names: Harada
+      given-names: Yuusuke
+      orcid: "https://orcid.org/0009-0006-7252-5115"
+  year: 2026
+  doi: 10.5281/zenodo.24132225
+  notes: "Preprint"

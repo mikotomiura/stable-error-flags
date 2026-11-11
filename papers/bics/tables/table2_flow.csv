@@ -1,0 +1,6 @@
+study,data,base,items,wordnet_lt2_senses,paraphrase_not_formed,excluded_by_human_check,reference_tie,errors_classified,unstable_errors,stable_errors,units,stable_after_parse_exclusion,units_after_parse_exclusion,stable_share_of_errors,base_accuracy_report_only,stop_rule
+study1,WiC test,deberta,1400,96,261,0,0,282,74,208,201,208,201,0.738,0.725,stable >= 100 and units >= 50 (base DeBERTa / RoBERTa; FLAN only for H1b in study 2)
+study1,WiC test,flan,1400,96,261,0,0,459,166,293,280,293,280,0.638,0.558,stable >= 100 and units >= 50 (base DeBERTa / RoBERTa; FLAN only for H1b in study 2)
+study1,ChaosNLI,roberta,3113,0,3,0,28,973,274,699,671,692,665,0.718,0.684,stable >= 100 and units >= 50 (base DeBERTa / RoBERTa; FLAN only for H1b in study 2)
+study2,MCL-WiC dev+test,deberta,1654,0,197,684,0,150,59,91,81,91,81,0.607,0.79,stable >= 100 and units >= 50 (base DeBERTa / RoBERTa; FLAN only for H1b in study 2)
+study2,MCL-WiC dev+test,flan,1654,0,197,684,0,360,75,285,225,285,225,0.792,0.542,stable >= 100 and units >= 50 (base DeBERTa / RoBERTa; FLAN only for H1b in study 2)

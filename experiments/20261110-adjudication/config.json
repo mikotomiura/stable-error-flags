@@ -1,0 +1,11 @@
+{
+ "purpose": "Human adjudication of DeBERTa's stable errors (post-hoc, not preregistered). Design: .steering/20261110-paper-write/adjudication-design.md",
+ "seed": 20261110,
+ "raters": ["rater1", "rater2"],
+ "base_model": "deberta",
+ "cells": ["wic_test/deberta/qwen", "wic_test/deberta/olmo", "mcl/deberta/qwen", "mcl/deberta/olmo"],
+ "controls": "stable correct items of the DeBERTa x Qwen table, as many as the stable errors per study, stratified by reference label",
+ "judgements": {"S": "same meaning", "D": "different meaning", "U": "cannot decide"},
+ "bootstrap": {"draws": 10000, "seed": 20261102, "unit": "lemma"},
+ "flags": "frozen fractional flags (mean over flag rates 0.10..0.50) over all ranked items of each cell; not recomputed"
+}

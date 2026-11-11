@@ -1,0 +1,51 @@
+{
+ "note": "post hoc [P], not preregistered; DeBERTa cells; flag mass = sum over ranked items of the q-mean flag",
+ "study1:wic_test/deberta/qwen": {
+  "ranked_items": 1304,
+  "ineligible_items": 261,
+  "ineligible_share_of_items": 0.20015337423312884,
+  "flag_mass_share_on_ineligible": {
+   "i": 0.19989775051124734,
+   "A": 0.1952965235173823,
+   "ii": 0.20040899795501033,
+   "iii": 0.22034764826175868,
+   "iv": 0.20535481991341398
+  }
+ },
+ "study1:wic_test/deberta/olmo": {
+  "ranked_items": 1270,
+  "ineligible_items": 258,
+  "ineligible_share_of_items": 0.2031496062992126,
+  "flag_mass_share_on_ineligible": {
+   "i": 0.1984251968503936,
+   "A": 0.20577427821522332,
+   "ii": 0.2320209973753279,
+   "iii": 0.22624671916010516,
+   "iv": 0.1973753280839894
+  }
+ },
+ "study2:mcl/deberta/qwen": {
+  "ranked_items": 1653,
+  "ineligible_items": 880,
+  "ineligible_share_of_items": 0.5323653962492438,
+  "flag_mass_share_on_ineligible": {
+   "i": 0.5562726906010491,
+   "A": 0.5457845905607105,
+   "ii": 0.5332795482049212,
+   "iii": 0.5356998789834597,
+   "iv": 0.5562726906010482
+  }
+ },
+ "study2:mcl/deberta/olmo": {
+  "ranked_items": 1653,
+  "ineligible_items": 880,
+  "ineligible_share_of_items": 0.5323653962492438,
+  "flag_mass_share_on_ineligible": {
+   "i": 0.5562726906010491,
+   "A": 0.538120209762001,
+   "ii": 0.5530455828963291,
+   "iii": 0.5361032674465512,
+   "iv": 0.5429608713190803
+  }
+ }
+}

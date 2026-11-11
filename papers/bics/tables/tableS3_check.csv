@@ -1,0 +1,7 @@
+study,task,rater,design,paraphrase_rows,paraphrase_rows_kept,kept_rate,wilson95,controls_used,controls_kept,rule,verdict,agreement_pct,kappa,agreement_scope
+study1,WiC (study 1),rater 1,audit sample,50,39,0.78,"[0.65, 0.87]",6,0,"kept rate >= 0.90 and controls kept <= 1, for both raters",fail,0.918,0.805,all 85 sheet rows
+study1,WiC (study 1),rater 2,audit sample,50,39,0.78,"[0.65, 0.87]",6,0,"kept rate >= 0.90 and controls kept <= 1, for both raters",fail,0.918,0.805,all 85 sheet rows
+study1,ChaosNLI (study 1),rater 1,audit sample,50,43,0.86,"[0.74, 0.93]",6,0,"kept rate >= 0.90 and controls kept <= 1, for both raters",fail,0.741,0.342,all 85 sheet rows
+study1,ChaosNLI (study 1),rater 2,audit sample,50,50,1.0,"[0.93, 1.00]",6,0,"kept rate >= 0.90 and controls kept <= 1, for both raters",pass,0.741,0.342,all 85 sheet rows
+study2,MCL-WiC (study 2),rater 1,every item (filter),2914,2317,0.795,,60,0,item excluded if either rater rejects either sentence; attention checks on 60 controls,attention checks passed,0.858,0.56,2914 paraphrase rows
+study2,MCL-WiC (study 2),rater 2,every item (filter),2914,2334,0.801,,60,0,item excluded if either rater rejects either sentence; attention checks on 60 controls,attention checks passed,0.858,0.56,2914 paraphrase rows

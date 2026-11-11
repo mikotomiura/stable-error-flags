@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="300" viewBox="0 0 920 300" role="img" aria-label="Overview: stable errors and the four flags compared at the same flag rate">
+  <style>
+    text{font-family:Inter,Helvetica,Arial,sans-serif;fill:#0b0b0b}
+    .muted{fill:#52514e}.box{fill:#ffffff;stroke:#d9d8d4}.arrow{stroke:#52514e;fill:none}
+    @media (prefers-color-scheme: dark){text{fill:#f0efec}.muted{fill:#c3c2b7}.box{fill:#232322;stroke:#4a4a47}.arrow{stroke:#c3c2b7}}
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#8a8984"/></marker></defs>
+  <!-- step 1 -->
+  <rect class="box" x="10" y="40" width="250" height="200" rx="14"/>
+  <text x="30" y="70" font-size="17" font-weight="700">1  Stable errors</text>
+  <text x="30" y="98" font-size="13" class="muted">The classifier gives the same wrong</text>
+  <text x="30" y="116" font-size="13" class="muted">label on the original input,</text>
+  <text x="30" y="134" font-size="13" class="muted">the swapped input and a paraphrase.</text>
+  <rect x="30" y="160" width="62" height="26" rx="6" fill="#e34948" opacity="0.18"/><text x="38" y="178" font-size="12">original</text>
+  <rect x="100" y="160" width="62" height="26" rx="6" fill="#e34948" opacity="0.18"/><text x="106" y="178" font-size="12">swapped</text>
+  <rect x="170" y="160" width="70" height="26" rx="6" fill="#e34948" opacity="0.18"/><text x="176" y="178" font-size="12">paraphrase</text>
+  <text x="30" y="216" font-size="12" class="muted">→ confidence stays high on them</text>
+  <path class="arrow" d="M266 140 L314 140" stroke-width="2" marker-end="url(#h)"/>
+  <!-- step 2 -->
+  <rect class="box" x="320" y="10" width="300" height="280" rx="14"/>
+  <text x="340" y="40" font-size="17" font-weight="700">2  Four flags, same budget</text>
+  <rect x="340" y="60" width="12" height="12" rx="3" fill="#2a78d6"/><text x="360" y="71" font-size="14" font-weight="700">A</text><text x="378" y="71" font-size="13" class="muted">LLM picks WordNet senses</text>
+  <text x="378" y="89" font-size="13" class="muted">(or atomic facts for NLI)</text>
+  <rect x="340" y="110" width="12" height="12" rx="3" fill="#eb6834"/><text x="360" y="121" font-size="14" font-weight="700">(i)</text><text x="386" y="121" font-size="13" class="muted">classifier confidence</text>
+  <rect x="340" y="150" width="12" height="12" rx="3" fill="#8a8984"/><text x="360" y="161" font-size="14" font-weight="700">(ii)</text><text x="390" y="161" font-size="13" class="muted">one more LLM judgement</text>
+  <rect x="340" y="190" width="12" height="12" rx="3" fill="#8a8984"/><text x="360" y="201" font-size="14" font-weight="700">(iii)</text><text x="396" y="201" font-size="13" class="muted">two-step LLM judgement</text>
+  <rect x="340" y="230" width="12" height="12" rx="3" fill="#8a8984"/><text x="360" y="241" font-size="14" font-weight="700">(iv)</text><text x="396" y="241" font-size="13" class="muted">fake inventory</text>
+  <text x="340" y="272" font-size="12" class="muted">top q of items flagged, q = 0.1 … 0.5</text>
+  <path class="arrow" d="M626 140 L674 140" stroke-width="2" marker-end="url(#h)"/>
+  <!-- step 3 -->
+  <rect class="box" x="680" y="40" width="230" height="200" rx="14"/>
+  <text x="700" y="70" font-size="17" font-weight="700">3  Detection rate</text>
+  <text x="700" y="98" font-size="13" class="muted">share of stable errors</text>
+  <text x="700" y="116" font-size="13" class="muted">that are flagged</text>
+  <text x="700" y="150" font-size="13">A − control,</text>
+  <text x="700" y="168" font-size="13">paired, cluster bootstrap</text>
+  <text x="700" y="202" font-size="12" class="muted">two studies; one preregistered</text>
+  <text x="700" y="220" font-size="12" class="muted">replication (MCL-WiC)</text>
+</svg>

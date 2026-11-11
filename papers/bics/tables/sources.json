@@ -1,0 +1,10 @@
+{
+ "study1": {
+  "path": "experiments/20261103-evaluation/results/eval/analysis.json",
+  "sha256": "2f712b52f569616e1a5fc9f7aa87bff7408b4ebd20f3d24ce7b43319a741590f"
+ },
+ "study2": {
+  "path": "experiments/20261109-rep-main/rep/analysis.json",
+  "sha256": "6caeea81b3e9876d4c70a06f2a5a15dffe49880e5783ad3512298ab250698941"
+ }
+}

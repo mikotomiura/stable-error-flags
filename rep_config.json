@@ -1,0 +1,93 @@
+{
+ "preregistration": "docs/rep_preregistration.md (replication of v4 H1/H2 on MCL-WiC; draft, not frozen)",
+ "seed": 20261102,
+ "versions": {
+  "wic_para1": "v2",
+  "wic_para2": "v2",
+  "wic_hardneg": "v1",
+  "wic_A": "v2",
+  "wic_ii": "v1",
+  "wic_iii": "v1",
+  "rep_wic_A": "v3",
+  "rep_hardneg_judge": "v2"
+ },
+ "versions_note": "WiC templates of the main evaluation unchanged; rep_wic_A (v3) = forced choice for A and (iv): no 'None of the above' option, asks for the closest meaning, number only. rep_hardneg_judge (v2) = the judge's instruction for the hard-negative candidates (Claude): `valid` (v1 wording, unchanged) and `meaning_changed` (added, decisions #18).",
+ "prompts": {
+  "wic_para1": "prompts/wic_para1.txt",
+  "wic_para2": "prompts/wic_para2.txt",
+  "wic_hardneg": "prompts/wic_hardneg.txt",
+  "wic_A": "prompts/wic_A.txt",
+  "wic_ii": "prompts/wic_ii.txt",
+  "wic_iii": "prompts/wic_iii.txt",
+  "base_deberta": "prompts/base_deberta.txt",
+  "base_flan": "prompts/base_flan.txt",
+  "rep_wic_A": "prompts/rep_wic_A.txt",
+  "rep_hardneg_judge": "prompts/rep_hardneg_judge.txt"
+ },
+ "parse_definition": {
+  "choice": "Greedy output (up to 8 new tokens; WiC sense choice 4) equals exactly one candidate after lm.normalize (strip spaces, quotes and trailing punctuation; lowercase).",
+  "wic_generation": "One non-empty line, not cut by the token limit, the original word form exactly once (case-insensitive whole word), not identical to the source sentence; [[ ]] markers are removed before counting.",
+  "nli_paraphrase": "One non-empty line, not cut by the token limit, different from the source text.",
+  "nli_hardneg": "One line whose word edit distance to the hypothesis is exactly 1.",
+  "atoms": "At least one bullet line, not cut by the token limit; at most 8 atoms are kept.",
+  "wic_iii_step1": "Both glosses '1: ...' and '2: ...' found (each truncated to 32 tokens).",
+  "nli_iii_step1": "Non-empty notes (at most 64 tokens)."
+ },
+ "len_tol": [
+  0.2,
+  0.4
+ ],
+ "qs": [
+  0.1,
+  0.2,
+  0.3,
+  0.4,
+  0.5
+ ],
+ "n_boot": 10000,
+ "abort": {
+  "min_errors": 100,
+  "min_units": 50
+ },
+ "sensitivity_fail_rate": 0.05,
+ "check": {
+  "n_other": 20,
+  "n_hardneg": 20,
+  "hardneg_candidates": 300,
+  "min_valid_hardneg": 10,
+  "max_kept_other": 2,
+  "hardneg_fail_share": 0.35,
+  "n_meaning": 20,
+  "min_meaning": 10,
+  "meaning_fail_share": 0.35,
+  "note": "Every evaluation item's paraphrase 1 (two sentences) is rated by two raters, mixed with 20 sentences of another item, up to 20 hard negatives (judge: valid = 1, the target word's sense changed) and up to 20 meaning controls (judge: valid = 0 and meaning_changed = 1, the sense did not change but the sentence meaning did), all judged BEFORE the sheets are built (first ones in the seeded candidate order). The attention check fails if a rater keeps more than max_kept_other of the other-item controls (3 or more of 20; decisions #21), or if BOTH raters keep at least ceil(0.35 x n) of the n hard negatives (7 of 20) or of the m meaning controls (the pair is the unit, as in the exclusion rule; decisions #17, #19); a part is not used if it has fewer than min_valid_hardneg / min_meaning rows. A rater who alone keeps at least ceil(0.35 x n) of a part is reported (lenient_raters) and does not change the decision (decisions #22). Each rater's kept counts on the first and second half of the sheet (by row number) are reported, descriptive only."
+ },
+ "train_data": {
+  "mcl_train": "experiments/20261108-mclwic-data/raw (train split, development only)"
+ },
+ "weights_sha256": "experiments/20261102-prompt-development/results/weights_sha256.json",
+ "wordnet_zip_sha256": "cbda5ea6eef7f36a97a43d4a75f85e07fccbb4f23657d27b4ccbc93e2646ab59",
+ "data_sha256": {
+  "SemEval-2021_MCL-WiC_all-datasets.zip": "595008e12a88c701850ddd0ca1e42d2a3385d51a6bac451f358f2d770b0ce6e0",
+  "SemEval-2021_MCL-WiC_test-gold-data.zip": "e94a0acbf035610c86efa327dcf156159159e2c37627e78b64098a7242f11e62",
+  "source": "https://github.com/SapienzaNLP/mcl-wic (master, fetched 2026-11-08)"
+ },
+ "env": {
+  "gpu": "Colab L4 (23GB)",
+  "python": "3.13.16",
+  "torch": "2.11.0+cu130",
+  "transformers": "5.21.0",
+  "tokenizers": "0.23.3",
+  "huggingface_hub": "1.33.0",
+  "accelerate": "1.15.0",
+  "safetensors": "0.8.0",
+  "sentencepiece": "0.2.2",
+  "numpy": "2.1.3",
+  "nltk": "3.9.1"
+ },
+ "fixed_sequence": [
+  "H1",
+  "H2",
+  "H1b"
+ ]
+}

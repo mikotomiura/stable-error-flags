@@ -1,0 +1,53 @@
+{
+ "preregistration": "docs/preregistration.md (v4, freeze 1 SHA-256 ced5321f3030bb297b8d947c2f67b52b2907d91330eebc27d62ac3da883637e2)",
+ "seed": 20261102,
+ "prompt_trials": "experiments/20261102-prompt-development/prompts_trials",
+ "versions": {
+  "wic_para1": "v2", "wic_para2": "v2", "wic_hardneg": "v1", "wic_A": "v2", "wic_ii": "v1", "wic_iii": "v1",
+  "nli_para1": "v1", "nli_para2": "v1", "nli_hardneg": "v1", "nli_atoms": "v1", "nli_A": "v1", "nli_ii": "v1", "nli_iii": "v1"
+ },
+ "versions_note": "Sec. 13 #2: for the methods below 98%, the version with the highest parse rate was taken (WiC para1 v2 0.85, para2 v2 0.70, WiC hard negative v1 0.955, NLI hard negative v1 0.605). (iv) uses the template of A.",
+ "prompts": {
+  "wic_para1": "prompts/wic_para1.txt", "wic_para2": "prompts/wic_para2.txt", "wic_hardneg": "prompts/wic_hardneg.txt",
+  "wic_A": "prompts/wic_A.txt", "wic_ii": "prompts/wic_ii.txt", "wic_iii": "prompts/wic_iii.txt",
+  "nli_para1": "prompts/nli_para1.txt", "nli_para2": "prompts/nli_para2.txt", "nli_hardneg": "prompts/nli_hardneg.txt",
+  "nli_atoms": "prompts/nli_atoms.txt", "nli_A": "prompts/nli_A.txt", "nli_ii": "prompts/nli_ii.txt", "nli_iii": "prompts/nli_iii.txt",
+  "base_deberta": "prompts/base_deberta.txt", "base_flan": "prompts/base_flan.txt", "base_roberta": "prompts/base_roberta.txt"
+ },
+ "parse_definition": {
+  "choice": "Greedy output (up to 8 new tokens; WiC sense choice 4) equals exactly one candidate after lm.normalize (strip spaces, quotes and trailing punctuation; lowercase).",
+  "wic_generation": "One non-empty line, not cut by the token limit, the original word form exactly once (case-insensitive whole word), not identical to the source sentence; [[ ]] markers are removed before counting.",
+  "nli_paraphrase": "One non-empty line, not cut by the token limit, different from the source text.",
+  "nli_hardneg": "One line whose word edit distance to the hypothesis is exactly 1.",
+  "atoms": "At least one bullet line, not cut by the token limit; at most 8 atoms are kept.",
+  "wic_iii_step1": "Both glosses '1: ...' and '2: ...' found (each truncated to 32 tokens).",
+  "nli_iii_step1": "Non-empty notes (at most 64 tokens)."
+ },
+ "nli_m": 4,
+ "nli_m_note": "Sec. 5: mean prompts of A per item on MNLI train 200 = 1 + 3.46 atoms = 4.46, rounded (qwen_run2).",
+ "len_tol": [0.2, 0.4],
+ "qs": [0.1, 0.2, 0.3, 0.4, 0.5],
+ "n_boot": 10000,
+ "abort": {"min_errors": 100, "min_units": 50},
+ "sensitivity_fail_rate": 0.05,
+ "check": {"n_S": 50, "n_B": 25, "n_other": 5, "n_hardneg": 5, "hardneg_max_candidates": 200, "s_min": 0.9, "max_controls_kept": 1,
+           "pool_note": "WiC pairs are drawn from WiC dev and test together; NLI from ChaosNLI-S and -M together."},
+ "b_atoms": {"c_mean": 0.11702566660864333, "e_mean": 0.028539013945617236, "source": "qwen_run2 nli_A on MNLI train 200"},
+ "b_yhat_nli_directions": ["entailment", "neutral", "contradiction"],
+ "b_len_definition": "1{yhat = d} + premise tokens / (max premise tokens + 1), one score per direction d of (b-yhat); tokens counted with the roberta tokenizer without special tokens. The Sec. 8 rule is applied if the lower end is <= 0 for any direction.",
+ "train_data": {
+  "wic": "experiments/20261102-prompt-development/data/wic_train200.jsonl",
+  "mnli": "experiments/20261102-prompt-development/data/mnli_train200.jsonl"
+ },
+ "weights_sha256": "experiments/20261102-prompt-development/results/weights_sha256.json",
+ "wordnet_zip_sha256": "cbda5ea6eef7f36a97a43d4a75f85e07fccbb4f23657d27b4ccbc93e2646ab59",
+ "data_sha256": {
+  "WiC_dataset.zip": "f1a2fb67d903c5b9b1180f1035d4228f7c0254e8f5f868d556235457046bd4b2",
+  "grainwic_coarse_test.jsonl": "b661c57a3cc03b14092289908d15ec1e75dd2a1ebcc54fc201284a866ae44151",
+  "chaosnli/chaosNLI_snli.jsonl": "99f9015ddda7d85f66a087452bc30d53974314fe27e7d589e2f41ad44bd509c1",
+  "chaosnli/chaosNLI_mnli_m.jsonl": "8eb49b589488e7b1a9ec95fb8a864bd50f0509b4f808eed0aed3f8167617664d",
+  "chaosnli_source": "https://huggingface.co/datasets/earino/chaosnli revision bf8d66a1d3434ac8b90ffc392b1b5e44bdf7e439 (unofficial preservation mirror; Sec. 13 #3)"
+ },
+ "env": {"gpu": "Colab L4 (23GB)", "python": "3.13.16", "torch": "2.11.0+cu130", "transformers": "5.21.0", "tokenizers": "0.23.3",
+         "huggingface_hub": "1.33.0", "accelerate": "1.15.0", "safetensors": "0.8.0", "sentencepiece": "0.2.2", "numpy": "2.1.3", "nltk": "3.9.1"}
+}

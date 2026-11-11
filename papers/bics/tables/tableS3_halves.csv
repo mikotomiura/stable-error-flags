@@ -1,0 +1,5 @@
+half,rater,paraphrase_rows,kept,kept_rate,controls,controls_kept
+first,rater 1,1457,1141,0.783,30,0
+first,rater 2,1457,1161,0.797,30,0
+second,rater 1,1457,1176,0.807,30,0
+second,rater 2,1457,1173,0.805,30,0

@@ -1,0 +1,4728 @@
+{
+ "counts": {
+  "mcl/deberta": {
+   "n_stable": 91,
+   "n_unstable": 59,
+   "units_stable": 81,
+   "n_stable_before_wordnet": 91,
+   "units_stable_before_wordnet": 81,
+   "non_transformable": [
+    "dev.en-en.0",
+    "dev.en-en.1",
+    "dev.en-en.10",
+    "dev.en-en.104",
+    "dev.en-en.105",
+    "dev.en-en.106",
+    "dev.en-en.107",
+    "dev.en-en.11",
+    "dev.en-en.110",
+    "dev.en-en.111",
+    "dev.en-en.115",
+    "dev.en-en.120",
+    "dev.en-en.121",
+    "dev.en-en.123",
+    "dev.en-en.124",
+    "dev.en-en.125",
+    "dev.en-en.126",
+    "dev.en-en.127",
+    "dev.en-en.133",
+    "dev.en-en.134",
+    "dev.en-en.135",
+    "dev.en-en.138",
+    "dev.en-en.139",
+    "dev.en-en.142",
+    "dev.en-en.144",
+    "dev.en-en.146",
+    "dev.en-en.147",
+    "dev.en-en.148",
+    "dev.en-en.149",
+    "dev.en-en.151",
+    "dev.en-en.152",
+    "dev.en-en.153",
+    "dev.en-en.154",
+    "dev.en-en.156",
+    "dev.en-en.157",
+    "dev.en-en.158",
+    "dev.en-en.159",
+    "dev.en-en.16",
+    "dev.en-en.160",
+    "dev.en-en.161",
+    "dev.en-en.165",
+    "dev.en-en.168",
+    "dev.en-en.169",
+    "dev.en-en.17",
+    "dev.en-en.172",
+    "dev.en-en.178",
+    "dev.en-en.179",
+    "dev.en-en.180",
+    "dev.en-en.181",
+    "dev.en-en.188",
+    "dev.en-en.189",
+    "dev.en-en.190",
+    "dev.en-en.191",
+    "dev.en-en.197",
+    "dev.en-en.198",
+    "dev.en-en.2",
+    "dev.en-en.205",
+    "dev.en-en.208",
+    "dev.en-en.209",
+    "dev.en-en.210",
+    "dev.en-en.211",
+    "dev.en-en.212",
+    "dev.en-en.213",
+    "dev.en-en.216",
+    "dev.en-en.217",
+    "dev.en-en.220",
+    "dev.en-en.221",
+    "dev.en-en.224",
+    "dev.en-en.225",
+    "dev.en-en.228",
+    "dev.en-en.229",
+    "dev.en-en.23",
+    "dev.en-en.236",
+    "dev.en-en.237",
+    "dev.en-en.238",
+    "dev.en-en.239",
+    "dev.en-en.242",
+    "dev.en-en.244",
+    "dev.en-en.246",
+    "dev.en-en.247",
+    "dev.en-en.256",
+    "dev.en-en.257",
+    "dev.en-en.26",
+    "dev.en-en.260",
+    "dev.en-en.261",
+    "dev.en-en.262",
+    "dev.en-en.263",
+    "dev.en-en.265",
+    "dev.en-en.266",
+    "dev.en-en.269",
+    "dev.en-en.27",
+    "dev.en-en.273",
+    "dev.en-en.274",
+    "dev.en-en.275",
+    "dev.en-en.276",
+    "dev.en-en.28",
+    "dev.en-en.283",
+    "dev.en-en.285",
+    "dev.en-en.288",
+    "dev.en-en.29",
+    "dev.en-en.292",
+    "dev.en-en.294",
+    "dev.en-en.296",
+    "dev.en-en.3",
+    "dev.en-en.301",
+    "dev.en-en.302",
+    "dev.en-en.303",
+    "dev.en-en.304",
+    "dev.en-en.305",
+    "dev.en-en.306",
+    "dev.en-en.307",
+    "dev.en-en.308",
+    "dev.en-en.310",
+    "dev.en-en.311",
+    "dev.en-en.312",
+    "dev.en-en.314",
+    "dev.en-en.315",
+    "dev.en-en.316",
+    "dev.en-en.318",
+    "dev.en-en.319",
+    "dev.en-en.32",
+    "dev.en-en.324",
+    "dev.en-en.326",
+    "dev.en-en.327",
+    "dev.en-en.337",
+    "dev.en-en.338",
+    "dev.en-en.339",
+    "dev.en-en.340",
+    "dev.en-en.341",
+    "dev.en-en.344",
+    "dev.en-en.345",
+    "dev.en-en.346",
+    "dev.en-en.347",
+    "dev.en-en.356",
+    "dev.en-en.357",
+    "dev.en-en.358",
+    "dev.en-en.364",
+    "dev.en-en.368",
+    "dev.en-en.369",
+    "dev.en-en.370",
+    "dev.en-en.377",
+    "dev.en-en.378",
+    "dev.en-en.38",
+    "dev.en-en.380",
+    "dev.en-en.381",
+    "dev.en-en.382",
+    "dev.en-en.386",
+    "dev.en-en.387",
+    "dev.en-en.388",
+    "dev.en-en.389",
+    "dev.en-en.39",
+    "dev.en-en.390",
+    "dev.en-en.392",
+    "dev.en-en.393",
+    "dev.en-en.394",
+    "dev.en-en.40",
+    "dev.en-en.402",
+    "dev.en-en.403",
+    "dev.en-en.404",
+    "dev.en-en.405",
+    "dev.en-en.406",
+    "dev.en-en.407",
+    "dev.en-en.408",
+    "dev.en-en.41",
+    "dev.en-en.410",
+    "dev.en-en.411",
+    "dev.en-en.412",
+    "dev.en-en.413",
+    "dev.en-en.414",
+    "dev.en-en.415",
+    "dev.en-en.416",
+    "dev.en-en.417",
+    "dev.en-en.418",
+    "dev.en-en.419",
+    "dev.en-en.425",
+    "dev.en-en.426",
+    "dev.en-en.427",
+    "dev.en-en.430",
+    "dev.en-en.44",
+    "dev.en-en.444",
+    "dev.en-en.445",
+    "dev.en-en.447",
+    "dev.en-en.448",
+    "dev.en-en.449",
+    "dev.en-en.45",
+    "dev.en-en.454",
+    "dev.en-en.456",
+    "dev.en-en.457",
+    "dev.en-en.461",
+    "dev.en-en.466",
+    "dev.en-en.467",
+    "dev.en-en.47",
+    "dev.en-en.470",
+    "dev.en-en.471",
+    "dev.en-en.478",
+    "dev.en-en.479",
+    "dev.en-en.480",
+    "dev.en-en.481",
+    "dev.en-en.482",
+    "dev.en-en.483",
+    "dev.en-en.486",
+    "dev.en-en.487",
+    "dev.en-en.491",
+    "dev.en-en.492",
+    "dev.en-en.50",
+    "dev.en-en.504",
+    "dev.en-en.505",
+    "dev.en-en.508",
+    "dev.en-en.509",
+    "dev.en-en.51",
+    "dev.en-en.510",
+    "dev.en-en.511",
+    "dev.en-en.516",
+    "dev.en-en.519",
+    "dev.en-en.521",
+    "dev.en-en.526",
+    "dev.en-en.528",
+    "dev.en-en.533",
+    "dev.en-en.534",
+    "dev.en-en.535",
+    "dev.en-en.536",
+    "dev.en-en.537",
+    "dev.en-en.54",
+    "dev.en-en.541",
+    "dev.en-en.542",
+    "dev.en-en.543",
+    "dev.en-en.548",
+    "dev.en-en.549",
+    "dev.en-en.55",
+    "dev.en-en.550",
+    "dev.en-en.552",
+    "dev.en-en.557",
+    "dev.en-en.558",
+    "dev.en-en.559",
+    "dev.en-en.562",
+    "dev.en-en.564",
+    "dev.en-en.565",
+    "dev.en-en.568",
+    "dev.en-en.57",
+    "dev.en-en.574",
+    "dev.en-en.58",
+    "dev.en-en.580",
+    "dev.en-en.581",
+    "dev.en-en.586",
+    "dev.en-en.587",
+    "dev.en-en.588",
+    "dev.en-en.589",
+    "dev.en-en.59",
+    "dev.en-en.590",
+    "dev.en-en.591",
+    "dev.en-en.592",
+    "dev.en-en.593",
+    "dev.en-en.595",
+    "dev.en-en.596",
+    "dev.en-en.597",
+    "dev.en-en.60",
+    "dev.en-en.600",
+    "dev.en-en.601",
+    "dev.en-en.602",
+    "dev.en-en.606",
+    "dev.en-en.607",
+    "dev.en-en.608",
+    "dev.en-en.609",
+    "dev.en-en.61",
+    "dev.en-en.610",
+    "dev.en-en.611",
+    "dev.en-en.612",
+    "dev.en-en.613",
+    "dev.en-en.620",
+    "dev.en-en.621",
+    "dev.en-en.622",
+    "dev.en-en.623",
+    "dev.en-en.626",
+    "dev.en-en.627",
+    "dev.en-en.630",
+    "dev.en-en.631",
+    "dev.en-en.634",
+    "dev.en-en.635",
+    "dev.en-en.636",
+    "dev.en-en.639",
+    "dev.en-en.640",
+    "dev.en-en.641",
+    "dev.en-en.642",
+    "dev.en-en.643",
+    "dev.en-en.644",
+    "dev.en-en.649",
+    "dev.en-en.66",
+    "dev.en-en.661",
+    "dev.en-en.669",
+    "dev.en-en.67",
+    "dev.en-en.675",
+    "dev.en-en.678",
+    "dev.en-en.682",
+    "dev.en-en.683",
+    "dev.en-en.688",
+    "dev.en-en.689",
+    "dev.en-en.692",
+    "dev.en-en.698",
+    "dev.en-en.70",
+    "dev.en-en.700",
+    "dev.en-en.71",
+    "dev.en-en.712",
+    "dev.en-en.713",
+    "dev.en-en.716",
+    "dev.en-en.718",
+    "dev.en-en.719",
+    "dev.en-en.722",
+    "dev.en-en.723",
+    "dev.en-en.728",
+    "dev.en-en.729",
+    "dev.en-en.730",
+    "dev.en-en.74",
+    "dev.en-en.743",
+    "dev.en-en.744",
+    "dev.en-en.75",
+    "dev.en-en.751",
+    "dev.en-en.752",
+    "dev.en-en.754",
+    "dev.en-en.755",
+    "dev.en-en.756",
+    "dev.en-en.757",
+    "dev.en-en.760",
+    "dev.en-en.761",
+    "dev.en-en.764",
+    "dev.en-en.765",
+    "dev.en-en.774",
+    "dev.en-en.775",
+    "dev.en-en.776",
+    "dev.en-en.777",
+    "dev.en-en.78",
+    "dev.en-en.782",
+    "dev.en-en.784",
+    "dev.en-en.785",
+    "dev.en-en.786",
+    "dev.en-en.787",
+    "dev.en-en.788",
+    "dev.en-en.789",
+    "dev.en-en.793",
+    "dev.en-en.794",
+    "dev.en-en.795",
+    "dev.en-en.796",
+    "dev.en-en.797",
+    "dev.en-en.798",
+    "dev.en-en.799",
+    "dev.en-en.80",
+    "dev.en-en.802",
+    "dev.en-en.803",
+    "dev.en-en.804",
+    "dev.en-en.805",
+    "dev.en-en.808",
+    "dev.en-en.809",
+    "dev.en-en.810",
+    "dev.en-en.827",
+    "dev.en-en.828",
+    "dev.en-en.832",
+    "dev.en-en.833",
+    "dev.en-en.836",
+    "dev.en-en.837",
+    "dev.en-en.838",
+    "dev.en-en.839",
+    "dev.en-en.84",
+    "dev.en-en.842",
+    "dev.en-en.843",
+    "dev.en-en.846",
+    "dev.en-en.847",
+    "dev.en-en.848",
+    "dev.en-en.85",
+    "dev.en-en.850",
+    "dev.en-en.851",
+    "dev.en-en.852",
+    "dev.en-en.853",
+    "dev.en-en.856",
+    "dev.en-en.86",
+    "dev.en-en.864",
+    "dev.en-en.865",
+    "dev.en-en.873",
+    "dev.en-en.874",
+    "dev.en-en.875",
+    "dev.en-en.880",
+    "dev.en-en.881",
+    "dev.en-en.882",
+    "dev.en-en.884",
+    "dev.en-en.885",
+    "dev.en-en.886",
+    "dev.en-en.887",
+    "dev.en-en.888",
+    "dev.en-en.889",
+    "dev.en-en.890",
+    "dev.en-en.892",
+    "dev.en-en.893",
+    "dev.en-en.895",
+    "dev.en-en.897",
+    "dev.en-en.899",
+    "dev.en-en.900",
+    "dev.en-en.903",
+    "dev.en-en.904",
+    "dev.en-en.905",
+    "dev.en-en.906",
+    "dev.en-en.907",
+    "dev.en-en.908",
+    "dev.en-en.909",
+    "dev.en-en.911",
+    "dev.en-en.913",
+    "dev.en-en.914",
+    "dev.en-en.915",
+    "dev.en-en.917",
+    "dev.en-en.919",
+    "dev.en-en.922",
+    "dev.en-en.923",
+    "dev.en-en.925",
+    "dev.en-en.926",
+    "dev.en-en.927",
+    "dev.en-en.930",
+    "dev.en-en.931",
+    "dev.en-en.932",
+    "dev.en-en.933",
+    "dev.en-en.936",
+    "dev.en-en.937",
+    "dev.en-en.940",
+    "dev.en-en.941",
+    "dev.en-en.942",
+    "dev.en-en.946",
+    "dev.en-en.947",
+    "dev.en-en.948",
+    "dev.en-en.949",
+    "dev.en-en.951",
+    "dev.en-en.952",
+    "dev.en-en.953",
+    "dev.en-en.954",
+    "dev.en-en.958",
+    "dev.en-en.959",
+    "dev.en-en.960",
+    "dev.en-en.961",
+    "dev.en-en.962",
+    "dev.en-en.964",
+    "dev.en-en.965",
+    "dev.en-en.966",
+    "dev.en-en.97",
+    "dev.en-en.971",
+    "dev.en-en.972",
+    "dev.en-en.973",
+    "dev.en-en.974",
+    "dev.en-en.975",
+    "dev.en-en.976",
+    "dev.en-en.977",
+    "dev.en-en.980",
+    "dev.en-en.981",
+    "dev.en-en.982",
+    "dev.en-en.983",
+    "dev.en-en.986",
+    "dev.en-en.987",
+    "dev.en-en.988",
+    "dev.en-en.990",
+    "dev.en-en.991",
+    "dev.en-en.993",
+    "dev.en-en.994",
+    "dev.en-en.995",
+    "test.en-en.102",
+    "test.en-en.103",
+    "test.en-en.105",
+    "test.en-en.106",
+    "test.en-en.107",
+    "test.en-en.110",
+    "test.en-en.111",
+    "test.en-en.115",
+    "test.en-en.116",
+    "test.en-en.117",
+    "test.en-en.123",
+    "test.en-en.124",
+    "test.en-en.125",
+    "test.en-en.130",
+    "test.en-en.131",
+    "test.en-en.133",
+    "test.en-en.135",
+    "test.en-en.136",
+    "test.en-en.138",
+    "test.en-en.140",
+    "test.en-en.141",
+    "test.en-en.143",
+    "test.en-en.144",
+    "test.en-en.145",
+    "test.en-en.147",
+    "test.en-en.149",
+    "test.en-en.15",
+    "test.en-en.154",
+    "test.en-en.155",
+    "test.en-en.157",
+    "test.en-en.158",
+    "test.en-en.160",
+    "test.en-en.161",
+    "test.en-en.162",
+    "test.en-en.163",
+    "test.en-en.164",
+    "test.en-en.165",
+    "test.en-en.166",
+    "test.en-en.167",
+    "test.en-en.168",
+    "test.en-en.169",
+    "test.en-en.172",
+    "test.en-en.173",
+    "test.en-en.175",
+    "test.en-en.18",
+    "test.en-en.180",
+    "test.en-en.181",
+    "test.en-en.186",
+    "test.en-en.187",
+    "test.en-en.189",
+    "test.en-en.19",
+    "test.en-en.191",
+    "test.en-en.192",
+    "test.en-en.193",
+    "test.en-en.196",
+    "test.en-en.197",
+    "test.en-en.201",
+    "test.en-en.204",
+    "test.en-en.207",
+    "test.en-en.208",
+    "test.en-en.209",
+    "test.en-en.21",
+    "test.en-en.215",
+    "test.en-en.216",
+    "test.en-en.217",
+    "test.en-en.220",
+    "test.en-en.221",
+    "test.en-en.23",
+    "test.en-en.232",
+    "test.en-en.233",
+    "test.en-en.238",
+    "test.en-en.239",
+    "test.en-en.24",
+    "test.en-en.242",
+    "test.en-en.243",
+    "test.en-en.245",
+    "test.en-en.248",
+    "test.en-en.25",
+    "test.en-en.250",
+    "test.en-en.251",
+    "test.en-en.254",
+    "test.en-en.262",
+    "test.en-en.263",
+    "test.en-en.264",
+    "test.en-en.265",
+    "test.en-en.266",
+    "test.en-en.267",
+    "test.en-en.269",
+    "test.en-en.271",
+    "test.en-en.28",
+    "test.en-en.280",
+    "test.en-en.283",
+    "test.en-en.284",
+    "test.en-en.285",
+    "test.en-en.29",
+    "test.en-en.290",
+    "test.en-en.292",
+    "test.en-en.298",
+    "test.en-en.299",
+    "test.en-en.302",
+    "test.en-en.303",
+    "test.en-en.304",
+    "test.en-en.305",
+    "test.en-en.307",
+    "test.en-en.313",
+    "test.en-en.316",
+    "test.en-en.318",
+    "test.en-en.327",
+    "test.en-en.329",
+    "test.en-en.330",
+    "test.en-en.331",
+    "test.en-en.333",
+    "test.en-en.334",
+    "test.en-en.335",
+    "test.en-en.338",
+    "test.en-en.344",
+    "test.en-en.347",
+    "test.en-en.348",
+    "test.en-en.349",
+    "test.en-en.351",
+    "test.en-en.36",
+    "test.en-en.362",
+    "test.en-en.37",
+    "test.en-en.370",
+    "test.en-en.376",
+    "test.en-en.381",
+    "test.en-en.382",
+    "test.en-en.386",
+    "test.en-en.387",
+    "test.en-en.388",
+    "test.en-en.391",
+    "test.en-en.393",
+    "test.en-en.394",
+    "test.en-en.395",
+    "test.en-en.396",
+    "test.en-en.4",
+    "test.en-en.403",
+    "test.en-en.404",
+    "test.en-en.405",
+    "test.en-en.41",
+    "test.en-en.410",
+    "test.en-en.411",
+    "test.en-en.412",
+    "test.en-en.415",
+    "test.en-en.419",
+    "test.en-en.42",
+    "test.en-en.422",
+    "test.en-en.423",
+    "test.en-en.43",
+    "test.en-en.430",
+    "test.en-en.431",
+    "test.en-en.432",
+    "test.en-en.433",
+    "test.en-en.435",
+    "test.en-en.436",
+    "test.en-en.437",
+    "test.en-en.443",
+    "test.en-en.444",
+    "test.en-en.445",
+    "test.en-en.448",
+    "test.en-en.449",
+    "test.en-en.45",
+    "test.en-en.450",
+    "test.en-en.451",
+    "test.en-en.452",
+    "test.en-en.453",
+    "test.en-en.454",
+    "test.en-en.455",
+    "test.en-en.456",
+    "test.en-en.457",
+    "test.en-en.460",
+    "test.en-en.461",
+    "test.en-en.468",
+    "test.en-en.469",
+    "test.en-en.470",
+    "test.en-en.471",
+    "test.en-en.472",
+    "test.en-en.474",
+    "test.en-en.48",
+    "test.en-en.482",
+    "test.en-en.483",
+    "test.en-en.484",
+    "test.en-en.486",
+    "test.en-en.488",
+    "test.en-en.489",
+    "test.en-en.502",
+    "test.en-en.505",
+    "test.en-en.507",
+    "test.en-en.508",
+    "test.en-en.512",
+    "test.en-en.516",
+    "test.en-en.517",
+    "test.en-en.518",
+    "test.en-en.519",
+    "test.en-en.52",
+    "test.en-en.523",
+    "test.en-en.524",
+    "test.en-en.525",
+    "test.en-en.528",
+    "test.en-en.529",
+    "test.en-en.53",
+    "test.en-en.534",
+    "test.en-en.535",
+    "test.en-en.536",
+    "test.en-en.537",
+    "test.en-en.542",
+    "test.en-en.548",
+    "test.en-en.554",
+    "test.en-en.555",
+    "test.en-en.56",
+    "test.en-en.560",
+    "test.en-en.562",
+    "test.en-en.565",
+    "test.en-en.57",
+    "test.en-en.58",
+    "test.en-en.588",
+    "test.en-en.589",
+    "test.en-en.590",
+    "test.en-en.591",
+    "test.en-en.594",
+    "test.en-en.598",
+    "test.en-en.599",
+    "test.en-en.6",
+    "test.en-en.60",
+    "test.en-en.604",
+    "test.en-en.605",
+    "test.en-en.606",
+    "test.en-en.607",
+    "test.en-en.608",
+    "test.en-en.610",
+    "test.en-en.611",
+    "test.en-en.614",
+    "test.en-en.615",
+    "test.en-en.618",
+    "test.en-en.619",
+    "test.en-en.62",
+    "test.en-en.620",
+    "test.en-en.621",
+    "test.en-en.625",
+    "test.en-en.63",
+    "test.en-en.632",
+    "test.en-en.634",
+    "test.en-en.635",
+    "test.en-en.64",
+    "test.en-en.640",
+    "test.en-en.641",
+    "test.en-en.642",
+    "test.en-en.643",
+    "test.en-en.647",
+    "test.en-en.65",
+    "test.en-en.650",
+    "test.en-en.651",
+    "test.en-en.652",
+    "test.en-en.654",
+    "test.en-en.656",
+    "test.en-en.657",
+    "test.en-en.66",
+    "test.en-en.661",
+    "test.en-en.670",
+    "test.en-en.671",
+    "test.en-en.677",
+    "test.en-en.678",
+    "test.en-en.679",
+    "test.en-en.68",
+    "test.en-en.680",
+    "test.en-en.681",
+    "test.en-en.688",
+    "test.en-en.69",
+    "test.en-en.690",
+    "test.en-en.691",
+    "test.en-en.692",
+    "test.en-en.693",
+    "test.en-en.695",
+    "test.en-en.696",
+    "test.en-en.698",
+    "test.en-en.699",
+    "test.en-en.7",
+    "test.en-en.70",
+    "test.en-en.703",
+    "test.en-en.708",
+    "test.en-en.709",
+    "test.en-en.71",
+    "test.en-en.710",
+    "test.en-en.711",
+    "test.en-en.712",
+    "test.en-en.716",
+    "test.en-en.717",
+    "test.en-en.718",
+    "test.en-en.719",
+    "test.en-en.721",
+    "test.en-en.722",
+    "test.en-en.723",
+    "test.en-en.725",
+    "test.en-en.728",
+    "test.en-en.73",
+    "test.en-en.735",
+    "test.en-en.737",
+    "test.en-en.738",
+    "test.en-en.739",
+    "test.en-en.740",
+    "test.en-en.741",
+    "test.en-en.743",
+    "test.en-en.746",
+    "test.en-en.747",
+    "test.en-en.749",
+    "test.en-en.750",
+    "test.en-en.751",
+    "test.en-en.752",
+    "test.en-en.754",
+    "test.en-en.76",
+    "test.en-en.761",
+    "test.en-en.763",
+    "test.en-en.766",
+    "test.en-en.767",
+    "test.en-en.768",
+    "test.en-en.769",
+    "test.en-en.776",
+    "test.en-en.777",
+    "test.en-en.78",
+    "test.en-en.781",
+    "test.en-en.784",
+    "test.en-en.785",
+    "test.en-en.786",
+    "test.en-en.787",
+    "test.en-en.79",
+    "test.en-en.804",
+    "test.en-en.805",
+    "test.en-en.807",
+    "test.en-en.81",
+    "test.en-en.810",
+    "test.en-en.814",
+    "test.en-en.815",
+    "test.en-en.82",
+    "test.en-en.822",
+    "test.en-en.823",
+    "test.en-en.826",
+    "test.en-en.828",
+    "test.en-en.829",
+    "test.en-en.83",
+    "test.en-en.832",
+    "test.en-en.834",
+    "test.en-en.836",
+    "test.en-en.837",
+    "test.en-en.838",
+    "test.en-en.839",
+    "test.en-en.841",
+    "test.en-en.844",
+    "test.en-en.846",
+    "test.en-en.850",
+    "test.en-en.851",
+    "test.en-en.855",
+    "test.en-en.857",
+    "test.en-en.858",
+    "test.en-en.859",
+    "test.en-en.861",
+    "test.en-en.862",
+    "test.en-en.863",
+    "test.en-en.864",
+    "test.en-en.865",
+    "test.en-en.868",
+    "test.en-en.869",
+    "test.en-en.870",
+    "test.en-en.871",
+    "test.en-en.876",
+    "test.en-en.877",
+    "test.en-en.882",
+    "test.en-en.883",
+    "test.en-en.886",
+    "test.en-en.887",
+    "test.en-en.888",
+    "test.en-en.889",
+    "test.en-en.890",
+    "test.en-en.891",
+    "test.en-en.892",
+    "test.en-en.893",
+    "test.en-en.894",
+    "test.en-en.895",
+    "test.en-en.898",
+    "test.en-en.899",
+    "test.en-en.900",
+    "test.en-en.902",
+    "test.en-en.908",
+    "test.en-en.917",
+    "test.en-en.918",
+    "test.en-en.919",
+    "test.en-en.92",
+    "test.en-en.921",
+    "test.en-en.923",
+    "test.en-en.924",
+    "test.en-en.925",
+    "test.en-en.926",
+    "test.en-en.927",
+    "test.en-en.93",
+    "test.en-en.933",
+    "test.en-en.934",
+    "test.en-en.935",
+    "test.en-en.937",
+    "test.en-en.938",
+    "test.en-en.944",
+    "test.en-en.945",
+    "test.en-en.946",
+    "test.en-en.947",
+    "test.en-en.95",
+    "test.en-en.952",
+    "test.en-en.953",
+    "test.en-en.954",
+    "test.en-en.96",
+    "test.en-en.963",
+    "test.en-en.97",
+    "test.en-en.970",
+    "test.en-en.971",
+    "test.en-en.972",
+    "test.en-en.973",
+    "test.en-en.974",
+    "test.en-en.976",
+    "test.en-en.977",
+    "test.en-en.980",
+    "test.en-en.981",
+    "test.en-en.988",
+    "test.en-en.989",
+    "test.en-en.990",
+    "test.en-en.994",
+    "test.en-en.996",
+    "test.en-en.997"
+   ],
+   "orig_skipped": [],
+   "wordnet_excluded": [],
+   "no_reference": [],
+   "accuracy_report_only": 0.7896009673518742,
+   "stable_share_of_errors": 0.6066666666666667,
+   "check_excluded": 684
+  },
+  "mcl/flan": {
+   "n_stable": 285,
+   "n_unstable": 75,
+   "units_stable": 225,
+   "n_stable_before_wordnet": 285,
+   "units_stable_before_wordnet": 225,
+   "non_transformable": [
+    "dev.en-en.0",
+    "dev.en-en.1",
+    "dev.en-en.10",
+    "dev.en-en.104",
+    "dev.en-en.105",
+    "dev.en-en.106",
+    "dev.en-en.107",
+    "dev.en-en.11",
+    "dev.en-en.110",
+    "dev.en-en.111",
+    "dev.en-en.115",
+    "dev.en-en.120",
+    "dev.en-en.121",
+    "dev.en-en.123",
+    "dev.en-en.124",
+    "dev.en-en.125",
+    "dev.en-en.126",
+    "dev.en-en.127",
+    "dev.en-en.133",
+    "dev.en-en.134",
+    "dev.en-en.135",
+    "dev.en-en.138",
+    "dev.en-en.139",
+    "dev.en-en.142",
+    "dev.en-en.144",
+    "dev.en-en.146",
+    "dev.en-en.147",
+    "dev.en-en.148",
+    "dev.en-en.149",
+    "dev.en-en.151",
+    "dev.en-en.152",
+    "dev.en-en.153",
+    "dev.en-en.154",
+    "dev.en-en.156",
+    "dev.en-en.157",
+    "dev.en-en.158",
+    "dev.en-en.159",
+    "dev.en-en.16",
+    "dev.en-en.160",
+    "dev.en-en.161",
+    "dev.en-en.165",
+    "dev.en-en.168",
+    "dev.en-en.169",
+    "dev.en-en.17",
+    "dev.en-en.172",
+    "dev.en-en.178",
+    "dev.en-en.179",
+    "dev.en-en.180",
+    "dev.en-en.181",
+    "dev.en-en.188",
+    "dev.en-en.189",
+    "dev.en-en.190",
+    "dev.en-en.191",
+    "dev.en-en.197",
+    "dev.en-en.198",
+    "dev.en-en.2",
+    "dev.en-en.205",
+    "dev.en-en.208",
+    "dev.en-en.209",
+    "dev.en-en.210",
+    "dev.en-en.211",
+    "dev.en-en.212",
+    "dev.en-en.213",
+    "dev.en-en.216",
+    "dev.en-en.217",
+    "dev.en-en.220",
+    "dev.en-en.221",
+    "dev.en-en.224",
+    "dev.en-en.225",
+    "dev.en-en.228",
+    "dev.en-en.229",
+    "dev.en-en.23",
+    "dev.en-en.236",
+    "dev.en-en.237",
+    "dev.en-en.238",
+    "dev.en-en.239",
+    "dev.en-en.242",
+    "dev.en-en.244",
+    "dev.en-en.246",
+    "dev.en-en.247",
+    "dev.en-en.256",
+    "dev.en-en.257",
+    "dev.en-en.26",
+    "dev.en-en.260",
+    "dev.en-en.261",
+    "dev.en-en.262",
+    "dev.en-en.263",
+    "dev.en-en.265",
+    "dev.en-en.266",
+    "dev.en-en.269",
+    "dev.en-en.27",
+    "dev.en-en.273",
+    "dev.en-en.274",
+    "dev.en-en.275",
+    "dev.en-en.276",
+    "dev.en-en.28",
+    "dev.en-en.283",
+    "dev.en-en.285",
+    "dev.en-en.288",
+    "dev.en-en.29",
+    "dev.en-en.292",
+    "dev.en-en.294",
+    "dev.en-en.296",
+    "dev.en-en.3",
+    "dev.en-en.301",
+    "dev.en-en.302",
+    "dev.en-en.303",
+    "dev.en-en.304",
+    "dev.en-en.305",
+    "dev.en-en.306",
+    "dev.en-en.307",
+    "dev.en-en.308",
+    "dev.en-en.310",
+    "dev.en-en.311",
+    "dev.en-en.312",
+    "dev.en-en.314",
+    "dev.en-en.315",
+    "dev.en-en.316",
+    "dev.en-en.318",
+    "dev.en-en.319",
+    "dev.en-en.32",
+    "dev.en-en.324",
+    "dev.en-en.326",
+    "dev.en-en.327",
+    "dev.en-en.337",
+    "dev.en-en.338",
+    "dev.en-en.339",
+    "dev.en-en.340",
+    "dev.en-en.341",
+    "dev.en-en.344",
+    "dev.en-en.345",
+    "dev.en-en.346",
+    "dev.en-en.347",
+    "dev.en-en.356",
+    "dev.en-en.357",
+    "dev.en-en.358",
+    "dev.en-en.364",
+    "dev.en-en.368",
+    "dev.en-en.369",
+    "dev.en-en.370",
+    "dev.en-en.377",
+    "dev.en-en.378",
+    "dev.en-en.38",
+    "dev.en-en.380",
+    "dev.en-en.381",
+    "dev.en-en.382",
+    "dev.en-en.386",
+    "dev.en-en.387",
+    "dev.en-en.388",
+    "dev.en-en.389",
+    "dev.en-en.39",
+    "dev.en-en.390",
+    "dev.en-en.392",
+    "dev.en-en.393",
+    "dev.en-en.394",
+    "dev.en-en.40",
+    "dev.en-en.402",
+    "dev.en-en.403",
+    "dev.en-en.404",
+    "dev.en-en.405",
+    "dev.en-en.406",
+    "dev.en-en.407",
+    "dev.en-en.408",
+    "dev.en-en.41",
+    "dev.en-en.410",
+    "dev.en-en.411",
+    "dev.en-en.412",
+    "dev.en-en.413",
+    "dev.en-en.414",
+    "dev.en-en.415",
+    "dev.en-en.416",
+    "dev.en-en.417",
+    "dev.en-en.418",
+    "dev.en-en.419",
+    "dev.en-en.425",
+    "dev.en-en.426",
+    "dev.en-en.427",
+    "dev.en-en.430",
+    "dev.en-en.44",
+    "dev.en-en.444",
+    "dev.en-en.445",
+    "dev.en-en.447",
+    "dev.en-en.448",
+    "dev.en-en.449",
+    "dev.en-en.45",
+    "dev.en-en.454",
+    "dev.en-en.456",
+    "dev.en-en.457",
+    "dev.en-en.461",
+    "dev.en-en.466",
+    "dev.en-en.467",
+    "dev.en-en.47",
+    "dev.en-en.470",
+    "dev.en-en.471",
+    "dev.en-en.478",
+    "dev.en-en.479",
+    "dev.en-en.480",
+    "dev.en-en.481",
+    "dev.en-en.482",
+    "dev.en-en.483",
+    "dev.en-en.486",
+    "dev.en-en.487",
+    "dev.en-en.491",
+    "dev.en-en.492",
+    "dev.en-en.50",
+    "dev.en-en.504",
+    "dev.en-en.505",
+    "dev.en-en.508",
+    "dev.en-en.509",
+    "dev.en-en.51",
+    "dev.en-en.510",
+    "dev.en-en.511",
+    "dev.en-en.516",
+    "dev.en-en.519",
+    "dev.en-en.521",
+    "dev.en-en.526",
+    "dev.en-en.528",
+    "dev.en-en.533",
+    "dev.en-en.534",
+    "dev.en-en.535",
+    "dev.en-en.536",
+    "dev.en-en.537",
+    "dev.en-en.54",
+    "dev.en-en.541",
+    "dev.en-en.542",
+    "dev.en-en.543",
+    "dev.en-en.548",
+    "dev.en-en.549",
+    "dev.en-en.55",
+    "dev.en-en.550",
+    "dev.en-en.552",
+    "dev.en-en.557",
+    "dev.en-en.558",
+    "dev.en-en.559",
+    "dev.en-en.562",
+    "dev.en-en.564",
+    "dev.en-en.565",
+    "dev.en-en.568",
+    "dev.en-en.57",
+    "dev.en-en.574",
+    "dev.en-en.58",
+    "dev.en-en.580",
+    "dev.en-en.581",
+    "dev.en-en.586",
+    "dev.en-en.587",
+    "dev.en-en.588",
+    "dev.en-en.589",
+    "dev.en-en.59",
+    "dev.en-en.590",
+    "dev.en-en.591",
+    "dev.en-en.592",
+    "dev.en-en.593",
+    "dev.en-en.595",
+    "dev.en-en.596",
+    "dev.en-en.597",
+    "dev.en-en.60",
+    "dev.en-en.600",
+    "dev.en-en.601",
+    "dev.en-en.602",
+    "dev.en-en.606",
+    "dev.en-en.607",
+    "dev.en-en.608",
+    "dev.en-en.609",
+    "dev.en-en.61",
+    "dev.en-en.610",
+    "dev.en-en.611",
+    "dev.en-en.612",
+    "dev.en-en.613",
+    "dev.en-en.620",
+    "dev.en-en.621",
+    "dev.en-en.622",
+    "dev.en-en.623",
+    "dev.en-en.626",
+    "dev.en-en.627",
+    "dev.en-en.630",
+    "dev.en-en.631",
+    "dev.en-en.634",
+    "dev.en-en.635",
+    "dev.en-en.636",
+    "dev.en-en.639",
+    "dev.en-en.640",
+    "dev.en-en.641",
+    "dev.en-en.642",
+    "dev.en-en.643",
+    "dev.en-en.644",
+    "dev.en-en.649",
+    "dev.en-en.66",
+    "dev.en-en.661",
+    "dev.en-en.669",
+    "dev.en-en.67",
+    "dev.en-en.675",
+    "dev.en-en.678",
+    "dev.en-en.682",
+    "dev.en-en.683",
+    "dev.en-en.688",
+    "dev.en-en.689",
+    "dev.en-en.692",
+    "dev.en-en.698",
+    "dev.en-en.70",
+    "dev.en-en.700",
+    "dev.en-en.71",
+    "dev.en-en.712",
+    "dev.en-en.713",
+    "dev.en-en.716",
+    "dev.en-en.718",
+    "dev.en-en.719",
+    "dev.en-en.722",
+    "dev.en-en.723",
+    "dev.en-en.728",
+    "dev.en-en.729",
+    "dev.en-en.730",
+    "dev.en-en.74",
+    "dev.en-en.743",
+    "dev.en-en.744",
+    "dev.en-en.75",
+    "dev.en-en.751",
+    "dev.en-en.752",
+    "dev.en-en.754",
+    "dev.en-en.755",
+    "dev.en-en.756",
+    "dev.en-en.757",
+    "dev.en-en.760",
+    "dev.en-en.761",
+    "dev.en-en.764",
+    "dev.en-en.765",
+    "dev.en-en.774",
+    "dev.en-en.775",
+    "dev.en-en.776",
+    "dev.en-en.777",
+    "dev.en-en.78",
+    "dev.en-en.782",
+    "dev.en-en.784",
+    "dev.en-en.785",
+    "dev.en-en.786",
+    "dev.en-en.787",
+    "dev.en-en.788",
+    "dev.en-en.789",
+    "dev.en-en.793",
+    "dev.en-en.794",
+    "dev.en-en.795",
+    "dev.en-en.796",
+    "dev.en-en.797",
+    "dev.en-en.798",
+    "dev.en-en.799",
+    "dev.en-en.80",
+    "dev.en-en.802",
+    "dev.en-en.803",
+    "dev.en-en.804",
+    "dev.en-en.805",
+    "dev.en-en.808",
+    "dev.en-en.809",
+    "dev.en-en.810",
+    "dev.en-en.827",
+    "dev.en-en.828",
+    "dev.en-en.832",
+    "dev.en-en.833",
+    "dev.en-en.836",
+    "dev.en-en.837",
+    "dev.en-en.838",
+    "dev.en-en.839",
+    "dev.en-en.84",
+    "dev.en-en.842",
+    "dev.en-en.843",
+    "dev.en-en.846",
+    "dev.en-en.847",
+    "dev.en-en.848",
+    "dev.en-en.85",
+    "dev.en-en.850",
+    "dev.en-en.851",
+    "dev.en-en.852",
+    "dev.en-en.853",
+    "dev.en-en.856",
+    "dev.en-en.86",
+    "dev.en-en.864",
+    "dev.en-en.865",
+    "dev.en-en.873",
+    "dev.en-en.874",
+    "dev.en-en.875",
+    "dev.en-en.880",
+    "dev.en-en.881",
+    "dev.en-en.882",
+    "dev.en-en.884",
+    "dev.en-en.885",
+    "dev.en-en.886",
+    "dev.en-en.887",
+    "dev.en-en.888",
+    "dev.en-en.889",
+    "dev.en-en.890",
+    "dev.en-en.892",
+    "dev.en-en.893",
+    "dev.en-en.895",
+    "dev.en-en.897",
+    "dev.en-en.899",
+    "dev.en-en.900",
+    "dev.en-en.903",
+    "dev.en-en.904",
+    "dev.en-en.905",
+    "dev.en-en.906",
+    "dev.en-en.907",
+    "dev.en-en.908",
+    "dev.en-en.909",
+    "dev.en-en.911",
+    "dev.en-en.913",
+    "dev.en-en.914",
+    "dev.en-en.915",
+    "dev.en-en.917",
+    "dev.en-en.919",
+    "dev.en-en.922",
+    "dev.en-en.923",
+    "dev.en-en.925",
+    "dev.en-en.926",
+    "dev.en-en.927",
+    "dev.en-en.930",
+    "dev.en-en.931",
+    "dev.en-en.932",
+    "dev.en-en.933",
+    "dev.en-en.936",
+    "dev.en-en.937",
+    "dev.en-en.940",
+    "dev.en-en.941",
+    "dev.en-en.942",
+    "dev.en-en.946",
+    "dev.en-en.947",
+    "dev.en-en.948",
+    "dev.en-en.949",
+    "dev.en-en.951",
+    "dev.en-en.952",
+    "dev.en-en.953",
+    "dev.en-en.954",
+    "dev.en-en.958",
+    "dev.en-en.959",
+    "dev.en-en.960",
+    "dev.en-en.961",
+    "dev.en-en.962",
+    "dev.en-en.964",
+    "dev.en-en.965",
+    "dev.en-en.966",
+    "dev.en-en.97",
+    "dev.en-en.971",
+    "dev.en-en.972",
+    "dev.en-en.973",
+    "dev.en-en.974",
+    "dev.en-en.975",
+    "dev.en-en.976",
+    "dev.en-en.977",
+    "dev.en-en.980",
+    "dev.en-en.981",
+    "dev.en-en.982",
+    "dev.en-en.983",
+    "dev.en-en.986",
+    "dev.en-en.987",
+    "dev.en-en.988",
+    "dev.en-en.990",
+    "dev.en-en.991",
+    "dev.en-en.993",
+    "dev.en-en.994",
+    "dev.en-en.995",
+    "test.en-en.102",
+    "test.en-en.103",
+    "test.en-en.105",
+    "test.en-en.106",
+    "test.en-en.107",
+    "test.en-en.110",
+    "test.en-en.111",
+    "test.en-en.115",
+    "test.en-en.116",
+    "test.en-en.117",
+    "test.en-en.123",
+    "test.en-en.124",
+    "test.en-en.125",
+    "test.en-en.130",
+    "test.en-en.131",
+    "test.en-en.133",
+    "test.en-en.135",
+    "test.en-en.136",
+    "test.en-en.138",
+    "test.en-en.140",
+    "test.en-en.141",
+    "test.en-en.143",
+    "test.en-en.144",
+    "test.en-en.145",
+    "test.en-en.147",
+    "test.en-en.149",
+    "test.en-en.15",
+    "test.en-en.154",
+    "test.en-en.155",
+    "test.en-en.157",
+    "test.en-en.158",
+    "test.en-en.160",
+    "test.en-en.161",
+    "test.en-en.162",
+    "test.en-en.163",
+    "test.en-en.164",
+    "test.en-en.165",
+    "test.en-en.166",
+    "test.en-en.167",
+    "test.en-en.168",
+    "test.en-en.169",
+    "test.en-en.172",
+    "test.en-en.173",
+    "test.en-en.175",
+    "test.en-en.18",
+    "test.en-en.180",
+    "test.en-en.181",
+    "test.en-en.186",
+    "test.en-en.187",
+    "test.en-en.189",
+    "test.en-en.19",
+    "test.en-en.191",
+    "test.en-en.192",
+    "test.en-en.193",
+    "test.en-en.196",
+    "test.en-en.197",
+    "test.en-en.201",
+    "test.en-en.204",
+    "test.en-en.207",
+    "test.en-en.208",
+    "test.en-en.209",
+    "test.en-en.21",
+    "test.en-en.215",
+    "test.en-en.216",
+    "test.en-en.217",
+    "test.en-en.220",
+    "test.en-en.221",
+    "test.en-en.23",
+    "test.en-en.232",
+    "test.en-en.233",
+    "test.en-en.238",
+    "test.en-en.239",
+    "test.en-en.24",
+    "test.en-en.242",
+    "test.en-en.243",
+    "test.en-en.245",
+    "test.en-en.248",
+    "test.en-en.25",
+    "test.en-en.250",
+    "test.en-en.251",
+    "test.en-en.254",
+    "test.en-en.262",
+    "test.en-en.263",
+    "test.en-en.264",
+    "test.en-en.265",
+    "test.en-en.266",
+    "test.en-en.267",
+    "test.en-en.269",
+    "test.en-en.271",
+    "test.en-en.28",
+    "test.en-en.280",
+    "test.en-en.283",
+    "test.en-en.284",
+    "test.en-en.285",
+    "test.en-en.29",
+    "test.en-en.290",
+    "test.en-en.292",
+    "test.en-en.298",
+    "test.en-en.299",
+    "test.en-en.302",
+    "test.en-en.303",
+    "test.en-en.304",
+    "test.en-en.305",
+    "test.en-en.307",
+    "test.en-en.313",
+    "test.en-en.316",
+    "test.en-en.318",
+    "test.en-en.327",
+    "test.en-en.329",
+    "test.en-en.330",
+    "test.en-en.331",
+    "test.en-en.333",
+    "test.en-en.334",
+    "test.en-en.335",
+    "test.en-en.338",
+    "test.en-en.344",
+    "test.en-en.347",
+    "test.en-en.348",
+    "test.en-en.349",
+    "test.en-en.351",
+    "test.en-en.36",
+    "test.en-en.362",
+    "test.en-en.37",
+    "test.en-en.370",
+    "test.en-en.376",
+    "test.en-en.381",
+    "test.en-en.382",
+    "test.en-en.386",
+    "test.en-en.387",
+    "test.en-en.388",
+    "test.en-en.391",
+    "test.en-en.393",
+    "test.en-en.394",
+    "test.en-en.395",
+    "test.en-en.396",
+    "test.en-en.4",
+    "test.en-en.403",
+    "test.en-en.404",
+    "test.en-en.405",
+    "test.en-en.41",
+    "test.en-en.410",
+    "test.en-en.411",
+    "test.en-en.412",
+    "test.en-en.415",
+    "test.en-en.419",
+    "test.en-en.42",
+    "test.en-en.422",
+    "test.en-en.423",
+    "test.en-en.43",
+    "test.en-en.430",
+    "test.en-en.431",
+    "test.en-en.432",
+    "test.en-en.433",
+    "test.en-en.435",
+    "test.en-en.436",
+    "test.en-en.437",
+    "test.en-en.443",
+    "test.en-en.444",
+    "test.en-en.445",
+    "test.en-en.448",
+    "test.en-en.449",
+    "test.en-en.45",
+    "test.en-en.450",
+    "test.en-en.451",
+    "test.en-en.452",
+    "test.en-en.453",
+    "test.en-en.454",
+    "test.en-en.455",
+    "test.en-en.456",
+    "test.en-en.457",
+    "test.en-en.460",
+    "test.en-en.461",
+    "test.en-en.468",
+    "test.en-en.469",
+    "test.en-en.470",
+    "test.en-en.471",
+    "test.en-en.472",
+    "test.en-en.474",
+    "test.en-en.48",
+    "test.en-en.482",
+    "test.en-en.483",
+    "test.en-en.484",
+    "test.en-en.486",
+    "test.en-en.488",
+    "test.en-en.489",
+    "test.en-en.502",
+    "test.en-en.505",
+    "test.en-en.507",
+    "test.en-en.508",
+    "test.en-en.512",
+    "test.en-en.516",
+    "test.en-en.517",
+    "test.en-en.518",
+    "test.en-en.519",
+    "test.en-en.52",
+    "test.en-en.523",
+    "test.en-en.524",
+    "test.en-en.525",
+    "test.en-en.528",
+    "test.en-en.529",
+    "test.en-en.53",
+    "test.en-en.534",
+    "test.en-en.535",
+    "test.en-en.536",
+    "test.en-en.537",
+    "test.en-en.542",
+    "test.en-en.548",
+    "test.en-en.554",
+    "test.en-en.555",
+    "test.en-en.56",
+    "test.en-en.560",
+    "test.en-en.562",
+    "test.en-en.565",
+    "test.en-en.57",
+    "test.en-en.58",
+    "test.en-en.588",
+    "test.en-en.589",
+    "test.en-en.590",
+    "test.en-en.591",
+    "test.en-en.594",
+    "test.en-en.598",
+    "test.en-en.599",
+    "test.en-en.6",
+    "test.en-en.60",
+    "test.en-en.604",
+    "test.en-en.605",
+    "test.en-en.606",
+    "test.en-en.607",
+    "test.en-en.608",
+    "test.en-en.610",
+    "test.en-en.611",
+    "test.en-en.614",
+    "test.en-en.615",
+    "test.en-en.618",
+    "test.en-en.619",
+    "test.en-en.62",
+    "test.en-en.620",
+    "test.en-en.621",
+    "test.en-en.625",
+    "test.en-en.63",
+    "test.en-en.632",
+    "test.en-en.634",
+    "test.en-en.635",
+    "test.en-en.64",
+    "test.en-en.640",
+    "test.en-en.641",
+    "test.en-en.642",
+    "test.en-en.643",
+    "test.en-en.647",
+    "test.en-en.65",
+    "test.en-en.650",
+    "test.en-en.651",
+    "test.en-en.652",
+    "test.en-en.654",
+    "test.en-en.656",
+    "test.en-en.657",
+    "test.en-en.66",
+    "test.en-en.661",
+    "test.en-en.670",
+    "test.en-en.671",
+    "test.en-en.677",
+    "test.en-en.678",
+    "test.en-en.679",
+    "test.en-en.68",
+    "test.en-en.680",
+    "test.en-en.681",
+    "test.en-en.688",
+    "test.en-en.69",
+    "test.en-en.690",
+    "test.en-en.691",
+    "test.en-en.692",
+    "test.en-en.693",
+    "test.en-en.695",
+    "test.en-en.696",
+    "test.en-en.698",
+    "test.en-en.699",
+    "test.en-en.7",
+    "test.en-en.70",
+    "test.en-en.703",
+    "test.en-en.708",
+    "test.en-en.709",
+    "test.en-en.71",
+    "test.en-en.710",
+    "test.en-en.711",
+    "test.en-en.712",
+    "test.en-en.716",
+    "test.en-en.717",
+    "test.en-en.718",
+    "test.en-en.719",
+    "test.en-en.721",
+    "test.en-en.722",
+    "test.en-en.723",
+    "test.en-en.725",
+    "test.en-en.728",
+    "test.en-en.73",
+    "test.en-en.735",
+    "test.en-en.737",
+    "test.en-en.738",
+    "test.en-en.739",
+    "test.en-en.740",
+    "test.en-en.741",
+    "test.en-en.743",
+    "test.en-en.746",
+    "test.en-en.747",
+    "test.en-en.749",
+    "test.en-en.750",
+    "test.en-en.751",
+    "test.en-en.752",
+    "test.en-en.754",
+    "test.en-en.76",
+    "test.en-en.761",
+    "test.en-en.763",
+    "test.en-en.766",
+    "test.en-en.767",
+    "test.en-en.768",
+    "test.en-en.769",
+    "test.en-en.776",
+    "test.en-en.777",
+    "test.en-en.78",
+    "test.en-en.781",
+    "test.en-en.784",
+    "test.en-en.785",
+    "test.en-en.786",
+    "test.en-en.787",
+    "test.en-en.79",
+    "test.en-en.804",
+    "test.en-en.805",
+    "test.en-en.807",
+    "test.en-en.81",
+    "test.en-en.810",
+    "test.en-en.814",
+    "test.en-en.815",
+    "test.en-en.82",
+    "test.en-en.822",
+    "test.en-en.823",
+    "test.en-en.826",
+    "test.en-en.828",
+    "test.en-en.829",
+    "test.en-en.83",
+    "test.en-en.832",
+    "test.en-en.834",
+    "test.en-en.836",
+    "test.en-en.837",
+    "test.en-en.838",
+    "test.en-en.839",
+    "test.en-en.841",
+    "test.en-en.844",
+    "test.en-en.846",
+    "test.en-en.850",
+    "test.en-en.851",
+    "test.en-en.855",
+    "test.en-en.857",
+    "test.en-en.858",
+    "test.en-en.859",
+    "test.en-en.861",
+    "test.en-en.862",
+    "test.en-en.863",
+    "test.en-en.864",
+    "test.en-en.865",
+    "test.en-en.868",
+    "test.en-en.869",
+    "test.en-en.870",
+    "test.en-en.871",
+    "test.en-en.876",
+    "test.en-en.877",
+    "test.en-en.882",
+    "test.en-en.883",
+    "test.en-en.886",
+    "test.en-en.887",
+    "test.en-en.888",
+    "test.en-en.889",
+    "test.en-en.890",
+    "test.en-en.891",
+    "test.en-en.892",
+    "test.en-en.893",
+    "test.en-en.894",
+    "test.en-en.895",
+    "test.en-en.898",
+    "test.en-en.899",
+    "test.en-en.900",
+    "test.en-en.902",
+    "test.en-en.908",
+    "test.en-en.917",
+    "test.en-en.918",
+    "test.en-en.919",
+    "test.en-en.92",
+    "test.en-en.921",
+    "test.en-en.923",
+    "test.en-en.924",
+    "test.en-en.925",
+    "test.en-en.926",
+    "test.en-en.927",
+    "test.en-en.93",
+    "test.en-en.933",
+    "test.en-en.934",
+    "test.en-en.935",
+    "test.en-en.937",
+    "test.en-en.938",
+    "test.en-en.944",
+    "test.en-en.945",
+    "test.en-en.946",
+    "test.en-en.947",
+    "test.en-en.95",
+    "test.en-en.952",
+    "test.en-en.953",
+    "test.en-en.954",
+    "test.en-en.96",
+    "test.en-en.963",
+    "test.en-en.97",
+    "test.en-en.970",
+    "test.en-en.971",
+    "test.en-en.972",
+    "test.en-en.973",
+    "test.en-en.974",
+    "test.en-en.976",
+    "test.en-en.977",
+    "test.en-en.980",
+    "test.en-en.981",
+    "test.en-en.988",
+    "test.en-en.989",
+    "test.en-en.990",
+    "test.en-en.994",
+    "test.en-en.996",
+    "test.en-en.997"
+   ],
+   "orig_skipped": [],
+   "wordnet_excluded": [],
+   "no_reference": [],
+   "accuracy_report_only": 0.5417170495767836,
+   "stable_share_of_errors": 0.7916666666666666,
+   "check_excluded": 684
+  },
+  "units_in_both_splits": 10,
+  "abort": {
+   "aborted": [
+    "H1",
+    "H2",
+    "H1b"
+   ],
+   "exploratory": []
+  }
+ },
+ "check": {
+  "raters": {
+   "rater1": {
+    "S_rows_kept": 2317,
+    "S_rows": 2914,
+    "items_marked_changed": 538,
+    "other_kept": 0,
+    "hardneg_kept": 0,
+    "meaning_kept": 0,
+    "attention_fail": false,
+    "declared_no_llm": false
+   },
+   "rater2": {
+    "S_rows_kept": 2334,
+    "S_rows": 2914,
+    "items_marked_changed": 525,
+    "other_kept": 0,
+    "hardneg_kept": 0,
+    "meaning_kept": 0,
+    "attention_fail": false,
+    "declared_no_llm": false
+   }
+  },
+  "controls_other": 20,
+  "controls_hardneg": 20,
+  "controls_meaning": 20,
+  "hardneg_part_used": true,
+  "hardneg_fail_at": 7,
+  "meaning_part_used": true,
+  "meaning_fail_at": 7,
+  "other_fail_above": 2,
+  "agreement_S_rows": {
+   "percent": 0.858270418668497,
+   "kappa": 0.5603330047806968
+  },
+  "pair": {
+   "hardneg_kept_by_both": 0,
+   "meaning_kept_by_both": 0,
+   "attention_fail": false,
+   "lenient_by_part": {
+    "hardneg": [],
+    "meaning": []
+   },
+   "lenient_raters": []
+  },
+  "halves": {
+   "first": {
+    "rater1": {
+     "S_rows": 1457,
+     "S_rows_kept": 1141,
+     "controls": 30,
+     "controls_kept": 0,
+     "C_other_kept": 0,
+     "C_hardneg_kept": 0,
+     "C_meaning_kept": 0
+    },
+    "rater2": {
+     "S_rows": 1457,
+     "S_rows_kept": 1161,
+     "controls": 30,
+     "controls_kept": 0,
+     "C_other_kept": 0,
+     "C_hardneg_kept": 0,
+     "C_meaning_kept": 0
+    }
+   },
+   "second": {
+    "rater1": {
+     "S_rows": 1457,
+     "S_rows_kept": 1176,
+     "controls": 30,
+     "controls_kept": 0,
+     "C_other_kept": 0,
+     "C_hardneg_kept": 0,
+     "C_meaning_kept": 0
+    },
+    "rater2": {
+     "S_rows": 1457,
+     "S_rows_kept": 1173,
+     "controls": 30,
+     "controls_kept": 0,
+     "C_other_kept": 0,
+     "C_hardneg_kept": 0,
+     "C_meaning_kept": 0
+    }
+   }
+  },
+  "items_checked": 1457,
+  "items_excluded": 684,
+  "exploratory": true
+ },
+ "decisions": {
+  "H1": {
+   "pass": false,
+   "ci": {
+    "i": {
+     "d": 0.2681318681318681,
+     "lo": 0.16129032258064518,
+     "hi": 0.37391304347826093,
+     "n": 91,
+     "units": 81
+    },
+    "ii": {
+     "d": 0.06813186813186814,
+     "lo": -0.03516483516483515,
+     "hi": 0.1747434210526315,
+     "n": 91,
+     "units": 81
+    },
+    "iii": {
+     "d": 0.04395604395604396,
+     "lo": -0.05813953488372095,
+     "hi": 0.14566255495847566,
+     "n": 91,
+     "units": 81
+    }
+   },
+   "failed": [
+    "ii",
+    "iii"
+   ],
+   "status": "aborted",
+   "confirmatory": false
+  },
+  "H2": {
+   "ci": {
+    "iv": {
+     "d": 0.2989010989010989,
+     "lo": 0.19120879120879122,
+     "hi": 0.40645161290322585,
+     "n": 91,
+     "units": 81
+    }
+   },
+   "pass": true,
+   "failed": [],
+   "report_iv_minus_ii": {
+    "d": -0.23076923076923078,
+    "lo": -0.339327545114062,
+    "hi": -0.11818181818181817,
+    "n": 91,
+    "units": 81
+   },
+   "status": "aborted",
+   "confirmatory": false
+  },
+  "H1b": {
+   "pass": true,
+   "ci": {
+    "i": {
+     "d": 0.35017543859649125,
+     "lo": 0.29057837528604125,
+     "hi": 0.4098254262416605,
+     "n": 285,
+     "units": 225
+    },
+    "ii": {
+     "d": 0.07649122807017543,
+     "lo": 0.016783216783216776,
+     "hi": 0.13493234505220808,
+     "n": 285,
+     "units": 225
+    },
+    "iii": {
+     "d": 0.09333333333333334,
+     "lo": 0.03438542231868332,
+     "hi": 0.15109717926512434,
+     "n": 285,
+     "units": 225
+    }
+   },
+   "failed": [],
+   "status": "aborted",
+   "confirmatory": false
+  }
+ },
+ "results": {
+  "mcl/deberta/qwen": {
+   "n_items": 1653,
+   "n_items_before_parse_exclusion": 1654,
+   "fail_rate": {
+    "A": 0.0,
+    "ii": 0.0,
+    "iii": 0.0,
+    "iv": 0.0006045949214026602
+   },
+   "n_stable": 91,
+   "units_stable": 81,
+   "n_unstable": 59,
+   "detection": {
+    "i": 0.38021978021978026,
+    "A": 0.6483516483516484,
+    "ii": 0.5802197802197802,
+    "iii": 0.6043956043956044,
+    "iv": 0.3494505494505495
+   },
+   "diff_qmean": {
+    "i": {
+     "d": 0.2681318681318681,
+     "lo": 0.16129032258064518,
+     "hi": 0.37391304347826093,
+     "n": 91,
+     "units": 81
+    },
+    "ii": {
+     "d": 0.06813186813186814,
+     "lo": -0.03516483516483515,
+     "hi": 0.1747434210526315,
+     "n": 91,
+     "units": 81
+    },
+    "iii": {
+     "d": 0.04395604395604396,
+     "lo": -0.05813953488372095,
+     "hi": 0.14566255495847566,
+     "n": 91,
+     "units": 81
+    },
+    "iv": {
+     "d": 0.2989010989010989,
+     "lo": 0.19120879120879122,
+     "hi": 0.40645161290322585,
+     "n": 91,
+     "units": 81
+    }
+   },
+   "lo_above_0.05": {
+    "i": true,
+    "ii": false,
+    "iii": false,
+    "iv": true
+   },
+   "diff_q25": {
+    "i": {
+     "d": 0.3076923076923077,
+     "lo": 0.15382352941176475,
+     "hi": 0.45555555555555555,
+     "n": 91,
+     "units": 81
+    },
+    "ii": {
+     "d": 0.07692307692307693,
+     "lo": -0.06451612903225806,
+     "hi": 0.21978021978021978,
+     "n": 91,
+     "units": 81
+    },
+    "iii": {
+     "d": 0.06593406593406594,
+     "lo": -0.0851063829787234,
+     "hi": 0.21348314606741572,
+     "n": 91,
+     "units": 81
+    },
+    "iv": {
+     "d": 0.34065934065934067,
+     "lo": 0.20224719101123595,
+     "hi": 0.47368421052631576,
+     "n": 91,
+     "units": 81
+    }
+   },
+   "detection_by_q": {
+    "i": {
+     "0.1": 0.0989010989010989,
+     "0.2": 0.26373626373626374,
+     "0.3": 0.4175824175824176,
+     "0.4": 0.5164835164835165,
+     "0.5": 0.6043956043956044,
+     "0.25": 0.31868131868131866
+    },
+    "A": {
+     "0.1": 0.3516483516483517,
+     "0.2": 0.5384615384615384,
+     "0.3": 0.6923076923076923,
+     "0.4": 0.8021978021978022,
+     "0.5": 0.8571428571428571,
+     "0.25": 0.6263736263736264
+    },
+    "ii": {
+     "0.1": 0.34065934065934067,
+     "0.2": 0.4725274725274725,
+     "0.3": 0.5934065934065934,
+     "0.4": 0.7032967032967034,
+     "0.5": 0.7912087912087912,
+     "0.25": 0.5494505494505495
+    },
+    "iii": {
+     "0.1": 0.24175824175824176,
+     "0.2": 0.4835164835164835,
+     "0.3": 0.6263736263736264,
+     "0.4": 0.8021978021978022,
+     "0.5": 0.8681318681318682,
+     "0.25": 0.5604395604395604
+    },
+    "iv": {
+     "0.1": 0.0989010989010989,
+     "0.2": 0.23076923076923078,
+     "0.3": 0.37362637362637363,
+     "0.4": 0.4725274725274725,
+     "0.5": 0.5714285714285714,
+     "0.25": 0.2857142857142857
+    }
+   },
+   "diff_secondary": {
+    "b7": {
+     "d": 0.29230769230769227,
+     "lo": 0.16629145796669825,
+     "hi": 0.4206185567010309,
+     "n": 91,
+     "units": 81
+    },
+    "i+A": {
+     "d": 0.06520146520146519,
+     "lo": -3.707351885801856e-18,
+     "hi": 0.13118279569892471,
+     "n": 91,
+     "units": 81
+    },
+    "b-yhat": {
+     "d": 0.24862333646253246,
+     "lo": 0.15362135632874516,
+     "hi": 0.3415745666567013,
+     "n": 91,
+     "units": 81
+    },
+    "b-K": {
+     "d": 0.2674483326712287,
+     "lo": 0.15573947518887105,
+     "hi": 0.3776696691636543,
+     "n": 91,
+     "units": 81
+    }
+   },
+   "diff_i_plus_A_vs_i": {
+    "d": 0.2029304029304029,
+    "lo": 0.14007303370786517,
+    "hi": 0.26128156565656563,
+    "n": 91,
+    "units": 81
+   },
+   "diff_b2": {
+    "d": 0.36530606710825025,
+    "lo": 0.27525752892175726,
+    "hi": 0.4532634889578817,
+    "n": 81,
+    "units": 73
+   },
+   "b2_n_stable": 81,
+   "all_errors": {
+    "i": {
+     "detection_qmean": 0.5333333333333332,
+     "detection_by_q": {
+      "0.1": 0.22666666666666666,
+      "0.2": 0.4266666666666667,
+      "0.3": 0.58,
+      "0.4": 0.68,
+      "0.5": 0.7533333333333333,
+      "0.25": 0.5
+     },
+     "precision_by_q": {
+      "0.1": 0.4484848484848485,
+      "0.2": 0.4169184290030212,
+      "0.3": 0.38911290322580644,
+      "0.4": 0.3540090771558245,
+      "0.5": 0.3171912832929782,
+      "0.25": 0.39951573849878935
+     }
+    },
+    "A": {
+     "detection_qmean": 0.7026666666666667,
+     "detection_by_q": {
+      "0.1": 0.4,
+      "0.2": 0.6266666666666667,
+      "0.3": 0.7466666666666667,
+      "0.4": 0.84,
+      "0.5": 0.9,
+      "0.25": 0.7
+     },
+     "precision_by_q": {
+      "0.1": 0.8545454545454545,
+      "0.2": 0.6706948640483383,
+      "0.3": 0.5342741935483871,
+      "0.4": 0.4462934947049924,
+      "0.5": 0.3837772397094431,
+      "0.25": 0.6029055690072639
+     }
+    },
+    "ii": {
+     "detection_qmean": 0.6053333333333334,
+     "detection_by_q": {
+      "0.1": 0.3466666666666667,
+      "0.2": 0.5,
+      "0.3": 0.64,
+      "0.4": 0.72,
+      "0.5": 0.82,
+      "0.25": 0.5933333333333334
+     },
+     "precision_by_q": {
+      "0.1": 0.6848484848484848,
+      "0.2": 0.5317220543806647,
+      "0.3": 0.46774193548387094,
+      "0.4": 0.38729198184568836,
+      "0.5": 0.3486682808716707,
+      "0.25": 0.513317191283293
+     }
+    },
+    "iii": {
+     "detection_qmean": 0.5973333333333333,
+     "detection_by_q": {
+      "0.1": 0.29333333333333333,
+      "0.2": 0.49333333333333335,
+      "0.3": 0.6133333333333333,
+      "0.4": 0.7666666666666667,
+      "0.5": 0.82,
+      "0.25": 0.5533333333333333
+     },
+     "precision_by_q": {
+      "0.1": 0.6848484848484848,
+      "0.2": 0.5438066465256798,
+      "0.3": 0.4657258064516129,
+      "0.4": 0.40242057488653554,
+      "0.5": 0.35351089588377727,
+      "0.25": 0.49878934624697335
+     }
+    },
+    "iv": {
+     "detection_qmean": 0.35866666666666663,
+     "detection_by_q": {
+      "0.1": 0.12666666666666668,
+      "0.2": 0.26,
+      "0.3": 0.38,
+      "0.4": 0.47333333333333333,
+      "0.5": 0.5533333333333333,
+      "0.25": 0.31333333333333335
+     },
+     "precision_by_q": {
+      "0.1": 0.2727272727272727,
+      "0.2": 0.25075528700906347,
+      "0.3": 0.25806451612903225,
+      "0.4": 0.2481089258698941,
+      "0.5": 0.23728813559322035,
+      "0.25": 0.25907990314769974
+     }
+    }
+   },
+   "all_errors_A_minus_i": {
+    "d": 0.16933333333333334,
+    "lo": 0.08992946171757295,
+    "hi": 0.24743881118881114,
+    "n": 150,
+    "units": 133
+   },
+   "p_yhat_stable": {
+    "q10": 0.5677861681563402,
+    "q25": 0.6265673542217627,
+    "q50": 0.745115100901105,
+    "q75": 0.8486945845415601,
+    "q90": 0.9096502021048207
+   },
+   "p_yhat_unstable": {
+    "q10": 0.5172088963140743,
+    "q25": 0.5402798007115855,
+    "q50": 0.5845597715148328,
+    "q75": 0.6446998661999606,
+    "q90": 0.7235409313389873
+   },
+   "by_yhat": {
+    "F": {
+     "n_items": 658,
+     "n_stable": 18,
+     "detection": {
+      "i": 0.47777777777777775,
+      "A": 0.7777777777777778,
+      "ii": 0.24444444444444446,
+      "iii": 0.37777777777777777,
+      "iv": 0.5555555555555556
+     },
+     "within_stratum_diff": {
+      "i": {
+       "d": 0.4000000000000001,
+       "lo": 0.19999999999999998,
+       "hi": 0.6,
+       "n": 18,
+       "units": 18
+      },
+      "ii": {
+       "d": 0.33333333333333337,
+       "lo": 0.13333333333333336,
+       "hi": 0.5222222222222223,
+       "n": 18,
+       "units": 18
+      },
+      "iii": {
+       "d": 0.12222222222222223,
+       "lo": -0.07777777777777778,
+       "hi": 0.3333333333333333,
+       "n": 18,
+       "units": 18
+      },
+      "iv": {
+       "d": 0.36666666666666664,
+       "lo": 0.18888888888888888,
+       "hi": 0.5555555555555555,
+       "n": 18,
+       "units": 18
+      }
+     }
+    },
+    "T": {
+     "n_items": 995,
+     "n_stable": 73,
+     "detection": {
+      "i": 0.3561643835616438,
+      "A": 0.6164383561643836,
+      "ii": 0.6630136986301369,
+      "iii": 0.6602739726027398,
+      "iv": 0.2986301369863013
+     },
+     "within_stratum_diff": {
+      "i": {
+       "d": 0.1972602739726027,
+       "lo": 0.07567567567567568,
+       "hi": 0.31944534632034627,
+       "n": 73,
+       "units": 63
+      },
+      "ii": {
+       "d": 0.038356164383561646,
+       "lo": -0.07042667771333885,
+       "hi": 0.14722222222222223,
+       "n": 73,
+       "units": 63
+      },
+      "iii": {
+       "d": 0.07671232876712328,
+       "lo": -0.04001351351351352,
+       "hi": 0.18888888888888888,
+       "n": 73,
+       "units": 63
+      },
+      "iv": {
+       "d": 0.22465753424657536,
+       "lo": 0.09066666666666667,
+       "hi": 0.35555555555555546,
+       "n": 73,
+       "units": 63
+      }
+     }
+    }
+   },
+   "discrepancy": {
+    "base_only": 263,
+    "A_only": 212,
+    "both": 84,
+    "both_same_label": 84
+   },
+   "overlap": {
+    "ii": {
+     "stable": 0.42857142857142855,
+     "unstable": 0.3050847457627119
+    },
+    "A": {
+     "stable": 0.31868131868131866,
+     "unstable": 0.1694915254237288
+    }
+   },
+   "diag_A": {
+    "p_same": {
+     "q10": 5.3214820913240556e-08,
+     "q25": 1.1882555027204185e-05,
+     "q50": 0.4999262307286296,
+     "q75": 0.9999813864765652,
+     "q90": 0.9999999110347795
+    },
+    "none_greedy_rate": 0.0,
+    "spearman_score_K": 0.05501264554186192
+   },
+   "diag_iv": {
+    "p_same": {
+     "q10": 0.06852563499050152,
+     "q25": 0.2489593566309518,
+     "q50": 0.6161250104484075,
+     "q75": 0.9524669656767049,
+     "q90": 0.9971707457111079
+    },
+    "none_greedy_rate": 0.0,
+    "spearman_score_K": 0.039498475210838956
+   },
+   "iv_none_over_half": false,
+   "iv_replacement_tolerance": {
+    "0.2": 0
+   }
+  },
+  "mcl/flan/qwen": {
+   "n_items": 1653,
+   "n_items_before_parse_exclusion": 1654,
+   "fail_rate": {
+    "A": 0.0,
+    "ii": 0.0,
+    "iii": 0.0,
+    "iv": 0.0006045949214026602
+   },
+   "n_stable": 285,
+   "units_stable": 225,
+   "n_unstable": 75,
+   "detection": {
+    "i": 0.20631578947368423,
+    "A": 0.5564912280701754,
+    "ii": 0.48000000000000004,
+    "iii": 0.4631578947368421,
+    "iv": 0.4007017543859649
+   },
+   "diff_qmean": {
+    "i": {
+     "d": 0.35017543859649125,
+     "lo": 0.29057837528604125,
+     "hi": 0.4098254262416605,
+     "n": 285,
+     "units": 225
+    },
+    "ii": {
+     "d": 0.07649122807017543,
+     "lo": 0.016783216783216776,
+     "hi": 0.13493234505220808,
+     "n": 285,
+     "units": 225
+    },
+    "iii": {
+     "d": 0.09333333333333334,
+     "lo": 0.03438542231868332,
+     "hi": 0.15109717926512434,
+     "n": 285,
+     "units": 225
+    },
+    "iv": {
+     "d": 0.15578947368421053,
+     "lo": 0.0932850244583328,
+     "hi": 0.2205673758865248,
+     "n": 285,
+     "units": 225
+    }
+   },
+   "lo_above_0.05": {
+    "i": true,
+    "ii": false,
+    "iii": false,
+    "iv": true
+   },
+   "diff_q25": {
+    "i": {
+     "d": 0.3719298245614035,
+     "lo": 0.29432624113475175,
+     "hi": 0.45017182130584193,
+     "n": 285,
+     "units": 225
+    },
+    "ii": {
+     "d": 0.07719298245614035,
+     "lo": -0.006944444444444444,
+     "hi": 0.15693430656934307,
+     "n": 285,
+     "units": 225
+    },
+    "iii": {
+     "d": 0.11578947368421053,
+     "lo": 0.03496503496503497,
+     "hi": 0.19642857142857142,
+     "n": 285,
+     "units": 225
+    },
+    "iv": {
+     "d": 0.1543859649122807,
+     "lo": 0.06761565836298933,
+     "hi": 0.24210526315789474,
+     "n": 285,
+     "units": 225
+    }
+   },
+   "detection_by_q": {
+    "i": {
+     "0.1": 0.0456140350877193,
+     "0.2": 0.08070175438596491,
+     "0.3": 0.19298245614035087,
+     "0.4": 0.2982456140350877,
+     "0.5": 0.41403508771929826,
+     "0.25": 0.13333333333333333
+    },
+    "A": {
+     "0.1": 0.21052631578947367,
+     "0.2": 0.4070175438596491,
+     "0.3": 0.5824561403508772,
+     "0.4": 0.7403508771929824,
+     "0.5": 0.8421052631578947,
+     "0.25": 0.5052631578947369
+    },
+    "ii": {
+     "0.1": 0.18947368421052632,
+     "0.2": 0.3684210526315789,
+     "0.3": 0.49122807017543857,
+     "0.4": 0.6175438596491228,
+     "0.5": 0.7333333333333333,
+     "0.25": 0.4280701754385965
+    },
+    "iii": {
+     "0.1": 0.19649122807017544,
+     "0.2": 0.3263157894736842,
+     "0.3": 0.4421052631578947,
+     "0.4": 0.6035087719298246,
+     "0.5": 0.7473684210526316,
+     "0.25": 0.3894736842105263
+    },
+    "iv": {
+     "0.1": 0.15789473684210525,
+     "0.2": 0.28771929824561404,
+     "0.3": 0.4245614035087719,
+     "0.4": 0.5263157894736842,
+     "0.5": 0.6070175438596491,
+     "0.25": 0.3508771929824561
+    }
+   },
+   "diff_secondary": {
+    "b7": {
+     "d": 0.23368421052631577,
+     "lo": 0.14893117750979337,
+     "hi": 0.3198556596768825,
+     "n": 285,
+     "units": 225
+    },
+    "i+A": {
+     "d": 0.16011695906432752,
+     "lo": 0.1151405745346785,
+     "hi": 0.20553634195452855,
+     "n": 285,
+     "units": 225
+    },
+    "b-yhat": {
+     "d": 0.35520747915613127,
+     "lo": 0.3037016862285155,
+     "hi": 0.40496937207745093,
+     "n": 285,
+     "units": 225
+    },
+    "b-K": {
+     "d": 0.32075817595669753,
+     "lo": 0.26588459384432417,
+     "hi": 0.373021837829987,
+     "n": 285,
+     "units": 225
+    }
+   },
+   "diff_i_plus_A_vs_i": {
+    "d": 0.19005847953216376,
+    "lo": 0.16025176507341457,
+    "hi": 0.2210888024274458,
+    "n": 285,
+    "units": 225
+   },
+   "diff_b2": {
+    "d": 0.3781765641776901,
+    "lo": 0.32837109743682624,
+    "hi": 0.42791262734896474,
+    "n": 236,
+    "units": 187
+   },
+   "b2_n_stable": 236,
+   "all_errors": {
+    "i": {
+     "detection_qmean": 0.30277777777777776,
+     "detection_by_q": {
+      "0.1": 0.11666666666666667,
+      "0.2": 0.17222222222222222,
+      "0.3": 0.30277777777777776,
+      "0.4": 0.4083333333333333,
+      "0.5": 0.5138888888888888,
+      "0.25": 0.23055555555555557
+     },
+     "precision_by_q": {
+      "0.1": 0.5212121212121212,
+      "0.2": 0.46827794561933533,
+      "0.3": 0.5020161290322581,
+      "0.4": 0.5007564296520424,
+      "0.5": 0.4939467312348668,
+      "0.25": 0.4794188861985472
+     }
+    },
+    "A": {
+     "detection_qmean": 0.5561111111111111,
+     "detection_by_q": {
+      "0.1": 0.21388888888888888,
+      "0.2": 0.3972222222222222,
+      "0.3": 0.575,
+      "0.4": 0.7416666666666667,
+      "0.5": 0.8527777777777777,
+      "0.25": 0.4888888888888889
+     },
+     "precision_by_q": {
+      "0.1": 0.9272727272727272,
+      "0.2": 0.9214501510574018,
+      "0.3": 0.8951612903225806,
+      "0.4": 0.8396369137670197,
+      "0.5": 0.7832929782082324,
+      "0.25": 0.910411622276029
+     }
+    },
+    "ii": {
+     "detection_qmean": 0.518888888888889,
+     "detection_by_q": {
+      "0.1": 0.21388888888888888,
+      "0.2": 0.4111111111111111,
+      "0.3": 0.5444444444444444,
+      "0.4": 0.6611111111111111,
+      "0.5": 0.7638888888888888,
+      "0.25": 0.4777777777777778
+     },
+     "precision_by_q": {
+      "0.1": 0.9272727272727272,
+      "0.2": 0.9003021148036254,
+      "0.3": 0.8528225806451613,
+      "0.4": 0.7972768532526475,
+      "0.5": 0.7312348668280871,
+      "0.25": 0.8668280871670703
+     }
+    },
+    "iii": {
+     "detection_qmean": 0.4927777777777778,
+     "detection_by_q": {
+      "0.1": 0.21388888888888888,
+      "0.2": 0.35555555555555557,
+      "0.3": 0.4861111111111111,
+      "0.4": 0.6416666666666667,
+      "0.5": 0.7666666666666667,
+      "0.25": 0.4222222222222222
+     },
+     "precision_by_q": {
+      "0.1": 0.9575757575757575,
+      "0.2": 0.8489425981873112,
+      "0.3": 0.8125,
+      "0.4": 0.7685325264750378,
+      "0.5": 0.7191283292978208,
+      "0.25": 0.837772397094431
+     }
+    },
+    "iv": {
+     "detection_qmean": 0.3855555555555556,
+     "detection_by_q": {
+      "0.1": 0.15555555555555556,
+      "0.2": 0.275,
+      "0.3": 0.4,
+      "0.4": 0.5,
+      "0.5": 0.5972222222222222,
+      "0.25": 0.3388888888888889
+     },
+     "precision_by_q": {
+      "0.1": 0.5878787878787879,
+      "0.2": 0.5770392749244713,
+      "0.3": 0.5524193548387096,
+      "0.4": 0.5355521936459909,
+      "0.5": 0.5217917675544794,
+      "0.25": 0.5690072639225182
+     }
+    }
+   },
+   "all_errors_A_minus_i": {
+    "d": 0.25333333333333335,
+    "lo": 0.19374820402298856,
+    "hi": 0.3104819776814361,
+    "n": 360,
+    "units": 285
+   },
+   "p_yhat_stable": {
+    "q10": 0.5205910516604647,
+    "q25": 0.5356485243009921,
+    "q50": 0.5561383746058928,
+    "q75": 0.5869486426094654,
+    "q90": 0.6226444738121165
+   },
+   "p_yhat_unstable": {
+    "q10": 0.5017103842734515,
+    "q25": 0.50460774072951,
+    "q50": 0.5172311349193238,
+    "q75": 0.5313289185614742,
+    "q90": 0.5493395191399972
+   },
+   "by_yhat": {
+    "F": {
+     "n_items": 1353,
+     "n_stable": 271,
+     "detection": {
+      "i": 0.19483394833948342,
+      "A": 0.566789667896679,
+      "ii": 0.47158671586715867,
+      "iii": 0.4472324723247232,
+      "iv": 0.4088560885608857
+     },
+     "within_stratum_diff": {
+      "i": {
+       "d": 0.30553505535055353,
+       "lo": 0.24191176470588238,
+       "hi": 0.36821740408026193,
+       "n": 271,
+       "units": 212
+      },
+      "ii": {
+       "d": 0.043542435424354244,
+       "lo": -0.016727341859661255,
+       "hi": 0.10254687394389995,
+       "n": 271,
+       "units": 212
+      },
+      "iii": {
+       "d": 0.043542435424354244,
+       "lo": -0.01654818786480249,
+       "hi": 0.10317588325652842,
+       "n": 271,
+       "units": 212
+      },
+      "iv": {
+       "d": 0.16900369003690038,
+       "lo": 0.10522102080836693,
+       "hi": 0.23478425559947294,
+       "n": 271,
+       "units": 212
+      }
+     }
+    },
+    "T": {
+     "n_items": 300,
+     "n_stable": 14,
+     "detection": {
+      "i": 0.42857142857142866,
+      "A": 0.3571428571428571,
+      "ii": 0.6428571428571429,
+      "iii": 0.7714285714285716,
+      "iv": 0.24285714285714288
+     },
+     "within_stratum_diff": {
+      "i": {
+       "d": 0.27142857142857146,
+       "lo": 0.07692307692307693,
+       "hi": 0.47142857142857136,
+       "n": 14,
+       "units": 13
+      },
+      "ii": {
+       "d": -0.028571428571428574,
+       "lo": -0.21538461538461537,
+       "hi": 0.17503676470588184,
+       "n": 14,
+       "units": 13
+      },
+      "iii": {
+       "d": -0.09999999999999999,
+       "lo": -0.2625,
+       "hi": 0.07142857142857142,
+       "n": 14,
+       "units": 13
+      },
+      "iv": {
+       "d": 0.08571428571428573,
+       "lo": -0.24615384615384614,
+       "hi": 0.43076923076923074,
+       "n": 14,
+       "units": 13
+      }
+     }
+    }
+   },
+   "discrepancy": {
+    "base_only": 612,
+    "A_only": 150,
+    "both": 146,
+    "both_same_label": 146
+   },
+   "overlap": {
+    "ii": {
+     "stable": 0.41754385964912283,
+     "unstable": 0.18666666666666668
+    },
+    "A": {
+     "stable": 0.2,
+     "unstable": 0.14666666666666667
+    }
+   },
+   "diag_A": {
+    "p_same": {
+     "q10": 5.3214820913240556e-08,
+     "q25": 1.1882555027204185e-05,
+     "q50": 0.4999262307286296,
+     "q75": 0.9999813864765652,
+     "q90": 0.9999999110347795
+    },
+    "none_greedy_rate": 0.0,
+    "spearman_score_K": -0.12749034222963343
+   },
+   "diag_iv": {
+    "p_same": {
+     "q10": 0.06852563499050152,
+     "q25": 0.2489593566309518,
+     "q50": 0.6161250104484075,
+     "q75": 0.9524669656767049,
+     "q90": 0.9971707457111079
+    },
+    "none_greedy_rate": 0.0,
+    "spearman_score_K": -0.17314603529227723
+   },
+   "iv_none_over_half": false,
+   "iv_replacement_tolerance": {
+    "0.2": 0
+   }
+  },
+  "mcl/deberta/olmo": {
+   "n_items": 1653,
+   "n_items_before_parse_exclusion": 1653,
+   "fail_rate": {
+    "A": 0.0,
+    "ii": 0.0,
+    "iii": 0.0,
+    "iv": 0.0
+   },
+   "n_stable": 91,
+   "units_stable": 81,
+   "n_unstable": 59,
+   "detection": {
+    "i": 0.38021978021978026,
+    "A": 0.5076923076923078,
+    "ii": 0.47472527472527476,
+    "iii": 0.49010989010989003,
+    "iv": 0.27692307692307694
+   },
+   "diff_qmean": {
+    "i": {
+     "d": 0.12747252747252746,
+     "lo": 0.018385579937304063,
+     "hi": 0.23370786516853934,
+     "n": 91,
+     "units": 81
+    },
+    "ii": {
+     "d": 0.03296703296703297,
+     "lo": -0.07835804471215105,
+     "hi": 0.15164835164835166,
+     "n": 91,
+     "units": 81
+    },
+    "iii": {
+     "d": 0.017582417582417582,
+     "lo": -0.0967758913412564,
+     "hi": 0.1377816091954023,
+     "n": 91,
+     "units": 81
+    },
+    "iv": {
+     "d": 0.2307692307692308,
+     "lo": 0.1368328173374613,
+     "hi": 0.32553968443700687,
+     "n": 91,
+     "units": 81
+    }
+   },
+   "lo_above_0.05": {
+    "i": false,
+    "ii": false,
+    "iii": false,
+    "iv": true
+   },
+   "diff_q25": {
+    "i": {
+     "d": 0.15384615384615385,
+     "lo": 0.02247191011235955,
+     "hi": 0.28421052631578947,
+     "n": 91,
+     "units": 81
+    },
+    "ii": {
+     "d": 0.06593406593406594,
+     "lo": -0.07446808510638298,
+     "hi": 0.2111111111111111,
+     "n": 91,
+     "units": 81
+    },
+    "iii": {
+     "d": 0.04395604395604396,
+     "lo": -0.10112359550561797,
+     "hi": 0.1978021978021978,
+     "n": 91,
+     "units": 81
+    },
+    "iv": {
+     "d": 0.23076923076923078,
+     "lo": 0.10416666666666667,
+     "hi": 0.3516483516483517,
+     "n": 91,
+     "units": 81
+    }
+   },
+   "detection_by_q": {
+    "i": {
+     "0.1": 0.0989010989010989,
+     "0.2": 0.26373626373626374,
+     "0.3": 0.4175824175824176,
+     "0.4": 0.5164835164835165,
+     "0.5": 0.6043956043956044,
+     "0.25": 0.31868131868131866
+    },
+    "A": {
+     "0.1": 0.25274725274725274,
+     "0.2": 0.38461538461538464,
+     "0.3": 0.5274725274725275,
+     "0.4": 0.6593406593406593,
+     "0.5": 0.7142857142857143,
+     "0.25": 0.4725274725274725
+    },
+    "ii": {
+     "0.1": 0.18681318681318682,
+     "0.2": 0.3626373626373626,
+     "0.3": 0.45054945054945056,
+     "0.4": 0.6263736263736264,
+     "0.5": 0.7472527472527473,
+     "0.25": 0.4065934065934066
+    },
+    "iii": {
+     "0.1": 0.2087912087912088,
+     "0.2": 0.3956043956043956,
+     "0.3": 0.4945054945054945,
+     "0.4": 0.6373626373626373,
+     "0.5": 0.7142857142857143,
+     "0.25": 0.42857142857142855
+    },
+    "iv": {
+     "0.1": 0.08791208791208792,
+     "0.2": 0.18681318681318682,
+     "0.3": 0.2967032967032967,
+     "0.4": 0.3516483516483517,
+     "0.5": 0.46153846153846156,
+     "0.25": 0.24175824175824176
+    }
+   },
+   "diff_secondary": {
+    "b7": {
+     "d": 0.20219780219780217,
+     "lo": 0.08296947271045328,
+     "hi": 0.3258575487537128,
+     "n": 91,
+     "units": 81
+    },
+    "i+A": {
+     "d": -0.008791208791208791,
+     "lo": -0.0741573033707865,
+     "hi": 0.05591397849462365,
+     "n": 91,
+     "units": 81
+    },
+    "b-yhat": {
+     "d": 0.10796399580319173,
+     "lo": 0.01559152294901337,
+     "hi": 0.20813879415363123,
+     "n": 91,
+     "units": 81
+    },
+    "b-K": {
+     "d": 0.12678899201188806,
+     "lo": 0.03636948153218412,
+     "hi": 0.21973709251342433,
+     "n": 91,
+     "units": 81
+    }
+   },
+   "diff_i_plus_A_vs_i": {
+    "d": 0.13626373626373628,
+    "lo": 0.07191011235955057,
+    "hi": 0.19777777777777777,
+    "n": 91,
+    "units": 81
+   },
+   "diff_b2": {
+    "d": 0.21962705476257122,
+    "lo": 0.12311819131289553,
+    "hi": 0.3169744075746773,
+    "n": 81,
+    "units": 73
+   },
+   "b2_n_stable": 81,
+   "all_errors": {
+    "i": {
+     "detection_qmean": 0.5333333333333332,
+     "detection_by_q": {
+      "0.1": 0.22666666666666666,
+      "0.2": 0.4266666666666667,
+      "0.3": 0.58,
+      "0.4": 0.68,
+      "0.5": 0.7533333333333333,
+      "0.25": 0.5
+     },
+     "precision_by_q": {
+      "0.1": 0.4484848484848485,
+      "0.2": 0.4169184290030212,
+      "0.3": 0.38911290322580644,
+      "0.4": 0.3540090771558245,
+      "0.5": 0.3171912832929782,
+      "0.25": 0.39951573849878935
+     }
+    },
+    "A": {
+     "detection_qmean": 0.508,
+     "detection_by_q": {
+      "0.1": 0.28,
+      "0.2": 0.38666666666666666,
+      "0.3": 0.5066666666666667,
+      "0.4": 0.6333333333333333,
+      "0.5": 0.7333333333333333,
+      "0.25": 0.46
+     },
+     "precision_by_q": {
+      "0.1": 0.5333333333333333,
+      "0.2": 0.4199395770392749,
+      "0.3": 0.36088709677419356,
+      "0.4": 0.3373676248108926,
+      "0.5": 0.30871670702179177,
+      "0.25": 0.3946731234866828
+     }
+    },
+    "ii": {
+     "detection_qmean": 0.4573333333333333,
+     "detection_by_q": {
+      "0.1": 0.19333333333333333,
+      "0.2": 0.37333333333333335,
+      "0.3": 0.4666666666666667,
+      "0.4": 0.58,
+      "0.5": 0.6733333333333333,
+      "0.25": 0.4266666666666667
+     },
+     "precision_by_q": {
+      "0.1": 0.4727272727272727,
+      "0.2": 0.4259818731117825,
+      "0.3": 0.36088709677419356,
+      "0.4": 0.32223903177004537,
+      "0.5": 0.2917675544794189,
+      "0.25": 0.3922518159806295
+     }
+    },
+    "iii": {
+     "detection_qmean": 0.44933333333333336,
+     "detection_by_q": {
+      "0.1": 0.18666666666666668,
+      "0.2": 0.35333333333333333,
+      "0.3": 0.48,
+      "0.4": 0.58,
+      "0.5": 0.6466666666666666,
+      "0.25": 0.38666666666666666
+     },
+     "precision_by_q": {
+      "0.1": 0.4121212121212121,
+      "0.2": 0.38972809667673713,
+      "0.3": 0.3548387096774194,
+      "0.4": 0.3146747352496218,
+      "0.5": 0.2820823244552058,
+      "0.25": 0.3583535108958838
+     }
+    },
+    "iv": {
+     "detection_qmean": 0.30666666666666664,
+     "detection_by_q": {
+      "0.1": 0.10666666666666667,
+      "0.2": 0.2,
+      "0.3": 0.29333333333333333,
+      "0.4": 0.4066666666666667,
+      "0.5": 0.5266666666666666,
+      "0.25": 0.24666666666666667
+     },
+     "precision_by_q": {
+      "0.1": 0.18181818181818182,
+      "0.2": 0.2175226586102719,
+      "0.3": 0.22782258064516128,
+      "0.4": 0.22239031770045387,
+      "0.5": 0.22033898305084745,
+      "0.25": 0.22760290556900725
+     }
+    }
+   },
+   "all_errors_A_minus_i": {
+    "d": -0.02533333333333334,
+    "lo": -0.11409417484081917,
+    "hi": 0.060994059132357,
+    "n": 150,
+    "units": 133
+   },
+   "p_yhat_stable": {
+    "q10": 0.5677861681563402,
+    "q25": 0.6265673542217627,
+    "q50": 0.745115100901105,
+    "q75": 0.8486945845415601,
+    "q90": 0.9096502021048207
+   },
+   "p_yhat_unstable": {
+    "q10": 0.5172088963140743,
+    "q25": 0.5402798007115855,
+    "q50": 0.5845597715148328,
+    "q75": 0.6446998661999606,
+    "q90": 0.7235409313389873
+   },
+   "by_yhat": {
+    "F": {
+     "n_items": 658,
+     "n_stable": 18,
+     "detection": {
+      "i": 0.47777777777777775,
+      "A": 0.5666666666666668,
+      "ii": 0.0,
+      "iii": 0.0,
+      "iv": 0.5444444444444444
+     },
+     "within_stratum_diff": {
+      "i": {
+       "d": 0.17777777777777776,
+       "lo": -0.03333333333333334,
+       "hi": 0.3777777777777778,
+       "n": 18,
+       "units": 18
+      },
+      "ii": {
+       "d": 0.13333333333333333,
+       "lo": -0.10000000000000002,
+       "hi": 0.3555555555555555,
+       "n": 18,
+       "units": 18
+      },
+      "iii": {
+       "d": 0.15555555555555556,
+       "lo": -0.08888888888888892,
+       "hi": 0.3777777777777778,
+       "n": 18,
+       "units": 18
+      },
+      "iv": {
+       "d": 0.2444444444444444,
+       "lo": 0.011111111111111108,
+       "hi": 0.4666666666666667,
+       "n": 18,
+       "units": 18
+      }
+     }
+    },
+    "T": {
+     "n_items": 995,
+     "n_stable": 73,
+     "detection": {
+      "i": 0.3561643835616438,
+      "A": 0.4931506849315068,
+      "ii": 0.5917808219178081,
+      "iii": 0.6109589041095891,
+      "iv": 0.21095890410958903
+     },
+     "within_stratum_diff": {
+      "i": {
+       "d": 0.09315068493150684,
+       "lo": -0.025,
+       "hi": 0.21369863013698628,
+       "n": 73,
+       "units": 63
+      },
+      "ii": {
+       "d": 0.08767123287671234,
+       "lo": -0.03835879873551108,
+       "hi": 0.2171428571428571,
+       "n": 73,
+       "units": 63
+      },
+      "iii": {
+       "d": 0.05753424657534246,
+       "lo": -0.07123287671232875,
+       "hi": 0.18309859154929578,
+       "n": 73,
+       "units": 63
+      },
+      "iv": {
+       "d": 0.1917808219178082,
+       "lo": 0.09749839743589744,
+       "hi": 0.2876712328767123,
+       "n": 73,
+       "units": 63
+      }
+     }
+    }
+   },
+   "discrepancy": {
+    "base_only": 212,
+    "A_only": 403,
+    "both": 135,
+    "both_same_label": 135
+   },
+   "overlap": {
+    "ii": {
+     "stable": 0.1978021978021978,
+     "unstable": 0.423728813559322
+    },
+    "A": {
+     "stable": 0.38461538461538464,
+     "unstable": 0.4406779661016949
+    }
+   },
+   "diag_A": {
+    "p_same": {
+     "q10": 0.09244301476781301,
+     "q25": 0.24283034434947443,
+     "q50": 0.4785372134641432,
+     "q75": 0.7894692951063107,
+     "q90": 0.9617461984328288
+    },
+    "none_greedy_rate": 0.0,
+    "spearman_score_K": 0.07820831483237062
+   },
+   "diag_iv": {
+    "p_same": {
+     "q10": 0.264124976620327,
+     "q25": 0.39186466811589604,
+     "q50": 0.5944776961889001,
+     "q75": 0.8238359448050881,
+     "q90": 0.930033010360834
+    },
+    "none_greedy_rate": 0.0,
+    "spearman_score_K": 0.17528101385613062
+   },
+   "iv_none_over_half": false,
+   "iv_replacement_tolerance": {
+    "0.2": 0
+   }
+  },
+  "mcl/flan/olmo": {
+   "n_items": 1653,
+   "n_items_before_parse_exclusion": 1653,
+   "fail_rate": {
+    "A": 0.0,
+    "ii": 0.0,
+    "iii": 0.0,
+    "iv": 0.0
+   },
+   "n_stable": 285,
+   "units_stable": 225,
+   "n_unstable": 75,
+   "detection": {
+    "i": 0.20631578947368423,
+    "A": 0.42736842105263156,
+    "ii": 0.29473684210526313,
+    "iii": 0.2680701754385965,
+    "iv": 0.391578947368421
+   },
+   "diff_qmean": {
+    "i": {
+     "d": 0.2210526315789474,
+     "lo": 0.15901060070671377,
+     "hi": 0.28327787258248005,
+     "n": 285,
+     "units": 225
+    },
+    "ii": {
+     "d": 0.1326315789473684,
+     "lo": 0.0711267605633803,
+     "hi": 0.19422486187130414,
+     "n": 285,
+     "units": 225
+    },
+    "iii": {
+     "d": 0.1592982456140351,
+     "lo": 0.10035081606455162,
+     "hi": 0.219789861561547,
+     "n": 285,
+     "units": 225
+    },
+    "iv": {
+     "d": 0.035789473684210524,
+     "lo": -0.023368611537617913,
+     "hi": 0.09503719684570747,
+     "n": 285,
+     "units": 225
+    }
+   },
+   "lo_above_0.05": {
+    "i": true,
+    "ii": true,
+    "iii": true,
+    "iv": false
+   },
+   "diff_q25": {
+    "i": {
+     "d": 0.23157894736842105,
+     "lo": 0.1588447653429603,
+     "hi": 0.30662020905923343,
+     "n": 285,
+     "units": 225
+    },
+    "ii": {
+     "d": 0.13333333333333333,
+     "lo": 0.04642444077275039,
+     "hi": 0.22064179653945268,
+     "n": 285,
+     "units": 225
+    },
+    "iii": {
+     "d": 0.17543859649122806,
+     "lo": 0.09824561403508772,
+     "hi": 0.254416961130742,
+     "n": 285,
+     "units": 225
+    },
+    "iv": {
+     "d": 0.010526315789473684,
+     "lo": -0.0636042402826855,
+     "hi": 0.08710801393728224,
+     "n": 285,
+     "units": 225
+    }
+   },
+   "detection_by_q": {
+    "i": {
+     "0.1": 0.0456140350877193,
+     "0.2": 0.08070175438596491,
+     "0.3": 0.19298245614035087,
+     "0.4": 0.2982456140350877,
+     "0.5": 0.41403508771929826,
+     "0.25": 0.13333333333333333
+    },
+    "A": {
+     "0.1": 0.14736842105263157,
+     "0.2": 0.29473684210526313,
+     "0.3": 0.4245614035087719,
+     "0.4": 0.5649122807017544,
+     "0.5": 0.7052631578947368,
+     "0.25": 0.3649122807017544
+    },
+    "ii": {
+     "0.1": 0.031578947368421054,
+     "0.2": 0.08771929824561403,
+     "0.3": 0.3333333333333333,
+     "0.4": 0.44912280701754387,
+     "0.5": 0.5719298245614035,
+     "0.25": 0.23157894736842105
+    },
+    "iii": {
+     "0.1": 0.03859649122807018,
+     "0.2": 0.07719298245614035,
+     "0.3": 0.2596491228070175,
+     "0.4": 0.4,
+     "0.5": 0.5649122807017544,
+     "0.25": 0.18947368421052632
+    },
+    "iv": {
+     "0.1": 0.13333333333333333,
+     "0.2": 0.2982456140350877,
+     "0.3": 0.4070175438596491,
+     "0.4": 0.5157894736842106,
+     "0.5": 0.6035087719298246,
+     "0.25": 0.3543859649122807
+    }
+   },
+   "diff_secondary": {
+    "b7": {
+     "d": 0.06736842105263159,
+     "lo": -0.01631241858445506,
+     "hi": 0.15379316035051785,
+     "n": 285,
+     "units": 225
+    },
+    "i+A": {
+     "d": 0.1,
+     "lo": 0.05813148788927336,
+     "hi": 0.1439449218601468,
+     "n": 285,
+     "units": 225
+    },
+    "b-yhat": {
+     "d": 0.22608467213858743,
+     "lo": 0.17522398452071924,
+     "hi": 0.27854064263633693,
+     "n": 285,
+     "units": 225
+    },
+    "b-K": {
+     "d": 0.19163536893915364,
+     "lo": 0.1421714819123875,
+     "hi": 0.24041900787231804,
+     "n": 285,
+     "units": 225
+    }
+   },
+   "diff_i_plus_A_vs_i": {
+    "d": 0.12105263157894737,
+    "lo": 0.0873286465367548,
+    "hi": 0.1552456786171575,
+    "n": 285,
+    "units": 225
+   },
+   "diff_b2": {
+    "d": 0.25105792010989353,
+    "lo": 0.19755564006068568,
+    "hi": 0.3043188372015421,
+    "n": 236,
+    "units": 187
+   },
+   "b2_n_stable": 236,
+   "all_errors": {
+    "i": {
+     "detection_qmean": 0.30277777777777776,
+     "detection_by_q": {
+      "0.1": 0.11666666666666667,
+      "0.2": 0.17222222222222222,
+      "0.3": 0.30277777777777776,
+      "0.4": 0.4083333333333333,
+      "0.5": 0.5138888888888888,
+      "0.25": 0.23055555555555557
+     },
+     "precision_by_q": {
+      "0.1": 0.5212121212121212,
+      "0.2": 0.46827794561933533,
+      "0.3": 0.5020161290322581,
+      "0.4": 0.5007564296520424,
+      "0.5": 0.4939467312348668,
+      "0.25": 0.4794188861985472
+     }
+    },
+    "A": {
+     "detection_qmean": 0.4294444444444445,
+     "detection_by_q": {
+      "0.1": 0.1527777777777778,
+      "0.2": 0.3,
+      "0.3": 0.4305555555555556,
+      "0.4": 0.5611111111111111,
+      "0.5": 0.7027777777777777,
+      "0.25": 0.3638888888888889
+     },
+     "precision_by_q": {
+      "0.1": 0.7636363636363637,
+      "0.2": 0.7401812688821753,
+      "0.3": 0.6955645161290323,
+      "0.4": 0.649016641452345,
+      "0.5": 0.635593220338983,
+      "0.25": 0.7167070217917676
+     }
+    },
+    "ii": {
+     "detection_qmean": 0.33944444444444444,
+     "detection_by_q": {
+      "0.1": 0.07222222222222222,
+      "0.2": 0.14166666666666666,
+      "0.3": 0.37777777777777777,
+      "0.4": 0.49444444444444446,
+      "0.5": 0.6111111111111112,
+      "0.25": 0.2777777777777778
+     },
+     "precision_by_q": {
+      "0.1": 0.5393939393939394,
+      "0.2": 0.43202416918429004,
+      "0.3": 0.5483870967741935,
+      "0.4": 0.573373676248109,
+      "0.5": 0.572639225181598,
+      "0.25": 0.5157384987893463
+     }
+    },
+    "iii": {
+     "detection_qmean": 0.315,
+     "detection_by_q": {
+      "0.1": 0.07777777777777778,
+      "0.2": 0.13333333333333333,
+      "0.3": 0.3138888888888889,
+      "0.4": 0.4527777777777778,
+      "0.5": 0.5972222222222222,
+      "0.25": 0.24166666666666667
+     },
+     "precision_by_q": {
+      "0.1": 0.5212121212121212,
+      "0.2": 0.42900302114803623,
+      "0.3": 0.5282258064516129,
+      "0.4": 0.5612708018154312,
+      "0.5": 0.5617433414043583,
+      "0.25": 0.4939467312348668
+     }
+    },
+    "iv": {
+     "detection_qmean": 0.36277777777777787,
+     "detection_by_q": {
+      "0.1": 0.13333333333333333,
+      "0.2": 0.2722222222222222,
+      "0.3": 0.36944444444444446,
+      "0.4": 0.4777777777777778,
+      "0.5": 0.5611111111111111,
+      "0.25": 0.3194444444444444
+     },
+     "precision_by_q": {
+      "0.1": 0.5878787878787879,
+      "0.2": 0.56797583081571,
+      "0.3": 0.532258064516129,
+      "0.4": 0.5219364599092284,
+      "0.5": 0.5072639225181598,
+      "0.25": 0.5520581113801453
+     }
+    }
+   },
+   "all_errors_A_minus_i": {
+    "d": 0.12666666666666668,
+    "lo": 0.06666666666666667,
+    "hi": 0.18402203856749313,
+    "n": 360,
+    "units": 285
+   },
+   "p_yhat_stable": {
+    "q10": 0.5205910516604647,
+    "q25": 0.5356485243009921,
+    "q50": 0.5561383746058928,
+    "q75": 0.5869486426094654,
+    "q90": 0.6226444738121165
+   },
+   "p_yhat_unstable": {
+    "q10": 0.5017103842734515,
+    "q25": 0.50460774072951,
+    "q50": 0.5172311349193238,
+    "q75": 0.5313289185614742,
+    "q90": 0.5493395191399972
+   },
+   "by_yhat": {
+    "F": {
+     "n_items": 1353,
+     "n_stable": 271,
+     "detection": {
+      "i": 0.19483394833948342,
+      "A": 0.42952029520295204,
+      "ii": 0.26199261992619927,
+      "iii": 0.23247232472324722,
+      "iv": 0.4059040590405904
+     },
+     "within_stratum_diff": {
+      "i": {
+       "d": 0.17416974169741697,
+       "lo": 0.1084606227106227,
+       "hi": 0.23806058990760484,
+       "n": 271,
+       "units": 212
+      },
+      "ii": {
+       "d": -0.030996309963099638,
+       "lo": -0.1037593984962406,
+       "hi": 0.04135591250854405,
+       "n": 271,
+       "units": 212
+      },
+      "iii": {
+       "d": 0.0036900369003690014,
+       "lo": -0.06745561497326202,
+       "hi": 0.07279582604417231,
+       "n": 271,
+       "units": 212
+      },
+      "iv": {
+       "d": 0.050922509225092255,
+       "lo": -0.0075757575757575725,
+       "hi": 0.10861918291790428,
+       "n": 271,
+       "units": 212
+      }
+     }
+    },
+    "T": {
+     "n_items": 300,
+     "n_stable": 14,
+     "detection": {
+      "i": 0.42857142857142866,
+      "A": 0.3857142857142857,
+      "ii": 0.9285714285714286,
+      "iii": 0.9571428571428572,
+      "iv": 0.1142857142857143
+     },
+     "within_stratum_diff": {
+      "i": {
+       "d": 0.3285714285714286,
+       "lo": 0.14274725274725283,
+       "hi": 0.5142857142857143,
+       "n": 14,
+       "units": 13
+      },
+      "ii": {
+       "d": 0.14285714285714285,
+       "lo": -0.13846153846153847,
+       "hi": 0.4,
+       "n": 14,
+       "units": 13
+      },
+      "iii": {
+       "d": 0.14285714285714285,
+       "lo": -0.12307692307692308,
+       "hi": 0.38571428571428573,
+       "n": 14,
+       "units": 13
+      },
+      "iv": {
+       "d": 0.19999999999999998,
+       "lo": -0.08571428571428573,
+       "hi": 0.4714285714285714,
+       "n": 14,
+       "units": 13
+      }
+     }
+    }
+   },
+   "discrepancy": {
+    "base_only": 492,
+    "A_only": 272,
+    "both": 266,
+    "both_same_label": 266
+   },
+   "overlap": {
+    "ii": {
+     "stable": 0.9508771929824561,
+     "unstable": 0.7066666666666667
+    },
+    "A": {
+     "stable": 0.3298245614035088,
+     "unstable": 0.37333333333333335
+    }
+   },
+   "diag_A": {
+    "p_same": {
+     "q10": 0.09244301476781301,
+     "q25": 0.24283034434947443,
+     "q50": 0.4785372134641432,
+     "q75": 0.7894692951063107,
+     "q90": 0.9617461984328288
+    },
+    "none_greedy_rate": 0.0,
+    "spearman_score_K": -0.22075925040012115
+   },
+   "diag_iv": {
+    "p_same": {
+     "q10": 0.264124976620327,
+     "q25": 0.39186466811589604,
+     "q50": 0.5944776961889001,
+     "q75": 0.8238359448050881,
+     "q90": 0.930033010360834
+    },
+    "none_greedy_rate": 0.0,
+    "spearman_score_K": -0.47495368869594506
+   },
+   "iv_none_over_half": false,
+   "iv_replacement_tolerance": {
+    "0.2": 0
+   }
+  }
+ },
+ "descriptive": {
+  "mcl/deberta/qwen": {
+   "scope": {
+    "ranked_items": 1653,
+    "note": "items with >= 2 WordNet senses on which every primary method parsed"
+   },
+   "accuracy_on_mcl": {
+    "base": 0.7900786448880823,
+    "A": 0.8209316394434362,
+    "ii": 0.7767695099818511,
+    "iii": 0.7477313974591652,
+    "iv": 0.5656382335148216
+   },
+   "A_v4": {
+    "n_items": 1653,
+    "parse_rate": 1.0,
+    "n_stable": 91,
+    "detection": {
+     "i": 0.38021978021978026,
+     "A": 0.6483516483516484,
+     "ii": 0.5802197802197802,
+     "iii": 0.6043956043956044,
+     "iv": 0.3494505494505495,
+     "A_v4": 0.6703296703296703
+    },
+    "A_v4_minus": {
+     "i": {
+      "d": 0.29010989010989013,
+      "lo": 0.1891304347826087,
+      "hi": 0.39047899159663857,
+      "n": 91,
+      "units": 81
+     },
+     "ii": {
+      "d": 0.09010989010989011,
+      "lo": -0.006063730084348634,
+      "hi": 0.18863636363636366,
+      "n": 91,
+      "units": 81
+     },
+     "iii": {
+      "d": 0.06593406593406592,
+      "lo": -0.03225806451612903,
+      "hi": 0.1613720986460347,
+      "n": 91,
+      "units": 81
+     }
+    },
+    "A_minus_A_v4": {
+     "d": -0.021978021978021973,
+     "lo": -0.05393258426966293,
+     "hi": 0.008988764044943823,
+     "n": 91,
+     "units": 81
+    },
+    "p_same": {
+     "q10": 2.859176448183217e-09,
+     "q25": 3.4664376122435475e-07,
+     "q50": 0.04738785112945108,
+     "q75": 0.9999893961667671,
+     "q90": 0.9999999826644211
+    }
+   },
+   "ties_A_v4": {
+    "0.1": 0.0006049606775559589,
+    "0.2": 0.0006049606775559589,
+    "0.3": 0.0006049606775559589,
+    "0.4": 0.0006049606775559589,
+    "0.5": 0.0006049606775559589
+   },
+   "ties_at_boundaries": {
+    "i": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    },
+    "A": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    },
+    "iv": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    },
+    "i+A": {
+     "0.1": 0.0018148820326678765,
+     "0.2": 0.0012099213551119178,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0012099213551119178,
+     "0.5": 0.0006049606775559589
+    }
+   },
+   "by_split": {
+    "dev": {
+     "n_stable": 43,
+     "detection": {
+      "i": 0.33953488372093027,
+      "A": 0.627906976744186,
+      "ii": 0.5162790697674419,
+      "iii": 0.5395348837209303,
+      "iv": 0.3116279069767442
+     },
+     "A_minus": {
+      "i": {
+       "d": 0.28837209302325584,
+       "lo": 0.1368356867779204,
+       "hi": 0.43043478260869567,
+       "n": 43,
+       "units": 37
+      },
+      "ii": {
+       "d": 0.11162790697674418,
+       "lo": -0.03111111111111111,
+       "hi": 0.2697674418604651,
+       "n": 43,
+       "units": 37
+      },
+      "iii": {
+       "d": 0.08837209302325583,
+       "lo": -0.04737468671679198,
+       "hi": 0.2340425531914893,
+       "n": 43,
+       "units": 37
+      },
+      "iv": {
+       "d": 0.31627906976744186,
+       "lo": 0.15384615384615385,
+       "hi": 0.46222222222222226,
+       "n": 43,
+       "units": 37
+      }
+     }
+    },
+    "test": {
+     "n_stable": 48,
+     "detection": {
+      "i": 0.4166666666666667,
+      "A": 0.6666666666666666,
+      "ii": 0.6375000000000001,
+      "iii": 0.6625,
+      "iv": 0.38333333333333336
+     },
+     "A_minus": {
+      "i": {
+       "d": 0.25,
+       "lo": 0.09795918367346938,
+       "hi": 0.4,
+       "n": 48,
+       "units": 44
+      },
+      "ii": {
+       "d": 0.02916666666666666,
+       "lo": -0.11199999999999999,
+       "hi": 0.16956521739130437,
+       "n": 48,
+       "units": 44
+      },
+      "iii": {
+       "d": 0.004166666666666666,
+       "lo": -0.13481304347826084,
+       "hi": 0.14583333333333331,
+       "n": 48,
+       "units": 44
+      },
+      "iv": {
+       "d": 0.2833333333333333,
+       "lo": 0.13599999999999998,
+       "hi": 0.4269499999999996,
+       "n": 48,
+       "units": 44
+      }
+     }
+    }
+   },
+   "risk_coverage": {
+    "risk_at_q": {
+     "i": {
+      "0.1": 0.18346774193548387,
+      "0.2": 0.15809379727685324,
+      "0.3": 0.1331028522039758,
+      "0.4": 0.11391129032258064,
+      "0.5": 0.10278113663845223
+     },
+     "A": {
+      "0.1": 0.13844086021505375,
+      "0.2": 0.094553706505295,
+      "0.3": 0.07087294727744166,
+      "0.4": 0.05241935483870968,
+      "0.5": 0.036275695284159616
+     },
+     "i+A": {
+      "0.1": 0.14493727598566308,
+      "0.2": 0.09833585476550681,
+      "0.3": 0.07000864304235091,
+      "0.4": 0.043850806451612906,
+      "0.5": 0.03869407496977025
+     }
+    },
+    "aurc": {
+     "i": 0.11473089467503286,
+     "A": 0.06455440309861832,
+     "i+A": 0.0655258244941582
+    },
+    "aurc_i+A_minus_i": {
+     "d": -0.049205070180874666,
+     "lo": -0.06124543396255125,
+     "hi": -0.038186804465783354
+    },
+    "risk_q10_50_i+A_minus_i": {
+     "d": -0.05910603263248837,
+     "lo": -0.06990794471301401,
+     "hi": -0.04847920112405427
+    },
+    "aurc_A_minus_i": {
+     "d": -0.050176491576414545,
+     "lo": -0.06717966387189203,
+     "hi": -0.03409283409728933
+    },
+    "risk_q10_50_A_minus_i": {
+     "d": -0.05975885085133722,
+     "lo": -0.07671177648635773,
+     "hi": -0.04335327974520485
+    }
+   },
+   "base_on_mcl": {
+    "n": 1653,
+    "accuracy": 0.7900786448880823,
+    "ece": 0.024348432159307685,
+    "share_pred_T": 0.6019358741681791,
+    "p_pred": {
+     "q10": 0.5621518703055494,
+     "q25": 0.6606198423226074,
+     "q50": 0.7979664800234861,
+     "q75": 0.8957876250721583,
+     "q90": 0.9428297086762543
+    }
+   },
+   "base_on_v4_wic_test": {
+    "n": 1400,
+    "accuracy": 0.7364285714285714,
+    "ece": 0.16895769765071086,
+    "share_pred_T": 0.545,
+    "p_pred": {
+     "q10": 0.7231193557103527,
+     "q25": 0.8687769331079707,
+     "q50": 0.9489096654042941,
+     "q75": 0.9726195621053105,
+     "q90": 0.983488919961539
+    }
+   },
+   "check_exclusion_profile": {
+    "excluded_by_check": {
+     "n": 683,
+     "base_error_rate": 0.21669106881405564,
+     "share_noun": 0.6486090775988287,
+     "K": {
+      "q10": 3.0,
+      "q25": 3.0,
+      "q50": 4.0,
+      "q75": 6.0,
+      "q90": 9.0
+     }
+    },
+    "passed_check": {
+     "n": 773,
+     "base_error_rate": 0.19404915912031048,
+     "share_noun": 0.7063389391979301,
+     "K": {
+      "q10": 3.0,
+      "q25": 3.0,
+      "q50": 4.0,
+      "q75": 6.0,
+      "q90": 9.0
+     }
+    },
+    "not_on_sheet": {
+     "n": 197,
+     "base_error_rate": 0.24873096446700507,
+     "share_noun": 0.6142131979695431,
+     "K": {
+      "q10": 3.0,
+      "q25": 4.0,
+      "q50": 5.0,
+      "q75": 7.0,
+      "q90": 11.0
+     }
+    }
+   }
+  },
+  "mcl/flan/qwen": {
+   "scope": {
+    "ranked_items": 1653,
+    "note": "items with >= 2 WordNet senses on which every primary method parsed"
+   },
+   "accuracy_on_mcl": {
+    "base": 0.5414398064125832,
+    "A": 0.8209316394434362,
+    "ii": 0.7767695099818511,
+    "iii": 0.7477313974591652,
+    "iv": 0.5656382335148216
+   },
+   "A_v4": {
+    "n_items": 1653,
+    "parse_rate": 1.0,
+    "n_stable": 285,
+    "detection": {
+     "i": 0.20631578947368423,
+     "A": 0.5564912280701754,
+     "ii": 0.48000000000000004,
+     "iii": 0.4631578947368421,
+     "iv": 0.4007017543859649,
+     "A_v4": 0.5410526315789473
+    },
+    "A_v4_minus": {
+     "i": {
+      "d": 0.3347368421052631,
+      "lo": 0.2778181197641949,
+      "hi": 0.39166738754325264,
+      "n": 285,
+      "units": 225
+     },
+     "ii": {
+      "d": 0.06105263157894738,
+      "lo": 0.005035519971119876,
+      "hi": 0.11643967796202837,
+      "n": 285,
+      "units": 225
+     },
+     "iii": {
+      "d": 0.07789473684210527,
+      "lo": 0.02318764302059496,
+      "hi": 0.13286713286713284,
+      "n": 285,
+      "units": 225
+     }
+    },
+    "A_minus_A_v4": {
+     "d": 0.015438596491228068,
+     "lo": -0.01103448275862069,
+     "hi": 0.043358136525396294,
+     "n": 285,
+     "units": 225
+    },
+    "p_same": {
+     "q10": 2.859176448183217e-09,
+     "q25": 3.4664376122435475e-07,
+     "q50": 0.04738785112945108,
+     "q75": 0.9999893961667671,
+     "q90": 0.9999999826644211
+    }
+   },
+   "ties_A_v4": {
+    "0.1": 0.0006049606775559589,
+    "0.2": 0.0006049606775559589,
+    "0.3": 0.0006049606775559589,
+    "0.4": 0.0006049606775559589,
+    "0.5": 0.0006049606775559589
+   },
+   "ties_at_boundaries": {
+    "i": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    },
+    "A": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    },
+    "iv": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    },
+    "i+A": {
+     "0.1": 0.0012099213551119178,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0018148820326678765,
+     "0.4": 0.0012099213551119178,
+     "0.5": 0.0006049606775559589
+    }
+   },
+   "by_split": {
+    "dev": {
+     "n_stable": 147,
+     "detection": {
+      "i": 0.18775510204081633,
+      "A": 0.5020408163265306,
+      "ii": 0.45170068027210886,
+      "iii": 0.41360544217687073,
+      "iv": 0.43129251700680277
+     },
+     "A_minus": {
+      "i": {
+       "d": 0.3142857142857143,
+       "lo": 0.23472222222222225,
+       "hi": 0.39305555555555555,
+       "n": 147,
+       "units": 113
+      },
+      "ii": {
+       "d": 0.05034013605442177,
+       "lo": -0.03120784484006368,
+       "hi": 0.12956213402732591,
+       "n": 147,
+       "units": 113
+      },
+      "iii": {
+       "d": 0.08843537414965986,
+       "lo": 0.004080943188086029,
+       "hi": 0.17162186122292508,
+       "n": 147,
+       "units": 113
+      },
+      "iv": {
+       "d": 0.07074829931972788,
+       "lo": -0.017808219178082188,
+       "hi": 0.16028368794326245,
+       "n": 147,
+       "units": 113
+      }
+     }
+    },
+    "test": {
+     "n_stable": 138,
+     "detection": {
+      "i": 0.22608695652173913,
+      "A": 0.6144927536231883,
+      "ii": 0.5101449275362319,
+      "iii": 0.5159420289855071,
+      "iv": 0.36811594202898557
+     },
+     "A_minus": {
+      "i": {
+       "d": 0.3884057971014493,
+       "lo": 0.29714182194616984,
+       "hi": 0.47571428571428576,
+       "n": 138,
+       "units": 113
+      },
+      "ii": {
+       "d": 0.10434782608695653,
+       "lo": 0.019255718954248376,
+       "hi": 0.18939593301435406,
+       "n": 138,
+       "units": 113
+      },
+      "iii": {
+       "d": 0.09855072463768115,
+       "lo": 0.016170609548167094,
+       "hi": 0.1824817518248175,
+       "n": 138,
+       "units": 113
+      },
+      "iv": {
+       "d": 0.2463768115942029,
+       "lo": 0.15781915685982423,
+       "hi": 0.33237410071942447,
+       "n": 138,
+       "units": 113
+      }
+     }
+    }
+   },
+   "risk_coverage": {
+    "risk_at_q": {
+     "i": {
+      "0.1": 0.45161290322580644,
+      "0.2": 0.45612708018154313,
+      "0.3": 0.4399308556611927,
+      "0.4": 0.43044354838709675,
+      "0.5": 0.42321644498186217
+     },
+     "A": {
+      "0.1": 0.40658602150537637,
+      "0.2": 0.3426626323751891,
+      "0.3": 0.2713915298184961,
+      "0.4": 0.20463709677419356,
+      "0.5": 0.13422007255139057
+     },
+     "i+A": {
+      "0.1": 0.40793010752688175,
+      "0.2": 0.3600605143721634,
+      "0.3": 0.32094497263036587,
+      "0.4": 0.2857862903225806,
+      "0.5": 0.2370012091898428
+     }
+    },
+    "aurc": {
+     "i": 0.4205990516581153,
+     "A": 0.18204807823389368,
+     "i+A": 0.23652836855522946
+    },
+    "aurc_i+A_minus_i": {
+     "d": -0.18407068310288582,
+     "lo": -0.20464835085419522,
+     "hi": -0.16428582587356025
+    },
+    "risk_q10_50_i+A_minus_i": {
+     "d": -0.11792154767913336,
+     "lo": -0.13036796039819445,
+     "hi": -0.10568550560651882
+    },
+    "aurc_A_minus_i": {
+     "d": -0.2385509734242216,
+     "lo": -0.26743799690039616,
+     "hi": -0.21063924094276357
+    },
+    "risk_q10_50_A_minus_i": {
+     "d": -0.16836669588257108,
+     "lo": -0.18934031642045643,
+     "hi": -0.14692342240391668
+    }
+   },
+   "base_on_mcl": {
+    "n": 1653,
+    "accuracy": 0.5414398064125832,
+    "ece": 0.018444751306926983,
+    "share_pred_T": 0.18148820326678766,
+    "p_pred": {
+     "q10": 0.5090156915084266,
+     "q25": 0.5244070764030377,
+     "q50": 0.5499318942507068,
+     "q75": 0.5833375724124465,
+     "q90": 0.6194162242699623
+    }
+   },
+   "base_on_v4_wic_test": {
+    "n": 1400,
+    "accuracy": 0.5421428571428571,
+    "ece": 0.036292088214601614,
+    "share_pred_T": 0.3464285714285714,
+    "p_pred": {
+     "q10": 0.5065478008566611,
+     "q25": 0.5150181910571399,
+     "q50": 0.5356054710287776,
+     "q75": 0.5606977224192403,
+     "q90": 0.5860005194284489
+    }
+   },
+   "check_exclusion_profile": {
+    "excluded_by_check": {
+     "n": 683,
+     "base_error_rate": 0.44363103953147875,
+     "share_noun": 0.6486090775988287,
+     "K": {
+      "q10": 3.0,
+      "q25": 3.0,
+      "q50": 4.0,
+      "q75": 6.0,
+      "q90": 9.0
+     }
+    },
+    "passed_check": {
+     "n": 773,
+     "base_error_rate": 0.46571798188874514,
+     "share_noun": 0.7063389391979301,
+     "K": {
+      "q10": 3.0,
+      "q25": 3.0,
+      "q50": 4.0,
+      "q75": 6.0,
+      "q90": 9.0
+     }
+    },
+    "not_on_sheet": {
+     "n": 197,
+     "base_error_rate": 0.48223350253807107,
+     "share_noun": 0.6142131979695431,
+     "K": {
+      "q10": 3.0,
+      "q25": 4.0,
+      "q50": 5.0,
+      "q75": 7.0,
+      "q90": 11.0
+     }
+    }
+   }
+  },
+  "mcl/deberta/olmo": {
+   "scope": {
+    "ranked_items": 1653,
+    "note": "items with >= 2 WordNet senses on which every primary method parsed"
+   },
+   "accuracy_on_mcl": {
+    "base": 0.7900786448880823,
+    "A": 0.6745311554748942,
+    "ii": 0.499697519661222,
+    "iii": 0.5015124016938899,
+    "iv": 0.5335753176043557
+   },
+   "ties_at_boundaries": {
+    "i": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    },
+    "A": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    },
+    "iv": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    },
+    "i+A": {
+     "0.1": 0.0012099213551119178,
+     "0.2": 0.0012099213551119178,
+     "0.3": 0.0024198427102238356,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    }
+   },
+   "by_split": {
+    "dev": {
+     "n_stable": 43,
+     "detection": {
+      "i": 0.33953488372093027,
+      "A": 0.47441860465116276,
+      "ii": 0.4697674418604651,
+      "iii": 0.4976744186046511,
+      "iv": 0.27441860465116275
+     },
+     "A_minus": {
+      "i": {
+       "d": 0.1348837209302326,
+       "lo": -0.022234848484848472,
+       "hi": 0.29047619047619044,
+       "n": 43,
+       "units": 37
+      },
+      "ii": {
+       "d": 0.0046511627906976735,
+       "lo": -0.15454545454545457,
+       "hi": 0.18000000000000002,
+       "n": 43,
+       "units": 37
+      },
+      "iii": {
+       "d": -0.02325581395348839,
+       "lo": -0.19047619047619047,
+       "hi": 0.1534973166368514,
+       "n": 43,
+       "units": 37
+      },
+      "iv": {
+       "d": 0.20000000000000007,
+       "lo": 0.04183959451401315,
+       "hi": 0.342238095238095,
+       "n": 43,
+       "units": 37
+      }
+     }
+    },
+    "test": {
+     "n_stable": 48,
+     "detection": {
+      "i": 0.4166666666666667,
+      "A": 0.5375000000000001,
+      "ii": 0.4791666666666667,
+      "iii": 0.4833333333333334,
+      "iv": 0.2791666666666667
+     },
+     "A_minus": {
+      "i": {
+       "d": 0.12083333333333333,
+       "lo": -0.02040816326530614,
+       "hi": 0.25957446808510637,
+       "n": 48,
+       "units": 44
+      },
+      "ii": {
+       "d": 0.05833333333333333,
+       "lo": -0.09411764705882353,
+       "hi": 0.2182272727272721,
+       "n": 48,
+       "units": 44
+      },
+      "iii": {
+       "d": 0.05416666666666667,
+       "lo": -0.10204081632653061,
+       "hi": 0.20888888888888885,
+       "n": 48,
+       "units": 44
+      },
+      "iv": {
+       "d": 0.2583333333333333,
+       "lo": 0.13877551020408163,
+       "hi": 0.38261794634597585,
+       "n": 48,
+       "units": 44
+      }
+     }
+    }
+   },
+   "risk_coverage": {
+    "risk_at_q": {
+     "i": {
+      "0.1": 0.18346774193548387,
+      "0.2": 0.15809379727685324,
+      "0.3": 0.1331028522039758,
+      "0.4": 0.11391129032258064,
+      "0.5": 0.10278113663845223
+     },
+     "A": {
+      "0.1": 0.17405913978494625,
+      "0.2": 0.1573373676248109,
+      "0.3": 0.14520311149524634,
+      "0.4": 0.125,
+      "0.5": 0.11124546553808948
+     },
+     "i+A": {
+      "0.1": 0.16599462365591397,
+      "0.2": 0.13010590015128592,
+      "0.3": 0.10544511668107173,
+      "0.4": 0.08770161290322581,
+      "0.5": 0.07859733978234583
+     }
+    },
+    "aurc": {
+     "i": 0.11473089467503286,
+     "A": 0.12099768962954476,
+     "i+A": 0.0931242631439887
+    },
+    "aurc_i+A_minus_i": {
+     "d": -0.021606631531044168,
+     "lo": -0.03305356041356862,
+     "hi": -0.010582408942525977
+    },
+    "risk_q10_50_i+A_minus_i": {
+     "d": -0.024702445040700505,
+     "lo": -0.034962187931119555,
+     "hi": -0.014465798491361056
+    },
+    "aurc_A_minus_i": {
+     "d": 0.006266794954511892,
+     "lo": -0.014041518924303822,
+     "hi": 0.026762788629738368
+    },
+    "risk_q10_50_A_minus_i": {
+     "d": 0.004297653213149436,
+     "lo": -0.012458258597825546,
+     "hi": 0.021088705026436803
+    }
+   },
+   "base_on_mcl": {
+    "n": 1653,
+    "accuracy": 0.7900786448880823,
+    "ece": 0.024348432159307685,
+    "share_pred_T": 0.6019358741681791,
+    "p_pred": {
+     "q10": 0.5621518703055494,
+     "q25": 0.6606198423226074,
+     "q50": 0.7979664800234861,
+     "q75": 0.8957876250721583,
+     "q90": 0.9428297086762543
+    }
+   },
+   "base_on_v4_wic_test": {
+    "n": 1400,
+    "accuracy": 0.7364285714285714,
+    "ece": 0.16895769765071086,
+    "share_pred_T": 0.545,
+    "p_pred": {
+     "q10": 0.7231193557103527,
+     "q25": 0.8687769331079707,
+     "q50": 0.9489096654042941,
+     "q75": 0.9726195621053105,
+     "q90": 0.983488919961539
+    }
+   },
+   "check_exclusion_profile": {
+    "excluded_by_check": {
+     "n": 683,
+     "base_error_rate": 0.21669106881405564,
+     "share_noun": 0.6486090775988287,
+     "K": {
+      "q10": 3.0,
+      "q25": 3.0,
+      "q50": 4.0,
+      "q75": 6.0,
+      "q90": 9.0
+     }
+    },
+    "passed_check": {
+     "n": 773,
+     "base_error_rate": 0.19404915912031048,
+     "share_noun": 0.7063389391979301,
+     "K": {
+      "q10": 3.0,
+      "q25": 3.0,
+      "q50": 4.0,
+      "q75": 6.0,
+      "q90": 9.0
+     }
+    },
+    "not_on_sheet": {
+     "n": 197,
+     "base_error_rate": 0.24873096446700507,
+     "share_noun": 0.6142131979695431,
+     "K": {
+      "q10": 3.0,
+      "q25": 4.0,
+      "q50": 5.0,
+      "q75": 7.0,
+      "q90": 11.0
+     }
+    }
+   }
+  },
+  "mcl/flan/olmo": {
+   "scope": {
+    "ranked_items": 1653,
+    "note": "items with >= 2 WordNet senses on which every primary method parsed"
+   },
+   "accuracy_on_mcl": {
+    "base": 0.5414398064125832,
+    "A": 0.6745311554748942,
+    "ii": 0.499697519661222,
+    "iii": 0.5015124016938899,
+    "iv": 0.5335753176043557
+   },
+   "ties_at_boundaries": {
+    "i": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    },
+    "A": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    },
+    "iv": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0006049606775559589,
+     "0.4": 0.0006049606775559589,
+     "0.5": 0.0006049606775559589
+    },
+    "i+A": {
+     "0.1": 0.0006049606775559589,
+     "0.2": 0.0006049606775559589,
+     "0.3": 0.0012099213551119178,
+     "0.4": 0.0012099213551119178,
+     "0.5": 0.0012099213551119178
+    }
+   },
+   "by_split": {
+    "dev": {
+     "n_stable": 147,
+     "detection": {
+      "i": 0.18775510204081633,
+      "A": 0.3904761904761905,
+      "ii": 0.2816326530612245,
+      "iii": 0.23401360544217686,
+      "iv": 0.41496598639455784
+     },
+     "A_minus": {
+      "i": {
+       "d": 0.20272108843537417,
+       "lo": 0.11971830985915495,
+       "hi": 0.28497151563328027,
+       "n": 147,
+       "units": 113
+      },
+      "ii": {
+       "d": 0.10884353741496598,
+       "lo": 0.015068493150684944,
+       "hi": 0.20256493506493506,
+       "n": 147,
+       "units": 113
+      },
+      "iii": {
+       "d": 0.1564625850340136,
+       "lo": 0.06756712010023269,
+       "hi": 0.2438776418242491,
+       "n": 147,
+       "units": 113
+      },
+      "iv": {
+       "d": -0.02448979591836735,
+       "lo": -0.10063757539967096,
+       "hi": 0.05359548167092923,
+       "n": 147,
+       "units": 113
+      }
+     }
+    },
+    "test": {
+     "n_stable": 138,
+     "detection": {
+      "i": 0.22608695652173913,
+      "A": 0.4666666666666666,
+      "ii": 0.308695652173913,
+      "iii": 0.30434782608695654,
+      "iv": 0.3666666666666667
+     },
+     "A_minus": {
+      "i": {
+       "d": 0.24057971014492754,
+       "lo": 0.14676235634868726,
+       "hi": 0.3301411374014113,
+       "n": 138,
+       "units": 113
+      },
+      "ii": {
+       "d": 0.15797101449275366,
+       "lo": 0.07384397163120568,
+       "hi": 0.2411347517730497,
+       "n": 138,
+       "units": 113
+      },
+      "iii": {
+       "d": 0.16231884057971013,
+       "lo": 0.07670941416496647,
+       "hi": 0.2457164667393675,
+       "n": 138,
+       "units": 113
+      },
+      "iv": {
+       "d": 0.1,
+       "lo": 0.014595895482915474,
+       "hi": 0.18382352941176472,
+       "n": 138,
+       "units": 113
+      }
+     }
+    }
+   },
+   "risk_coverage": {
+    "risk_at_q": {
+     "i": {
+      "0.1": 0.45161290322580644,
+      "0.2": 0.45612708018154313,
+      "0.3": 0.4399308556611927,
+      "0.4": 0.43044354838709675,
+      "0.5": 0.42321644498186217
+     },
+     "A": {
+      "0.1": 0.42473118279569894,
+      "0.2": 0.3880484114977307,
+      "0.3": 0.35695764909248057,
+      "0.4": 0.3316532258064516,
+      "0.5": 0.28174123337363965
+     },
+     "i+A": {
+      "0.1": 0.426747311827957,
+      "0.2": 0.405446293494705,
+      "0.3": 0.3811581676750216,
+      "0.4": 0.34274193548387094,
+      "0.5": 0.3143893591293833
+     }
+    },
+    "aurc": {
+     "i": 0.4205990516581153,
+     "A": 0.2728131108466545,
+     "i+A": 0.30204899111845834
+    },
+    "aurc_i+A_minus_i": {
+     "d": -0.11855006053965694,
+     "lo": -0.1383538937277379,
+     "hi": -0.09938345028319975
+    },
+    "risk_q10_50_i+A_minus_i": {
+     "d": -0.06616955296531267,
+     "lo": -0.07855215162069566,
+     "hi": -0.054106783929569066
+    },
+    "aurc_A_minus_i": {
+     "d": -0.1477859408114608,
+     "lo": -0.17758790603652,
+     "hi": -0.11845727765440485
+    },
+    "risk_q10_50_A_minus_i": {
+     "d": -0.08363982597429995,
+     "lo": -0.10434413359670813,
+     "hi": -0.06311722272762796
+    }
+   },
+   "base_on_mcl": {
+    "n": 1653,
+    "accuracy": 0.5414398064125832,
+    "ece": 0.018444751306926983,
+    "share_pred_T": 0.18148820326678766,
+    "p_pred": {
+     "q10": 0.5090156915084266,
+     "q25": 0.5244070764030377,
+     "q50": 0.5499318942507068,
+     "q75": 0.5833375724124465,
+     "q90": 0.6194162242699623
+    }
+   },
+   "base_on_v4_wic_test": {
+    "n": 1400,
+    "accuracy": 0.5421428571428571,
+    "ece": 0.036292088214601614,
+    "share_pred_T": 0.3464285714285714,
+    "p_pred": {
+     "q10": 0.5065478008566611,
+     "q25": 0.5150181910571399,
+     "q50": 0.5356054710287776,
+     "q75": 0.5606977224192403,
+     "q90": 0.5860005194284489
+    }
+   },
+   "check_exclusion_profile": {
+    "excluded_by_check": {
+     "n": 683,
+     "base_error_rate": 0.44363103953147875,
+     "share_noun": 0.6486090775988287,
+     "K": {
+      "q10": 3.0,
+      "q25": 3.0,
+      "q50": 4.0,
+      "q75": 6.0,
+      "q90": 9.0
+     }
+    },
+    "passed_check": {
+     "n": 773,
+     "base_error_rate": 0.46571798188874514,
+     "share_noun": 0.7063389391979301,
+     "K": {
+      "q10": 3.0,
+      "q25": 3.0,
+      "q50": 4.0,
+      "q75": 6.0,
+      "q90": 9.0
+     }
+    },
+    "not_on_sheet": {
+     "n": 197,
+     "base_error_rate": 0.48223350253807107,
+     "share_noun": 0.6142131979695431,
+     "K": {
+      "q10": 3.0,
+      "q25": 4.0,
+      "q50": 5.0,
+      "q75": 7.0,
+      "q90": 11.0
+     }
+    }
+   }
+  }
+ },
+ "reading_rules": [
+  "mcl/flan/qwen: within the stratum yhat=T, A - (ii) has the opposite sign to the main result; report in the limitations.",
+  "mcl/flan/qwen: within the stratum yhat=T, A - (iii) has the opposite sign to the main result; report in the limitations.",
+  "mcl/flan/olmo: within the stratum yhat=F, A - (ii) has the opposite sign to the main result; report in the limitations."
+ ]
+}
