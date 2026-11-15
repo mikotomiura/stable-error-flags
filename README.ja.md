@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="https://doi.org/10.5281/zenodo.24132225"><img alt="Preprint DOI" src="https://img.shields.io/badge/preprint-10.5281%2Fzenodo.24132225-2a78d6?style=flat-square"></a>
-  <a href="https://doi.org/10.5281/zenodo.24132227"><img alt="Code DOI" src="https://img.shields.io/badge/code%20%26%20data-10.5281%2Fzenodo.24132227-2a78d6?style=flat-square"></a>
+  <a href="https://doi.org/10.5281/zenodo.24241661"><img alt="Preprint DOI" src="https://img.shields.io/badge/preprint-10.5281%2Fzenodo.24241661-2a78d6?style=flat-square"></a>
+  <a href="https://doi.org/10.5281/zenodo.24241662"><img alt="Code DOI" src="https://img.shields.io/badge/code%20%26%20data-10.5281%2Fzenodo.24241662-2a78d6?style=flat-square"></a>
   <img alt="Code license MIT" src="https://img.shields.io/badge/code-MIT-52514e?style=flat-square">
   <img alt="Content license CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-52514e?style=flat-square">
   <img alt="Python 3.13" src="https://img.shields.io/badge/python-3.13-52514e?style=flat-square">
@@ -15,7 +15,7 @@
   <a href="README.md">English</a> · <b>日本語</b>
 </p>
 
-Mikoto Miura・Yuusuke Harada による論文「**Flagging stable classifier errors with an inventory-mediated LLM judgement: an exploratory study and a preregistered replication**」（プレプリント、査読中）のコードと集計の出力です。
+Mikoto Miura・Yuusuke Harada による論文「**Flagging stable classifier errors with an inventory-mediated LLM judgement: an exploratory study and a preregistered replication**」（プレプリント、第 0.8 版）のコードと集計の出力です。
 
 > **ひとことで言うと。** WordNet の語義の目録を介した LLM の判断と分類器との食い違いは、分類器が**繰り返す**誤りを、分類器自身の信頼度より多く拾います。ただし、そのうち目録そのものが要った分（もう 1 回の判断でも届く分ではないもの）は決められませんでした。
 
@@ -44,8 +44,10 @@ Mikoto Miura・Yuusuke Harada による論文「**Flagging stable classifier err
 | | 結果 | 位置づけ |
 |---|---|---|
 | 🔵 **A は安定した誤りで信頼度に勝つ** | WiC 型の 7 構成すべてで。DeBERTa × Qwen は 0.206 [0.142, 0.268]（研究 1）、0.268 [0.161, 0.374]（研究 2） | 探索 / 中止（記述） |
-| ⚖️ **目録が要った分は？** | 働く判定器である構造なしの 2 回目の判断だけで、A の上乗せの 25〜78% に届く | 事後 |
+| 🔍 **安定した予測に絞ると** | どの形でも同じ予測をした項目に旗を先に使うと（ラベル不要）、無作為を含むどの得点も上がる。絞った A は、同じく絞った無作為に 7 構成すべてで、絞った信頼度に 5 構成で勝つ | 事後 |
+| ⚖️ **目録が要った分は？** | 働く判定器である構造なしの 2 回目の判断だけで、信頼度に対する A の上乗せの 25〜78%（偏りを補正すると 39〜88%）に届く | 事後 |
 | 🧭 **上乗せの一部は偏りの補正** | ラベルを使わずに偏りを補正した判断と比べても、WiC test では上乗せが残る（0.125 [0.066, 0.185]）。MCL-WiC では補正の決め方次第 | 事後 |
+| 🧩 **語義の粒度が効く** | WiC test の作り方が除いた近い語義を A で同じ語義に数えると、WiC test では検出率が上がり、MCL-WiC では下がった。共有した目録の効果と整合するが、それを確かめたわけではない | 事後 |
 | 🧑‍⚖️ **安定した誤りは本当に誤りか** | 研究から独立した 2 名がともに参照ラベルを選んだのは、研究 1 の安定した誤り 208 件中 100 件だけ（正しく分類された項目では 208 件中 180 件） | 事後 |
 | 🔶 **NLI** | 原子的な事実を介すと、直接聞くより旗が**悪く**なった（−0.097 [−0.119, −0.075]） | 探索 |
 
@@ -74,7 +76,7 @@ Mikoto Miura・Yuusuke Harada による論文「**Flagging stable classifier err
 │   ├── 20261109-rep-main/     # 研究 2 の解析の出力
 │   └── 20261110-adjudication/ # 人の裁定: 手引き・コード・テスト・結果
 ├── papers/bics/
-│   ├── scripts/               # 表・図・事後の分析（P1〜P17）・LaTeX の組版
+│   ├── scripts/               # 表・図・事後の分析（P1〜P26）・LaTeX の組版
 │   ├── tables/                # 表と事後の分析の出力（JSON）
 │   ├── data/                  # item_outputs.csv・adjudication_items.csv（id と数値。文は含まない）
 │   └── figures/               # 図 1
@@ -109,8 +111,8 @@ python -X utf8 papers/bics/scripts/make_readme_assets.py assets
             an exploratory study and a preregistered replication},
   author = {Miura, Mikoto and Harada, Yuusuke},
   year   = {2026},
-  note   = {Preprint},
-  doi    = {10.5281/zenodo.24132225}
+  note   = {Preprint, version 0.8},
+  doi    = {10.5281/zenodo.24241661}
 }
 ```
 

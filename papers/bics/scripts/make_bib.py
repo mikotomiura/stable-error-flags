@@ -99,6 +99,11 @@ def main():
             year = "20" + r["key"][6:8]
             venue = venue + ", to appear"
         venue_txt = re.sub(r",?\s+(?:v\d+\s+)?(?:19|20)\d\d\b", "", venue).strip(" ,")
+        # One style for every entry (2026-11-15, attack-me round 5): no page ranges; journals keep volume(issue),
+        # proceedings keep the venue name only (the SSOT keeps the pages).
+        venue_txt = re.sub(r",?\s*pp\.\s*\d+[–-]\d+", "", venue_txt)
+        venue_txt = re.sub(r":\d+[–-]\d+", "", venue_txt)
+        venue_txt = re.sub(r"\s*\((?:PMLR [^)]*|Volume [^)]*)\)", "", venue_txt).strip(" ,")
         names = [("Qwen Team" if x == "Qwen" else x) for x in a["authors"] if x != ":"]  # arXiv 2412.15115 lists "Qwen", ":"
         if len(names) > 10:  # long consortium lists: first ten, then "others" (et al.)
             names = names[:10] + ["others"]
@@ -108,6 +113,12 @@ def main():
             fields["journal"] = f"arXiv preprint arXiv:{r['key'][6:]}"
         else:
             fields["journal"] = venue_txt
+            # journals: "Name vol(issue)" -> journal, volume, number (2026-11-15, attack-me round 6: "TACL 7")
+            mv = re.match(r"^(.*[^\d\s-])\s+(\d+)(?:\((\d+)\))?$", venue_txt)
+            if mv:
+                fields["journal"], fields["volume"] = mv.group(1), mv.group(2)
+                if mv.group(3):
+                    fields["number"] = mv.group(3)
         fields["url"] = r["url"]
         body = ",\n".join(f"  {k} = {{{tex_escape(v) if k != 'url' else v}}}" for k, v in fields.items())
         out.append(f"@article{{ref{n},\n{body}\n}}\n")

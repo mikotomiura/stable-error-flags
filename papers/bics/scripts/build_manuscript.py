@@ -89,7 +89,7 @@ def table_s4():
     import json
     A = {"1": json.loads((ROOT / "experiments/20261103-evaluation/results/eval/analysis.json").read_text(encoding="utf-8")),
          "2": json.loads((ROOT / "experiments/20261109-rep-main/rep/analysis.json").read_text(encoding="utf-8"))}
-    data = {"wic_test": "WiC test", "wic_dev": "WiC dev", "grain": "GrainWiC coarse", "chaos": "ChaosNLI",
+    data = {"wic_test": "WiC test", "wic_dev": "WiC dev", "grain": "Coarse WiC", "chaos": "ChaosNLI",
             "mcl": "MCL-WiC dev+test"}
     f = lambda x: f"{x:.3f}".replace("-", "−")
     iv = lambda d: f"{f(d['d'])} [{f(d['lo'])}, {f(d['hi'])}]"
@@ -115,7 +115,7 @@ CELLS = [("1", "wic_test", "deberta", "qwen"), ("1", "wic_test", "flan", "qwen")
          ("2", "mcl", "deberta", "qwen"), ("2", "mcl", "flan", "qwen"), ("2", "mcl", "deberta", "olmo"),
          ("2", "mcl", "flan", "olmo")]
 DATA = {"wic_test": "WiC test", "mcl": "MCL-WiC dev+test"}
-fmt = lambda x: f"{x:.3f}".replace("-", "−")
+fmt = lambda x: f"{x:.3f}".replace("-", "−").replace("−0.000", "0.000")
 fmt2 = lambda x: f"{x:.2f}".replace("-", "−")
 
 
@@ -260,6 +260,181 @@ def table_s8_round4():
         e = v["detection"]
         out.append(f"| {st} | {NAMES[l]}{DG(l)} | {v['n']} ({v['units']}) | {e['A']:.3f} | {e['i']:.3f} | {e['ii']:.3f} | "
                    f"{e['ii_deb']:.3f} | {iv(v['A_minus_ii'])} | {iv(v['A_minus_ii_deb'])} |")
+    return "\n".join(out) + "\n"
+
+
+def posthoc5():
+    import json
+    return json.loads((TAB / "posthoc_round5.json").read_text(encoding="utf-8"))
+
+
+def table_s8_round5():
+    """Tables S8.15-S8.16 (post-hoc analyses deferred in the internal review; posthoc_round5.py)."""
+    q = posthoc5()
+    iv = lambda x: f"{fmt(x['d'])} [{fmt(x['lo'])}, {fmt(x['hi'])}]" if x else "—"
+    out = ["*Table S8.15. Stable-correct items of the adjudication sheet (DeBERTa) on which both raters chose the label "
+           "opposite to the reference (\"reversed\"; not called errors, see S9) or the reference itself (\"confirmed\") [P]: flag rates and A − (ii) "
+           "(unit bootstrap). †: OLMo's (ii) is not a working judge. Intervals are not given for a single item.*", "",
+           "| Study | LLM | Items | n (units) | A | (i) | (ii) | debiased (ii) | A − (ii) | A − debiased (ii) |",
+           "|---|---|---|---|---|---|---|---|---|---|"]
+    for k, v in q["H1_hidden_errors"].items():
+        st, l = k[5], k.split("/")[-1]
+        for name, g in (("reversed", "hidden_errors_both_raters_opposite"), ("confirmed", "correct_both_raters_reference")):
+            s = v[g]
+            e = s["flag_rate"]
+            out.append(f"| {st} | {NAMES[l]}{DG(l)} | {name} | {s['n']} ({s['units']}) | {e['A']:.3f} | {e['i']:.3f} | "
+                       f"{e['ii']:.3f} | {e['ii_deb']:.3f} | {iv(s.get('A_minus_ii'))} | {iv(s.get('A_minus_ii_deb'))} |")
+    out += ["", "*Table S8.16. Study 1 contested stable errors of DeBERTa (not both raters chose the reference) by "
+            "reference label and by whether both sentences are WordNet usage examples (P4) [P]: flag rates and "
+            "A − (ii) (unit bootstrap). †: OLMo's (ii) is not a working judge.*", "",
+            "| LLM | Reference | Origin | n (units) | A | (ii) | debiased (ii) | A − (ii) | A − debiased (ii) |",
+            "|---|---|---|---|---|---|---|---|---|"]
+    for k, v in q["H2_contested_by_label_origin"].items():
+        l = k.split("/")[-1]
+        for c, s in v.items():
+            if c == "n_contested":
+                continue
+            ref, origin = c.split("/")
+            e = s["flag_rate"]
+            out.append(f"| {NAMES[l]}{DG(l)} | {ref[4:]} | {'WordNet examples' if origin == 'wordnet_examples' else 'other'} | "
+                       f"{s['n']} ({s['units']}) | {e['A']:.3f} | {e['ii']:.3f} | {e['ii_deb']:.3f} | "
+                       f"{iv(s.get('A_minus_ii'))} | {iv(s.get('A_minus_ii_deb'))} |")
+    return "\n".join(out) + "\n"
+
+
+def posthoc6():
+    import json
+    return json.loads((TAB / "posthoc_round6.json").read_text(encoding="utf-8"))
+
+
+def table_s8_round6():
+    """Tables S8.17-S8.18 (post-hoc analyses requested in attack-me round 5; posthoc_round6.py)."""
+    q = posthoc6()
+    iv = lambda x: f"{fmt(x['d'])} [{fmt(x['lo'])}, {fmt(x['hi'])}]"
+    out = ["*Table S8.17. Flags restricted to stably predicted items (same label on the original, swapped and "
+           "paraphrased inputs; no labels used) [P]: share of ranked items that are stably predicted, detection rates (q-mean over q = 0.1–0.5) of "
+           "(i) and A without and with the restriction (subscript r), and differences (unit bootstrap). (i) does not "
+           "depend on the LLM. Baselines for the restriction (a random ranking restricted in the same way, the ceiling) are in "
+           "Table S8.19.*", "",
+           "| Study | Classifier × LLM | Stable predictions | (i) | A | (i)_r | A_r | A_r − (i)_r | A − (i)_r | (i)_r − (i) |",
+           "|---|---|---|---|---|---|---|---|---|---|"]
+    for st, d, b, l in CELLS:
+        v = q["P20_stability_restricted"][f"study{st}:{d}/{b}/{l}"]
+        e = v["detection"]
+        out.append(f"| {st} | {NAMES[b]} × {NAMES[l]} | {v['n_stable_predictions']:,} of {v['n_ranked']:,} | {e['i']:.3f} | "
+                   f"{e['A']:.3f} | {e['i_r']:.3f} | {e['A_r']:.3f} | {iv(v['A_r_minus_i_r'])} | {iv(v['A_minus_i_r'])} | "
+                   f"{iv(v['i_r_minus_i'])} |")
+    out += ["", "*Table S8.18. A with the coarsening of WiC test's reference (A_c: first-degree WordNet neighbours, sister "
+            "senses and senses of the same supersense count as the same sense; no labels used) [P]: share of ranked items "
+            "predicted different, detection rates and differences (unit bootstrap). †: OLMo's (ii) is not a working judge.*", "",
+            "| Study | Classifier × LLM | Different: A | Different: A_c | A | A_c | A_c − A | A_c − (i) | A_c − (ii) | A_c − debiased (ii) |",
+            "|---|---|---|---|---|---|---|---|---|---|"]
+    for st, d, b, l in CELLS:
+        v = q["P21_coarsened_A"][f"study{st}:{d}/{b}/{l}"]
+        e = v["detection"]
+        out.append(f"| {st} | {NAMES[b]} × {NAMES[l]}{DG(l)} | {v['share_different_A']:.3f} | {v['share_different_A_c']:.3f} | "
+                   f"{e['A']:.3f} | {e['A_c']:.3f} | {iv(v['A_c_minus_A'])} | {iv(v['A_c_minus_i'])} | {iv(v['A_c_minus_ii'])} | "
+                   f"{iv(v['A_c_minus_ii_deb'])} |")
+    return "\n".join(out) + "\n"
+
+
+def posthoc7():
+    import json
+    return json.loads((TAB / "posthoc_round7.json").read_text(encoding="utf-8"))
+
+
+def table_s8_round7():
+    """Tables S8.19-S8.24 (post-hoc analyses requested in attack-me rounds 6-7; posthoc_round7.py, posthoc_round8.py)."""
+    import json
+    q = posthoc7()
+    iv = lambda x: f"{fmt(x['d'])} [{fmt(x['lo'])}, {fmt(x['hi'])}]"
+    dash = "—"
+    out = ["*Table S8.19. Baselines for the flags restricted to stably predicted items (P22) [P]: a random ranking "
+           "restricted in the same way (random_r), the ceiling (perfect ranking), detection rates of the restricted "
+           "methods, normalised detection (detection − random_r)/(ceiling − random_r), and differences (unit bootstrap). "
+           "q = 0.1–0.3: mean over the three flag rates at which the budget does not exceed the stably predicted items "
+           "(all five in Study 1). (ii) columns for Qwen only; †: OLMo's (ii) is not a working judge.*", "",
+           "| Study | Classifier × LLM | random_r | Ceiling | (i)_r | A_r | (ii)_r | Debiased (ii)_r | Normalised (i)_r | "
+           "Normalised A_r | (i)_r − random_r | A_r − random_r | A_r − debiased (ii)_r | A_r − (i)_r, q = 0.1–0.3 |",
+           "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for st, d, b, l in CELLS:
+        v = q["P22_restricted_baselines"][f"study{st}:{d}/{b}/{l}"]
+        e, n, df = v["detection"], v["normalised_r"], v["diff"]
+        qwen = l == "qwen"
+        out.append(f"| {st} | {NAMES[b]} × {NAMES[l]}{DG(l)} | {v['random_r']:.3f} | {v['ceiling']:.3f} | {e['i']:.3f} | "
+                   f"{e['A']:.3f} | {e['ii']:.3f} | {e['ii_deb']:.3f} | {fmt(n['i'])} | {fmt(n['A'])} | "
+                   if qwen else
+                   f"| {st} | {NAMES[b]} × {NAMES[l]}{DG(l)} | {v['random_r']:.3f} | {v['ceiling']:.3f} | {e['i']:.3f} | "
+                   f"{e['A']:.3f} | {dash} | {dash} | {fmt(n['i'])} | {fmt(n['A'])} | ")
+        out[-1] += (f"{iv(df['i_r_minus_random_r'])} | {iv(df['A_r_minus_random_r'])} | "
+                    f"{iv(df['A_r_minus_ii_deb_r']) if qwen else dash} | {iv(v['unsaturated_mean']['A_r_minus_i_r'])} |")
+    out += ["", "*Table S8.20. The restriction on all eligible errors (stable or not) and on the risk–coverage curve over all "
+            "ranked items with a reference (AURC, abstention 0–0.95, lower is better) (P22) [P].*", "",
+            "| Study | Classifier × LLM | All errors: (i) | All errors: (i)_r | All errors: A | All errors: A_r | "
+            "All errors: A_r − (i)_r | AURC: (i) | AURC: (i)_r | AURC: A | AURC: A_r | AURC: A_r − (i)_r |",
+            "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for st, d, b, l in CELLS:
+        c = f"study{st}:{d}/{b}/{l}"
+        v = q["P22_restricted_baselines"][c]
+        a, r = v["all_errors"], v["aurc"]
+        out.append(f"| {st} | {NAMES[b]} × {NAMES[l]} | {a['detection']['i']:.3f} | {a['detection']['i_r']:.3f} | "
+                   f"{a['detection']['A']:.3f} | {a['detection']['A_r']:.3f} | {iv(a['A_r_minus_i_r'])} | {r['i']:.3f} | "
+                   f"{r['i_r']:.3f} | {r['A']:.3f} | {r['A_r']:.3f} | {iv(r['A_r_minus_i_r'])} |")
+    out += ["", "*Table S8.21. Study 2 with stability measured on the paraphrases as formed, before the human check (P22) "
+            "[P]. Detection rates are q-means over q = 0.1–0.5 (the budget does not exceed the restricted items here).*", "",
+            "| Classifier × LLM | Stably predicted | random_r | (i)_r | A_r | A_r − (i)_r |", "|---|---|---|---|---|---|"]
+    for st, d, b, l in CELLS:
+        pc = q["P22_study2_before_check"].get(f"study{st}:{d}/{b}/{l}")
+        if pc:
+            out.append(f"| {NAMES[b]} × {NAMES[l]} | {pc['n_stable_predictions']:,} of {pc['n_ranked']:,} | "
+                       f"{pc['random_r']:.3f} | {pc['detection']['i']:.3f} | {pc['detection']['A']:.3f} | "
+                       f"{iv(pc['diff']['A_r_minus_i_r'])} |")
+    out += ["", "*Table S8.22. Coarsened A with its share of \"different\" restored (P23), and coarse WiC (P24) [P]: share "
+            "predicted different by A and A_c, detection rates, and differences (unit bootstrap). A_c back: A_c shifted "
+            "to A's share by one log-odds constant. Debiased (ii) at A's share (as P6) or at A_c's share. Coarse WiC has "
+            "20 lemmas (20 units). †: OLMo's (ii) is not a working judge.*", "",
+            "| Study | Data | Classifier × LLM | Share different: A | Share different: A_c | Detection: A | Detection: A_c | "
+            "Detection: A_c back | A_c − A | A_c back − A | A − debiased (ii) at A | A_c − debiased (ii) at A_c |",
+            "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    rows = [(st, d, b, l, q["P23_share_shift"][f"study{st}:{d}/{b}/{l}"]) for st, d, b, l in CELLS]
+    rows.append(("1", "grain", "deberta", "qwen", q["P24_coarse_wic"]["study1:grain/deberta/qwen"]))
+    for st, d, b, l, v in rows:
+        e = v["detection"]
+        out.append(f"| {st} | {DATA.get(d, 'Coarse WiC')} | {NAMES[b]} × {NAMES[l]}{DG(l)} | {v['share_different_A']:.3f} | "
+                   f"{v['share_different_A_c']:.3f} | {e['A']:.3f} | {e['A_c']:.3f} | {e['A_c_back']:.3f} | "
+                   f"{iv(v['A_c_minus_A'])} | {iv(v['A_c_back_minus_A'])} | {iv(v['A_minus_ii_deb_A'])} | "
+                   f"{iv(v['A_c_minus_ii_deb_Ac'])} |")
+    q8 = json.loads((TAB / "posthoc_round8.json").read_text(encoding="utf-8"))
+    out += ["", "*Table S8.23. Adjudicated stable errors against the random expectation (P25) [P] (Study 1, DeBERTa): "
+            "detection rate of each method, and A and (ii) minus 0.30 (the q-mean of a random ranking), unit bootstrap. "
+            "Both opposite: both raters chose the label opposite to the reference (the classifier's); confirmed: both chose "
+            "the reference. †: OLMo's (ii) is not a working judge.*", "",
+            "| LLM | Errors | n (units) | A | (i) | (ii) | Debiased (ii) | A − 0.30 | (ii) − 0.30 | A − (ii) | A − debiased (ii) |",
+            "|---|---|---|---|---|---|---|---|---|---|---|"]
+    for c, v in q8["P25_adjudicated_vs_random"].items():
+        l = c.split("/")[-1]
+        for k, nm in (("both_opposite", "Both opposite"), ("confirmed", "Confirmed")):
+            b2 = v[k]
+            e = b2["detection"]
+            out.append(f"| {NAMES[l]}{DG(l)} | {nm} | {b2['n']} ({b2['units']}) | {e['A']:.3f} | {e['i']:.3f} | {e['ii']:.3f} | "
+                       f"{e['ii_deb']:.3f} | {iv(b2['A_minus_random'])} | {iv(b2['ii_minus_random'])} | {iv(b2['A_minus_ii'])} | "
+                       f"{iv(b2['A_minus_ii_deb'])} |")
+    out += ["", "*Table S8.24. The restricted comparisons at q = 0.1–0.3 in every configuration (P26) [P]: in Study 2 the budget "
+            "exceeds the stably predicted items at q = 0.4 and 0.5, where every restricted difference is 0, so q-means over "
+            "q = 0.1–0.5 shrink Study 2's differences to 3/5. Share: ((ii)_r − (i)_r)/(A_r − (i)_r) as in P2 (95% interval; "
+            "Qwen only). †: OLMo's (ii) is not a working judge.*", "",
+            "| Study | Classifier × LLM | random_r | (i)_r | A_r | A_r − random_r | (i)_r − random_r | A_r − (i)_r | "
+            "A_r − (ii)_r | A_r − debiased (ii)_r | Share of debiased (ii)_r |",
+            "|---|---|---|---|---|---|---|---|---|---|---|"]
+    for st, d, b, l in CELLS:
+        v = q8["P26_restricted_same_rates"][f"study{st}:{d}/{b}/{l}"]["q10_30"]
+        e = v["detection"]
+        qw = "ii" in e
+        sh = v.get("share_ii_deb_r")
+        out.append(f"| {st} | {NAMES[b]} × {NAMES[l]}{DG(l)} | {v['random_r']:.3f} | {e['i']:.3f} | {e['A']:.3f} | "
+                   f"{iv(v['A_r_minus_random_r'])} | {iv(v['i_r_minus_random_r'])} | {iv(v['A_r_minus_i_r'])} | "
+                   f"{iv(v['A_r_minus_ii_r']) if qw else dash} | {iv(v['A_r_minus_ii_deb_r']) if qw else dash} | "
+                   f"{(fmt2(sh['share']) + ' [' + fmt2(sh['lo']) + ', ' + fmt2(sh['hi']) + ']') if qw else dash} |")
     return "\n".join(out) + "\n"
 
 
@@ -503,7 +678,7 @@ def main():
     (TAB / "tableS3.md").write_text(table_s3(), encoding="utf-8")
     (TAB / "table_share.md").write_text(table_share(), encoding="utf-8")
     (TAB / "table_adjudication.md").write_text(table_adjudication(), encoding="utf-8")
-    (TAB / "tableS8.md").write_text(table_s8() + "\n" + table_s8_round2() + "\n" + table_s8_round3() + "\n" + table_s8_round4(), encoding="utf-8")
+    (TAB / "tableS8.md").write_text(table_s8() + "\n" + table_s8_round2() + "\n" + table_s8_round3() + "\n" + table_s8_round4() + "\n" + table_s8_round5() + "\n" + table_s8_round6() + "\n" + table_s8_round7(), encoding="utf-8")
     (TAB / "tableS9.md").write_text(table_s9(), encoding="utf-8")
     build("manuscript.md", "manuscript_built.md")
     if (P / "supplement.md").exists():

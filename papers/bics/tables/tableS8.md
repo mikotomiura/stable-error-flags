@@ -209,3 +209,120 @@
 | 1 | OLMo † | 66 (64) | 0.315 | 0.203 | 0.188 | 0.185 | 0.127 [0.033, 0.224] | 0.130 [0.041, 0.221] |
 | 2 | Qwen | 8 (8) | 0.325 | 0.375 | 0.575 | 0.575 | −0.250 [−0.600, 0.100] | −0.250 [−0.575, 0.100] |
 | 2 | OLMo † | 8 (8) | 0.425 | 0.375 | 0.325 | 0.375 | 0.100 [−0.275, 0.475] | 0.050 [−0.225, 0.350] |
+
+*Table S8.15. Stable-correct items of the adjudication sheet (DeBERTa) on which both raters chose the label opposite to the reference ("reversed"; not called errors, see S9) or the reference itself ("confirmed") [P]: flag rates and A − (ii) (unit bootstrap). †: OLMo's (ii) is not a working judge. Intervals are not given for a single item.*
+
+| Study | LLM | Items | n (units) | A | (i) | (ii) | debiased (ii) | A − (ii) | A − debiased (ii) |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Qwen | reversed | 13 (13) | 0.662 | 0.462 | 0.585 | 0.492 | 0.077 [−0.154, 0.323] | 0.169 [−0.077, 0.431] |
+| 1 | Qwen | confirmed | 180 (173) | 0.133 | 0.151 | 0.164 | 0.149 | −0.031 [−0.082, 0.020] | −0.016 [−0.065, 0.034] |
+| 1 | OLMo † | reversed | 13 (13) | 0.554 | 0.462 | 0.508 | 0.338 | 0.046 [−0.169, 0.246] | 0.215 [−0.062, 0.462] |
+| 1 | OLMo † | confirmed | 173 (167) | 0.206 | 0.143 | 0.203 | 0.214 | 0.002 [−0.058, 0.064] | −0.008 [−0.072, 0.056] |
+| 2 | Qwen | reversed | 1 (1) | 1.000 | 0.000 | 0.400 | 0.200 | — | — |
+| 2 | Qwen | confirmed | 89 (85) | 0.133 | 0.198 | 0.117 | 0.153 | 0.016 [−0.047, 0.076] | −0.020 [−0.089, 0.044] |
+| 2 | OLMo † | reversed | 1 (1) | 0.200 | 0.000 | 0.000 | 0.000 | — | — |
+| 2 | OLMo † | confirmed | 89 (85) | 0.247 | 0.198 | 0.088 | 0.216 | 0.160 [0.076, 0.243] | 0.031 [−0.061, 0.125] |
+
+*Table S8.16. Study 1 contested stable errors of DeBERTa (not both raters chose the reference) by reference label and by whether both sentences are WordNet usage examples (P4) [P]: flag rates and A − (ii) (unit bootstrap). †: OLMo's (ii) is not a working judge.*
+
+| LLM | Reference | Origin | n (units) | A | (ii) | debiased (ii) | A − (ii) | A − debiased (ii) |
+|---|---|---|---|---|---|---|---|---|
+| Qwen | same | WordNet examples | 11 (11) | 0.345 | 0.091 | 0.164 | 0.255 [0.055, 0.455] | 0.182 [−0.055, 0.418] |
+| Qwen | same | other | 42 (41) | 0.305 | 0.071 | 0.224 | 0.233 [0.122, 0.348] | 0.081 [−0.052, 0.219] |
+| Qwen | different | WordNet examples | 38 (37) | 0.400 | 0.389 | 0.316 | 0.011 [−0.130, 0.147] | 0.084 [−0.049, 0.216] |
+| Qwen | different | other | 17 (17) | 0.329 | 0.318 | 0.224 | 0.012 [−0.176, 0.200] | 0.106 [−0.071, 0.282] |
+| OLMo † | same | WordNet examples | 10 (10) | 0.540 | 0.000 | 0.420 | 0.540 [0.360, 0.720] | 0.120 [−0.200, 0.420] |
+| OLMo † | same | other | 41 (40) | 0.220 | 0.000 | 0.137 | 0.220 [0.135, 0.310] | 0.083 [−0.040, 0.200] |
+| OLMo † | different | WordNet examples | 38 (37) | 0.432 | 0.511 | 0.321 | −0.079 [−0.215, 0.059] | 0.111 [−0.042, 0.263] |
+| OLMo † | different | other | 17 (17) | 0.306 | 0.424 | 0.224 | −0.118 [−0.282, 0.035] | 0.082 [−0.082, 0.247] |
+
+*Table S8.17. Flags restricted to stably predicted items (same label on the original, swapped and paraphrased inputs; no labels used) [P]: share of ranked items that are stably predicted, detection rates (q-mean over q = 0.1–0.5) of (i) and A without and with the restriction (subscript r), and differences (unit bootstrap). (i) does not depend on the LLM. Baselines for the restriction (a random ranking restricted in the same way, the ceiling) are in Table S8.19.*
+
+| Study | Classifier × LLM | Stable predictions | (i) | A | (i)_r | A_r | A_r − (i)_r | A − (i)_r | (i)_r − (i) |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | DeBERTa × Qwen | 824 of 1,304 | 0.303 | 0.509 | 0.592 | 0.698 | 0.106 [0.049, 0.162] | −0.084 [−0.146, −0.023] | 0.289 [0.267, 0.312] |
+| 1 | FLAN-T5 × Qwen | 714 of 1,304 | 0.187 | 0.463 | 0.534 | 0.741 | 0.206 [0.161, 0.251] | −0.072 [−0.125, −0.017] | 0.347 [0.324, 0.370] |
+| 1 | DeBERTa × OLMo | 796 of 1,270 | 0.302 | 0.391 | 0.595 | 0.626 | 0.031 [−0.025, 0.087] | −0.204 [−0.264, −0.144] | 0.293 [0.270, 0.316] |
+| 2 | DeBERTa × Qwen | 657 of 1,653 | 0.380 | 0.648 | 0.809 | 0.903 | 0.095 [0.039, 0.149] | −0.160 [−0.250, −0.074] | 0.429 [0.383, 0.472] |
+| 2 | FLAN-T5 × Qwen | 630 of 1,653 | 0.206 | 0.556 | 0.732 | 0.874 | 0.142 [0.111, 0.176] | −0.175 [−0.227, −0.122] | 0.526 [0.502, 0.548] |
+| 2 | DeBERTa × OLMo | 657 of 1,653 | 0.380 | 0.508 | 0.809 | 0.824 | 0.015 [−0.048, 0.076] | −0.301 [−0.391, −0.212] | 0.429 [0.383, 0.472] |
+| 2 | FLAN-T5 × OLMo | 630 of 1,653 | 0.206 | 0.427 | 0.732 | 0.819 | 0.087 [0.052, 0.123] | −0.305 [−0.359, −0.247] | 0.526 [0.502, 0.548] |
+
+*Table S8.18. A with the coarsening of WiC test's reference (A_c: first-degree WordNet neighbours, sister senses and senses of the same supersense count as the same sense; no labels used) [P]: share of ranked items predicted different, detection rates and differences (unit bootstrap). †: OLMo's (ii) is not a working judge.*
+
+| Study | Classifier × LLM | Different: A | Different: A_c | A | A_c | A_c − A | A_c − (i) | A_c − (ii) | A_c − debiased (ii) |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | DeBERTa × Qwen | 0.571 | 0.501 | 0.509 | 0.559 | 0.050 [0.017, 0.085] | 0.256 [0.194, 0.318] | 0.204 [0.140, 0.267] | 0.175 [0.114, 0.236] |
+| 1 | FLAN-T5 × Qwen | 0.571 | 0.501 | 0.463 | 0.500 | 0.038 [0.014, 0.063] | 0.313 [0.258, 0.367] | 0.153 [0.103, 0.202] | 0.116 [0.070, 0.162] |
+| 1 | DeBERTa × OLMo † | 0.624 | 0.494 | 0.391 | 0.438 | 0.047 [0.015, 0.081] | 0.136 [0.074, 0.198] | 0.121 [0.051, 0.192] | 0.102 [0.038, 0.167] |
+| 2 | DeBERTa × Qwen | 0.503 | 0.356 | 0.648 | 0.492 | −0.156 [−0.230, −0.089] | 0.112 [0.000, 0.222] | −0.088 [−0.214, 0.045] | −0.090 [−0.210, 0.035] |
+| 2 | FLAN-T5 × Qwen | 0.503 | 0.356 | 0.556 | 0.494 | −0.062 [−0.092, −0.031] | 0.288 [0.229, 0.346] | 0.014 [−0.047, 0.074] | −0.020 [−0.080, 0.039] |
+| 2 | DeBERTa × OLMo † | 0.523 | 0.357 | 0.508 | 0.380 | −0.127 [−0.190, −0.071] | 0.000 [−0.104, 0.102] | −0.095 [−0.219, 0.034] | −0.053 [−0.170, 0.067] |
+| 2 | FLAN-T5 × OLMo † | 0.523 | 0.357 | 0.427 | 0.414 | −0.013 [−0.049, 0.024] | 0.208 [0.146, 0.269] | 0.119 [0.056, 0.182] | −0.035 [−0.103, 0.034] |
+
+*Table S8.19. Baselines for the flags restricted to stably predicted items (P22) [P]: a random ranking restricted in the same way (random_r), the ceiling (perfect ranking), detection rates of the restricted methods, normalised detection (detection − random_r)/(ceiling − random_r), and differences (unit bootstrap). q = 0.1–0.3: mean over the three flag rates at which the budget does not exceed the stably predicted items (all five in Study 1). (ii) columns for Qwen only; †: OLMo's (ii) is not a working judge.*
+
+| Study | Classifier × LLM | random_r | Ceiling | (i)_r | A_r | (ii)_r | Debiased (ii)_r | Normalised (i)_r | Normalised A_r | (i)_r − random_r | A_r − random_r | A_r − debiased (ii)_r | A_r − (i)_r, q = 0.1–0.3 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | DeBERTa × Qwen | 0.475 | 0.925 | 0.592 | 0.698 | 0.603 | 0.605 | 0.261 | 0.496 | 0.118 [0.073, 0.162] | 0.223 [0.179, 0.267] | 0.093 [0.040, 0.146] | 0.106 [0.049, 0.162] |
+| 1 | FLAN-T5 × Qwen | 0.548 | 0.867 | 0.534 | 0.741 | 0.689 | 0.698 | −0.042 | 0.604 | −0.013 [−0.049, 0.023] | 0.193 [0.162, 0.222] | 0.043 [0.010, 0.076] | 0.206 [0.161, 0.251] |
+| 1 | DeBERTa × OLMo † | 0.479 | 0.923 | 0.595 | 0.626 | — | — | 0.262 | 0.332 | 0.117 [0.074, 0.160] | 0.148 [0.104, 0.190] | — | 0.031 [−0.025, 0.087] |
+| 2 | DeBERTa × Qwen | 0.702 | 1.000 | 0.809 | 0.903 | 0.857 | 0.859 | 0.358 | 0.676 | 0.107 [0.064, 0.150] | 0.201 [0.162, 0.237] | 0.044 [−0.009, 0.098] | 0.158 [0.065, 0.248] |
+| 2 | FLAN-T5 × Qwen | 0.715 | 0.916 | 0.732 | 0.874 | 0.860 | 0.865 | 0.085 | 0.793 | 0.017 [−0.010, 0.043] | 0.159 [0.141, 0.178] | 0.010 [−0.015, 0.035] | 0.237 [0.185, 0.293] |
+| 2 | DeBERTa × OLMo † | 0.702 | 1.000 | 0.809 | 0.824 | — | — | 0.358 | 0.410 | 0.107 [0.064, 0.150] | 0.122 [0.077, 0.166] | — | 0.026 [−0.080, 0.127] |
+| 2 | FLAN-T5 × OLMo † | 0.715 | 0.916 | 0.732 | 0.819 | — | — | 0.085 | 0.517 | 0.017 [−0.010, 0.043] | 0.104 [0.084, 0.125] | — | 0.145 [0.087, 0.205] |
+
+*Table S8.20. The restriction on all eligible errors (stable or not) and on the risk–coverage curve over all ranked items with a reference (AURC, abstention 0–0.95, lower is better) (P22) [P].*
+
+| Study | Classifier × LLM | All errors: (i) | All errors: (i)_r | All errors: A | All errors: A_r | All errors: A_r − (i)_r | AURC: (i) | AURC: (i)_r | AURC: A | AURC: A_r | AURC: A_r − (i)_r |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | DeBERTa × Qwen | 0.403 | 0.437 | 0.536 | 0.515 | 0.078 [0.038, 0.119] | 0.191 | 0.251 | 0.144 | 0.215 | −0.036 [−0.050, −0.022] |
+| 1 | FLAN-T5 × Qwen | 0.338 | 0.341 | 0.488 | 0.473 | 0.132 [0.102, 0.162] | 0.434 | 0.462 | 0.237 | 0.344 | −0.119 [−0.139, −0.098] |
+| 1 | DeBERTa × OLMo | 0.403 | 0.439 | 0.419 | 0.462 | 0.023 [−0.019, 0.065] | 0.193 | 0.254 | 0.183 | 0.247 | −0.006 [−0.021, 0.009] |
+| 2 | DeBERTa × Qwen | 0.533 | 0.529 | 0.703 | 0.593 | 0.064 [0.026, 0.102] | 0.115 | 0.174 | 0.065 | 0.131 | −0.043 [−0.057, −0.030] |
+| 2 | FLAN-T5 × Qwen | 0.303 | 0.602 | 0.556 | 0.710 | 0.108 [0.079, 0.137] | 0.421 | 0.433 | 0.182 | 0.273 | −0.160 [−0.182, −0.139] |
+| 2 | DeBERTa × OLMo | 0.533 | 0.529 | 0.508 | 0.529 | 0.000 [−0.041, 0.040] | 0.115 | 0.174 | 0.121 | 0.179 | 0.005 [−0.012, 0.021] |
+| 2 | FLAN-T5 × OLMo | 0.303 | 0.602 | 0.429 | 0.662 | 0.059 [0.030, 0.090] | 0.421 | 0.433 | 0.273 | 0.345 | −0.089 [−0.113, −0.066] |
+
+*Table S8.21. Study 2 with stability measured on the paraphrases as formed, before the human check (P22) [P]. Detection rates are q-means over q = 0.1–0.5 (the budget does not exceed the restricted items here).*
+
+| Classifier × LLM | Stably predicted | random_r | (i)_r | A_r | A_r − (i)_r |
+|---|---|---|---|---|---|
+| DeBERTa × Qwen | 1,216 of 1,653 | 0.408 | 0.593 | 0.765 | 0.171 [0.076, 0.266] |
+| FLAN-T5 × Qwen | 1,162 of 1,653 | 0.427 | 0.440 | 0.707 | 0.267 [0.212, 0.325] |
+| DeBERTa × OLMo | 1,216 of 1,653 | 0.408 | 0.593 | 0.644 | 0.051 [−0.057, 0.153] |
+| FLAN-T5 × OLMo | 1,162 of 1,653 | 0.427 | 0.440 | 0.592 | 0.152 [0.088, 0.215] |
+
+*Table S8.22. Coarsened A with its share of "different" restored (P23), and coarse WiC (P24) [P]: share predicted different by A and A_c, detection rates, and differences (unit bootstrap). A_c back: A_c shifted to A's share by one log-odds constant. Debiased (ii) at A's share (as P6) or at A_c's share. Coarse WiC has 20 lemmas (20 units). †: OLMo's (ii) is not a working judge.*
+
+| Study | Data | Classifier × LLM | Share different: A | Share different: A_c | Detection: A | Detection: A_c | Detection: A_c back | A_c − A | A_c back − A | A − debiased (ii) at A | A_c − debiased (ii) at A_c |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | WiC test | DeBERTa × Qwen | 0.571 | 0.501 | 0.509 | 0.559 | 0.551 | 0.050 [0.017, 0.085] | 0.042 [0.010, 0.075] | 0.125 [0.066, 0.185] | 0.175 [0.114, 0.236] |
+| 1 | WiC test | FLAN-T5 × Qwen | 0.571 | 0.501 | 0.463 | 0.500 | 0.484 | 0.038 [0.014, 0.063] | 0.021 [−0.004, 0.047] | 0.078 [0.036, 0.121] | 0.098 [0.052, 0.145] |
+| 1 | WiC test | DeBERTa × OLMo † | 0.624 | 0.494 | 0.391 | 0.438 | 0.437 | 0.047 [0.015, 0.081] | 0.046 [0.016, 0.075] | 0.055 [−0.005, 0.117] | 0.098 [0.037, 0.160] |
+| 2 | MCL-WiC dev+test | DeBERTa × Qwen | 0.503 | 0.356 | 0.648 | 0.492 | 0.514 | −0.156 [−0.230, −0.089] | −0.134 [−0.214, −0.058] | 0.066 [−0.030, 0.167] | 0.022 [−0.088, 0.134] |
+| 2 | MCL-WiC dev+test | FLAN-T5 × Qwen | 0.503 | 0.356 | 0.556 | 0.494 | 0.455 | −0.062 [−0.092, −0.031] | −0.102 [−0.136, −0.066] | 0.042 [−0.017, 0.100] | −0.047 [−0.103, 0.009] |
+| 2 | MCL-WiC dev+test | DeBERTa × OLMo † | 0.523 | 0.357 | 0.508 | 0.380 | 0.411 | −0.127 [−0.190, −0.071] | −0.097 [−0.161, −0.037] | 0.075 [−0.038, 0.193] | 0.020 [−0.083, 0.123] |
+| 2 | MCL-WiC dev+test | FLAN-T5 × OLMo † | 0.523 | 0.357 | 0.427 | 0.414 | 0.380 | −0.013 [−0.049, 0.024] | −0.047 [−0.084, −0.007] | −0.022 [−0.091, 0.048] | −0.067 [−0.133, 0.001] |
+| 1 | Coarse WiC | DeBERTa × Qwen | 0.617 | 0.590 | 0.555 | 0.553 | 0.544 | −0.002 [−0.015, 0.008] | −0.011 [−0.037, −0.001] | 0.051 [−0.019, 0.101] | 0.042 [−0.045, 0.098] |
+
+*Table S8.23. Adjudicated stable errors against the random expectation (P25) [P] (Study 1, DeBERTa): detection rate of each method, and A and (ii) minus 0.30 (the q-mean of a random ranking), unit bootstrap. Both opposite: both raters chose the label opposite to the reference (the classifier's); confirmed: both chose the reference. †: OLMo's (ii) is not a working judge.*
+
+| LLM | Errors | n (units) | A | (i) | (ii) | Debiased (ii) | A − 0.30 | (ii) − 0.30 | A − (ii) | A − debiased (ii) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Qwen | Both opposite | 68 (66) | 0.306 | 0.200 | 0.156 | 0.174 | 0.006 [−0.073, 0.086] | −0.144 [−0.204, −0.079] | 0.150 [0.049, 0.254] | 0.132 [0.029, 0.236] |
+| Qwen | Confirmed | 100 (100) | 0.684 | 0.372 | 0.496 | 0.528 | 0.384 [0.316, 0.448] | 0.196 [0.124, 0.270] | 0.188 [0.104, 0.274] | 0.156 [0.070, 0.244] |
+| OLMo † | Both opposite | 66 (64) | 0.315 | 0.203 | 0.188 | 0.185 | 0.015 [−0.063, 0.094] | −0.112 [−0.180, −0.038] | 0.127 [0.033, 0.224] | 0.130 [0.041, 0.221] |
+| OLMo † | Confirmed | 100 (100) | 0.446 | 0.370 | 0.386 | 0.434 | 0.146 [0.072, 0.220] | 0.086 [0.010, 0.164] | 0.060 [−0.024, 0.146] | 0.012 [−0.074, 0.102] |
+
+*Table S8.24. The restricted comparisons at q = 0.1–0.3 in every configuration (P26) [P]: in Study 2 the budget exceeds the stably predicted items at q = 0.4 and 0.5, where every restricted difference is 0, so q-means over q = 0.1–0.5 shrink Study 2's differences to 3/5. Share: ((ii)_r − (i)_r)/(A_r − (i)_r) as in P2 (95% interval; Qwen only). †: OLMo's (ii) is not a working judge.*
+
+| Study | Classifier × LLM | random_r | (i)_r | A_r | A_r − random_r | (i)_r − random_r | A_r − (i)_r | A_r − (ii)_r | A_r − debiased (ii)_r | Share of debiased (ii)_r |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | DeBERTa × Qwen | 0.316 | 0.425 | 0.572 | 0.256 [0.201, 0.310] | 0.108 [0.055, 0.163] | 0.147 [0.076, 0.217] | 0.135 [0.071, 0.199] | 0.109 [0.043, 0.175] | 0.26 [−0.29, 0.64] |
+| 1 | FLAN-T5 × Qwen | 0.365 | 0.346 | 0.603 | 0.238 [0.196, 0.279] | −0.019 [−0.063, 0.026] | 0.257 [0.198, 0.315] | 0.072 [0.022, 0.119] | 0.057 [0.011, 0.102] | 0.78 [0.61, 0.95] |
+| 1 | DeBERTa × OLMo † | 0.319 | 0.427 | 0.463 | 0.144 [0.088, 0.197] | 0.108 [0.055, 0.162] | 0.036 [−0.036, 0.105] | — | — | — |
+| 2 | DeBERTa × Qwen | 0.503 | 0.681 | 0.839 | 0.336 [0.271, 0.396] | 0.178 [0.106, 0.250] | 0.158 [0.065, 0.248] | 0.077 [−0.011, 0.170] | 0.073 [−0.014, 0.163] | 0.53 [0.04, 1.14] |
+| 2 | FLAN-T5 × Qwen | 0.525 | 0.553 | 0.791 | 0.266 [0.235, 0.296] | 0.028 [−0.016, 0.072] | 0.237 [0.185, 0.293] | 0.025 [−0.019, 0.067] | 0.016 [−0.026, 0.058] | 0.93 [0.77, 1.12] |
+| 2 | DeBERTa × OLMo † | 0.503 | 0.681 | 0.707 | 0.204 [0.129, 0.277] | 0.178 [0.106, 0.250] | 0.026 [−0.080, 0.127] | — | — | — |
+| 2 | FLAN-T5 × OLMo † | 0.525 | 0.553 | 0.698 | 0.173 [0.139, 0.208] | 0.028 [−0.016, 0.072] | 0.145 [0.087, 0.205] | — | — | — |

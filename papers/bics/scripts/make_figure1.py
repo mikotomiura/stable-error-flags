@@ -43,8 +43,12 @@ def main():
             st = STYLE[r["study"]]
             y = ypos[(r["base"], r["llm"])] + st["dy"]
             d, lo, hi = float(r[f"A-{c}"]), float(r[f"A-{c}_lo"]), float(r[f"A-{c}_hi"])
-            ax.plot([lo, hi], [y, y], color=st["color"], lw=1.6, solid_capstyle="round", zorder=2)
-            ax.plot(d, y, marker=st["marker"], ms=4.5, color=st["color"], mec="#fcfcfb", mew=0.8, zorder=3)
+            dag = c in ("ii", "iii") and r["llm"] == "olmo" and r["base"] != "roberta"  # † : not a working judge
+            al = 0.35 if dag else 1.0
+            ax.plot([lo, hi], [y, y], color=st["color"], lw=1.6, solid_capstyle="round", zorder=2, alpha=al)
+            ax.plot(d, y, marker=st["marker"], ms=4.5, color=st["color"], mec="#fcfcfb", mew=0.8, zorder=3, alpha=al)
+            if dag:
+                ax.text(0.44, y, "†", fontsize=7, color=INK, ha="right", va="center", zorder=4)
         ax.set_title(title, fontsize=7.5, color=INK)
         ax.set_facecolor("#fcfcfb")
         ax.grid(axis="x", color=GRID, lw=0.5)

@@ -77,6 +77,7 @@ PREAMBLE = r"""\documentclass[10pt]{article}
 SPECIAL = {"\\": r"\textbackslash{}", "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#", "_": r"\_",
            "{": r"\{", "}": r"\}", "~": r"\textasciitilde{}", "^": r"\textasciicircum{}"}
 CITED = set()
+FOOT = {}  # Markdown footnotes "[^id]: text" -> \footnote at the "[^id]" marker
 
 
 def esc(s):
@@ -91,6 +92,7 @@ def inline(s):
         keep.append(x)
         return f"\x00{len(keep) - 1}\x00"
 
+    s = re.sub(r"\[\^(\w+)\]", lambda m: stash(r"\footnote{" + inline(FOOT[m[1]]) + "}"), s)
     s = re.sub(r"`([^`]+)`", lambda m: stash(r"\nolinkurl{" + m[1] + "}" if " " not in m[1]
                                              else r"\texttt{" + esc(m[1]) + "}"), s)
     s = re.sub(r"https?://[^\s|)]+[^\s|).,;]", lambda m: stash(r"\url{" + m[0] + "}"), s)
@@ -104,6 +106,8 @@ def inline(s):
         return stash("$" + b + "_{" + sb + "}$")
 
     s = re.sub(r"(?<![\w/.])([A-Za-z]+)_([A-Za-z0-9]+)(?![\w/.])", sub_math, s)
+    # restricted controls written as (i)_r, (ii)_r (2026-11-15, attack-me round 7: "(i)\_r" was printed)
+    s = re.sub(r"\((i{1,3}|iv)\)_r(?![\w/.])", lambda m: stash("(" + m[1] + ")$_{r}$"), s)
 
     def cite(m):
         nums = re.findall(r"\d+", m[2])
@@ -150,7 +154,8 @@ def cell(c, stack, wrap_at):
         return (r"\makecell[tl]{" + inline(m[1]) + r" \\ {[}" + inline(m[2]) + ", " + inline(m[3]) + "{]}"
                 + inline(m[4] or "") + "}")
     if m:
-        return inline(re.sub(r"(\d) \[(−?\d)", r"\1~[\2", c).replace(", ", ",~"))
+        # non-breaking spaces inside the interval (2026-11-15: inline() used to escape the "~" into \textasciitilde)
+        return inline(m[1]) + "~{[}" + inline(m[2]) + ",~" + inline(m[3]) + "{]}" + inline(m[4] or "")
     if wrap_at and re.fullmatch(r"[−\d.,%() †—–→x]+", c):  # numbers and arrows never wrap
         return inline(c)
     return wrap(c, wrap_at) if wrap_at else inline(c)
@@ -196,6 +201,11 @@ def table(lines, caption, label_num, env="table"):
 
 def convert(md, part):
     lines = [l.rstrip("\r") for l in md.split("\n")]
+    for l in lines:
+        fm = re.match(r"\[\^(\w+)\]: (.*)", l)
+        if fm:
+            FOOT[fm[1]] = fm[2]
+    lines = [l for l in lines if not re.match(r"\[\^(\w+)\]: ", l)]
     out, i, title, abstract = [], 0, None, None
     pending_caption = None
     while i < len(lines):
